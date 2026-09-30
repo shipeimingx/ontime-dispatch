@@ -1,0 +1,1240 @@
+{
+  "schema_version": 1,
+  "input": {
+    "rule_profile_id": "demo-v1",
+    "tasks": [
+      {
+        "id": "T01",
+        "station": "A",
+        "load_kg": 1,
+        "service_s": 60,
+        "window_start_s": 60,
+        "window_end_s": 540,
+        "eligible_types": [
+          "UAV",
+          "AGV"
+        ]
+      },
+      {
+        "id": "T02",
+        "station": "B",
+        "load_kg": 10,
+        "window_start_s": 180,
+        "window_end_s": 420,
+        "service_s": 120,
+        "eligible_types": [
+          "UAV",
+          "AGV"
+        ]
+      },
+      {
+        "id": "T03",
+        "station": "C",
+        "load_kg": 8,
+        "window_start_s": 600,
+        "window_end_s": 1200,
+        "service_s": 120,
+        "eligible_types": [
+          "UAV",
+          "AGV"
+        ]
+      },
+      {
+        "id": "T04",
+        "station": "D",
+        "load_kg": 25,
+        "window_start_s": 0,
+        "window_end_s": 1800,
+        "service_s": 120,
+        "eligible_types": [
+          "UAV",
+          "AGV"
+        ]
+      }
+    ],
+    "vehicles": [
+      {
+        "id": "UAV-01",
+        "type": "UAV",
+        "available": false,
+        "capacity_kg": 2,
+        "speed_m_s": 5,
+        "trip_limit_s": 600,
+        "shift_end_s": 2700,
+        "turnaround_s": 120
+      },
+      {
+        "id": "AGV-01",
+        "type": "AGV",
+        "available": true,
+        "capacity_kg": 20,
+        "speed_m_s": 1,
+        "trip_limit_s": 1800,
+        "shift_end_s": 2700,
+        "turnaround_s": 120
+      }
+    ],
+    "distances_m": {
+      "UAV": {
+        "A": 600,
+        "B": 240,
+        "C": 360,
+        "D": 300
+      },
+      "AGV": {
+        "A": 360,
+        "B": 240,
+        "C": 360,
+        "D": 300
+      }
+    }
+  },
+  "input_revision": 3,
+  "runtime_revision": 9,
+  "clock_s": 1560,
+  "delivered": {
+    "T02": {
+      "task_id": "T02",
+      "arrival_s": 240,
+      "service_end_s": 360,
+      "vehicle_id": "AGV-01",
+      "plan_id": "P-16a002ed",
+      "run_id": "R-2efffb04",
+      "task_snapshot": {
+        "id": "T02",
+        "station": "B",
+        "load_kg": 10,
+        "window_start_s": 180,
+        "window_end_s": 420,
+        "service_s": 120,
+        "eligible_types": [
+          "UAV",
+          "AGV"
+        ]
+      }
+    },
+    "T03": {
+      "task_id": "T03",
+      "arrival_s": 1080,
+      "service_end_s": 1200,
+      "vehicle_id": "AGV-01",
+      "plan_id": "P-16a002ed",
+      "run_id": "R-2efffb04",
+      "task_snapshot": {
+        "id": "T03",
+        "station": "C",
+        "load_kg": 8,
+        "window_start_s": 600,
+        "window_end_s": 1200,
+        "service_s": 120,
+        "eligible_types": [
+          "UAV",
+          "AGV"
+        ]
+      }
+    }
+  },
+  "task_states": {
+    "T01": "Unassigned",
+    "T02": "Delivered",
+    "T03": "Delivered",
+    "T04": "Unassigned"
+  },
+  "ready_s": {
+    "AGV-01": 1680
+  },
+  "plans": [
+    {
+      "assignments": [
+        {
+          "task_id": "T01",
+          "vehicle_id": "UAV-01",
+          "trip_id": "UAV-01/Trip1",
+          "depart_s": 0,
+          "travel_s": 120,
+          "arrival_s": 120,
+          "service_start_s": 120,
+          "service_end_s": 180,
+          "return_s": 300,
+          "trip_duration_s": 300,
+          "distance_m": 1200,
+          "load_kg": 1,
+          "window_check": "Within window",
+          "payload_check": true,
+          "trip_check": true,
+          "shift_check": true
+        },
+        {
+          "task_id": "T02",
+          "vehicle_id": "AGV-01",
+          "trip_id": "AGV-01/Trip1",
+          "depart_s": 0,
+          "travel_s": 240,
+          "arrival_s": 240,
+          "service_start_s": 240,
+          "service_end_s": 360,
+          "return_s": 600,
+          "trip_duration_s": 600,
+          "distance_m": 480,
+          "load_kg": 10,
+          "window_check": "Within window",
+          "payload_check": true,
+          "trip_check": true,
+          "shift_check": true
+        },
+        {
+          "task_id": "T03",
+          "vehicle_id": "AGV-01",
+          "trip_id": "AGV-01/Trip2",
+          "depart_s": 720,
+          "travel_s": 360,
+          "arrival_s": 1080,
+          "service_start_s": 1080,
+          "service_end_s": 1200,
+          "return_s": 1560,
+          "trip_duration_s": 840,
+          "distance_m": 720,
+          "load_kg": 8,
+          "window_check": "Within window",
+          "payload_check": true,
+          "trip_check": true,
+          "shift_check": true
+        }
+      ],
+      "unassigned": [
+        {
+          "task_id": "T04",
+          "reason_codes": [
+            "PAYLOAD_EXCEEDED"
+          ],
+          "explanation": "Load exceeds available payload.",
+          "next_actions": [
+            "Change load or resources."
+          ],
+          "evidence": [
+            {
+              "vehicle_id": "UAV-01",
+              "available": true,
+              "eligible": true,
+              "load_kg": 25,
+              "capacity_kg": 2,
+              "distance_m": 300,
+              "ready_s": 420,
+              "checked_arrival_s": 480,
+              "window_end_s": 1800,
+              "trip_duration_s": 240,
+              "trip_limit_s": 600,
+              "checked_return_s": 660,
+              "shift_end_s": 2700,
+              "reason_codes": [
+                "PAYLOAD_EXCEEDED"
+              ]
+            },
+            {
+              "vehicle_id": "AGV-01",
+              "available": true,
+              "eligible": true,
+              "load_kg": 25,
+              "capacity_kg": 20,
+              "distance_m": 300,
+              "ready_s": 1680,
+              "checked_arrival_s": 1980,
+              "window_end_s": 1800,
+              "trip_duration_s": 720,
+              "trip_limit_s": 1800,
+              "checked_return_s": 2400,
+              "shift_end_s": 2700,
+              "reason_codes": [
+                "PAYLOAD_EXCEEDED",
+                "TIME_WINDOW_UNREACHABLE"
+              ]
+            }
+          ]
+        }
+      ],
+      "coverage": "Partial",
+      "calculation_status": "Calculated",
+      "method": "demo-edf-earliest-arrival",
+      "rule_profile_id": "demo-v1",
+      "checks": {
+        "ok": true,
+        "errors": [],
+        "checked_tasks": 4,
+        "validator": "independent-demo-v1"
+      },
+      "plan_id": "P-59d4668c",
+      "snapshot_id": "S-c03448e32f15bf1d",
+      "input_revision": 1,
+      "status": "Stale",
+      "created_at": "2026-09-30T06:23:28.287Z",
+      "input_snapshot": {
+        "rule_profile_id": "demo-v1",
+        "tasks": [
+          {
+            "id": "T01",
+            "station": "A",
+            "load_kg": 1,
+            "window_start_s": 60,
+            "window_end_s": 300,
+            "service_s": 60,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T02",
+            "station": "B",
+            "load_kg": 10,
+            "window_start_s": 180,
+            "window_end_s": 420,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T03",
+            "station": "C",
+            "load_kg": 8,
+            "window_start_s": 600,
+            "window_end_s": 1200,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T04",
+            "station": "D",
+            "load_kg": 25,
+            "window_start_s": 0,
+            "window_end_s": 1800,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          }
+        ],
+        "vehicles": [
+          {
+            "id": "UAV-01",
+            "type": "UAV",
+            "available": true,
+            "capacity_kg": 2,
+            "speed_m_s": 5,
+            "trip_limit_s": 600,
+            "shift_end_s": 2700,
+            "turnaround_s": 120
+          },
+          {
+            "id": "AGV-01",
+            "type": "AGV",
+            "available": true,
+            "capacity_kg": 20,
+            "speed_m_s": 1,
+            "trip_limit_s": 1800,
+            "shift_end_s": 2700,
+            "turnaround_s": 120
+          }
+        ],
+        "distances_m": {
+          "UAV": {
+            "A": 600,
+            "B": 240,
+            "C": 360,
+            "D": 300
+          },
+          "AGV": {
+            "A": 360,
+            "B": 240,
+            "C": 360,
+            "D": 300
+          }
+        }
+      },
+      "checkpoint": {
+        "clock_s": 0,
+        "delivered_ids": [],
+        "ready_s": {}
+      }
+    },
+    {
+      "assignments": [
+        {
+          "task_id": "T02",
+          "vehicle_id": "AGV-01",
+          "trip_id": "AGV-01/Trip1",
+          "depart_s": 0,
+          "travel_s": 240,
+          "arrival_s": 240,
+          "service_start_s": 240,
+          "service_end_s": 360,
+          "return_s": 600,
+          "trip_duration_s": 600,
+          "distance_m": 480,
+          "load_kg": 10,
+          "window_check": "Within window",
+          "payload_check": true,
+          "trip_check": true,
+          "shift_check": true
+        },
+        {
+          "task_id": "T03",
+          "vehicle_id": "AGV-01",
+          "trip_id": "AGV-01/Trip2",
+          "depart_s": 720,
+          "travel_s": 360,
+          "arrival_s": 1080,
+          "service_start_s": 1080,
+          "service_end_s": 1200,
+          "return_s": 1560,
+          "trip_duration_s": 840,
+          "distance_m": 720,
+          "load_kg": 8,
+          "window_check": "Within window",
+          "payload_check": true,
+          "trip_check": true,
+          "shift_check": true
+        }
+      ],
+      "unassigned": [
+        {
+          "task_id": "T01",
+          "reason_codes": [
+            "TIME_WINDOW_UNREACHABLE"
+          ],
+          "explanation": "No checked assignment meets the arrival window.",
+          "next_actions": [
+            "Review window or resources."
+          ],
+          "evidence": [
+            {
+              "vehicle_id": "UAV-01",
+              "available": false,
+              "eligible": true,
+              "load_kg": 1,
+              "capacity_kg": 2,
+              "distance_m": 600,
+              "ready_s": 0,
+              "checked_arrival_s": 120,
+              "window_end_s": 300,
+              "trip_duration_s": 300,
+              "trip_limit_s": 600,
+              "checked_return_s": 300,
+              "shift_end_s": 2700,
+              "reason_codes": [
+                "NO_AVAILABLE_VEHICLE"
+              ]
+            },
+            {
+              "vehicle_id": "AGV-01",
+              "available": true,
+              "eligible": true,
+              "load_kg": 1,
+              "capacity_kg": 20,
+              "distance_m": 360,
+              "ready_s": 0,
+              "checked_arrival_s": 360,
+              "window_end_s": 300,
+              "trip_duration_s": 780,
+              "trip_limit_s": 1800,
+              "checked_return_s": 780,
+              "shift_end_s": 2700,
+              "reason_codes": [
+                "TIME_WINDOW_UNREACHABLE"
+              ]
+            }
+          ]
+        },
+        {
+          "task_id": "T04",
+          "reason_codes": [
+            "PAYLOAD_EXCEEDED"
+          ],
+          "explanation": "Load exceeds available payload.",
+          "next_actions": [
+            "Change load or resources."
+          ],
+          "evidence": [
+            {
+              "vehicle_id": "UAV-01",
+              "available": false,
+              "eligible": true,
+              "load_kg": 25,
+              "capacity_kg": 2,
+              "distance_m": 300,
+              "ready_s": 0,
+              "checked_arrival_s": 60,
+              "window_end_s": 1800,
+              "trip_duration_s": 240,
+              "trip_limit_s": 600,
+              "checked_return_s": 240,
+              "shift_end_s": 2700,
+              "reason_codes": [
+                "NO_AVAILABLE_VEHICLE",
+                "PAYLOAD_EXCEEDED"
+              ]
+            },
+            {
+              "vehicle_id": "AGV-01",
+              "available": true,
+              "eligible": true,
+              "load_kg": 25,
+              "capacity_kg": 20,
+              "distance_m": 300,
+              "ready_s": 1680,
+              "checked_arrival_s": 1980,
+              "window_end_s": 1800,
+              "trip_duration_s": 720,
+              "trip_limit_s": 1800,
+              "checked_return_s": 2400,
+              "shift_end_s": 2700,
+              "reason_codes": [
+                "PAYLOAD_EXCEEDED",
+                "TIME_WINDOW_UNREACHABLE"
+              ]
+            }
+          ]
+        }
+      ],
+      "coverage": "Partial",
+      "calculation_status": "Calculated",
+      "method": "demo-edf-earliest-arrival",
+      "rule_profile_id": "demo-v1",
+      "checks": {
+        "ok": true,
+        "errors": [],
+        "checked_tasks": 4,
+        "validator": "independent-demo-v1"
+      },
+      "plan_id": "P-16a002ed",
+      "snapshot_id": "S-f419f6cfb7815609",
+      "input_revision": 2,
+      "status": "Stale",
+      "created_at": "2026-09-30T06:24:15.579Z",
+      "input_snapshot": {
+        "rule_profile_id": "demo-v1",
+        "tasks": [
+          {
+            "id": "T01",
+            "station": "A",
+            "load_kg": 1,
+            "window_start_s": 60,
+            "window_end_s": 300,
+            "service_s": 60,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T02",
+            "station": "B",
+            "load_kg": 10,
+            "window_start_s": 180,
+            "window_end_s": 420,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T03",
+            "station": "C",
+            "load_kg": 8,
+            "window_start_s": 600,
+            "window_end_s": 1200,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T04",
+            "station": "D",
+            "load_kg": 25,
+            "window_start_s": 0,
+            "window_end_s": 1800,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          }
+        ],
+        "vehicles": [
+          {
+            "id": "UAV-01",
+            "type": "UAV",
+            "available": false,
+            "capacity_kg": 2,
+            "speed_m_s": 5,
+            "trip_limit_s": 600,
+            "shift_end_s": 2700,
+            "turnaround_s": 120
+          },
+          {
+            "id": "AGV-01",
+            "type": "AGV",
+            "available": true,
+            "capacity_kg": 20,
+            "speed_m_s": 1,
+            "trip_limit_s": 1800,
+            "shift_end_s": 2700,
+            "turnaround_s": 120
+          }
+        ],
+        "distances_m": {
+          "UAV": {
+            "A": 600,
+            "B": 240,
+            "C": 360,
+            "D": 300
+          },
+          "AGV": {
+            "A": 360,
+            "B": 240,
+            "C": 360,
+            "D": 300
+          }
+        }
+      },
+      "checkpoint": {
+        "clock_s": 0,
+        "delivered_ids": [],
+        "ready_s": {}
+      }
+    }
+  ],
+  "approvals": [
+    {
+      "approval_id": "A-a856e16f",
+      "plan_id": "P-59d4668c",
+      "snapshot_id": "S-c03448e32f15bf1d",
+      "approved_task_ids": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "acknowledged_unassigned": [
+        "T04"
+      ],
+      "actor_label": "Demo dispatcher",
+      "recorded_sim_time": 0,
+      "status": "Invalidated"
+    },
+    {
+      "approval_id": "A-25d80c17",
+      "plan_id": "P-16a002ed",
+      "snapshot_id": "S-f419f6cfb7815609",
+      "approved_task_ids": [
+        "T02",
+        "T03"
+      ],
+      "acknowledged_unassigned": [
+        "T01",
+        "T04"
+      ],
+      "actor_label": "Demo dispatcher",
+      "recorded_sim_time": 0,
+      "status": "Invalidated"
+    }
+  ],
+  "active_plan_id": "P-16a002ed",
+  "active_approval_id": null,
+  "run": {
+    "run_id": "R-2efffb04",
+    "plan_id": "P-16a002ed",
+    "approval_id": "A-25d80c17",
+    "status": "Finished",
+    "pending_events": [],
+    "result": "Assigned tasks completed; 2 tasks remain unassigned.",
+    "arrivals": {
+      "T02": 240,
+      "T03": 1080
+    }
+  },
+  "events": [
+    {
+      "event_id": "E-aee17f25",
+      "event_type": "plan_calculated",
+      "event_time": 0,
+      "message": "P-59d4668c: 3 assigned, 1 unassigned.",
+      "run_id": null
+    },
+    {
+      "event_id": "E-b2bba86b",
+      "event_type": "approved",
+      "event_time": 0,
+      "message": "Approved T01, T02, T03 for simulation.",
+      "run_id": null,
+      "approval_id": "A-a856e16f"
+    },
+    {
+      "event_id": "E-4d094d20",
+      "event_type": "started",
+      "event_time": 0,
+      "message": "Simulation using approved plan P-59d4668c.",
+      "run_id": "R-2efffb04"
+    },
+    {
+      "event_id": "E-92b1bd99",
+      "event_type": "input_changed",
+      "event_time": 0,
+      "message": "UAV-01 became unavailable.",
+      "run_id": "R-2efffb04",
+      "before": {
+        "vehicle_id": "UAV-01",
+        "availability": "Available"
+      },
+      "after": {
+        "vehicle_id": "UAV-01",
+        "availability": "Unavailable"
+      },
+      "affected_ids": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "rollback": true
+    },
+    {
+      "event_id": "E-42ebd890",
+      "event_type": "device_unavailable",
+      "event_time": 0,
+      "message": "UAV-01 unavailable; new plan requires approval.",
+      "run_id": "R-2efffb04",
+      "vehicle_id": "UAV-01"
+    },
+    {
+      "event_id": "E-afc89fac",
+      "event_type": "plan_calculated",
+      "event_time": 0,
+      "message": "P-16a002ed: 2 assigned, 2 unassigned.",
+      "run_id": "R-2efffb04"
+    },
+    {
+      "event_id": "E-cb039341",
+      "event_type": "approved",
+      "event_time": 0,
+      "message": "Approved T02, T03 for simulation.",
+      "run_id": "R-2efffb04",
+      "approval_id": "A-25d80c17"
+    },
+    {
+      "event_id": "E-99e1924b",
+      "event_type": "started",
+      "event_time": 0,
+      "message": "Simulation using approved plan P-16a002ed.",
+      "run_id": "R-2efffb04"
+    },
+    {
+      "event_id": "E-8e0142f8",
+      "event_type": "departure",
+      "event_time": 0,
+      "message": "T02 · AGV-01 · departure",
+      "run_id": "R-2efffb04",
+      "task_id": "T02",
+      "vehicle_id": "AGV-01",
+      "trip_id": "AGV-01/Trip1"
+    },
+    {
+      "event_id": "E-cd3bcd7a",
+      "event_type": "arrival",
+      "event_time": 240,
+      "message": "T02 · AGV-01 · arrival",
+      "run_id": "R-2efffb04",
+      "task_id": "T02",
+      "vehicle_id": "AGV-01",
+      "trip_id": "AGV-01/Trip1"
+    },
+    {
+      "event_id": "E-e383cfb2",
+      "event_type": "service_completed",
+      "event_time": 360,
+      "message": "T02 · AGV-01 · service completed",
+      "run_id": "R-2efffb04",
+      "task_id": "T02",
+      "vehicle_id": "AGV-01",
+      "trip_id": "AGV-01/Trip1"
+    },
+    {
+      "event_id": "E-d0d3038b",
+      "event_type": "returned",
+      "event_time": 600,
+      "message": "T02 · AGV-01 · returned",
+      "run_id": "R-2efffb04",
+      "task_id": "T02",
+      "vehicle_id": "AGV-01",
+      "trip_id": "AGV-01/Trip1"
+    },
+    {
+      "event_id": "E-efd5c135",
+      "event_type": "departure",
+      "event_time": 720,
+      "message": "T03 · AGV-01 · departure",
+      "run_id": "R-2efffb04",
+      "task_id": "T03",
+      "vehicle_id": "AGV-01",
+      "trip_id": "AGV-01/Trip2"
+    },
+    {
+      "event_id": "E-39c37f9a",
+      "event_type": "arrival",
+      "event_time": 1080,
+      "message": "T03 · AGV-01 · arrival",
+      "run_id": "R-2efffb04",
+      "task_id": "T03",
+      "vehicle_id": "AGV-01",
+      "trip_id": "AGV-01/Trip2"
+    },
+    {
+      "event_id": "E-eaef8cc5",
+      "event_type": "service_completed",
+      "event_time": 1200,
+      "message": "T03 · AGV-01 · service completed",
+      "run_id": "R-2efffb04",
+      "task_id": "T03",
+      "vehicle_id": "AGV-01",
+      "trip_id": "AGV-01/Trip2"
+    },
+    {
+      "event_id": "E-a6de60cf",
+      "event_type": "returned",
+      "event_time": 1560,
+      "message": "T03 · AGV-01 · returned",
+      "run_id": "R-2efffb04",
+      "task_id": "T03",
+      "vehicle_id": "AGV-01",
+      "trip_id": "AGV-01/Trip2"
+    },
+    {
+      "event_id": "E-30756bc4",
+      "event_type": "finished",
+      "event_time": 1560,
+      "message": "Assigned tasks completed; 2 tasks remain unassigned.",
+      "run_id": "R-2efffb04"
+    },
+    {
+      "event_id": "E-4575b847",
+      "event_type": "tasks_deferred",
+      "event_time": 1560,
+      "message": "Kept unassigned tasks for review: T01, T04.",
+      "run_id": "R-2efffb04",
+      "task_ids": [
+        "T01",
+        "T04"
+      ]
+    },
+    {
+      "event_id": "E-4a34db29",
+      "event_type": "input_changed",
+      "event_time": 1560,
+      "message": "Planning inputs changed; the previous approval is invalid.",
+      "run_id": "R-2efffb04",
+      "before": {
+        "rule_profile_id": "demo-v1",
+        "tasks": [
+          {
+            "id": "T01",
+            "station": "A",
+            "load_kg": 1,
+            "window_start_s": 60,
+            "window_end_s": 300,
+            "service_s": 60,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T02",
+            "station": "B",
+            "load_kg": 10,
+            "window_start_s": 180,
+            "window_end_s": 420,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T03",
+            "station": "C",
+            "load_kg": 8,
+            "window_start_s": 600,
+            "window_end_s": 1200,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T04",
+            "station": "D",
+            "load_kg": 25,
+            "window_start_s": 0,
+            "window_end_s": 1800,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          }
+        ],
+        "vehicles": [
+          {
+            "id": "UAV-01",
+            "type": "UAV",
+            "available": false,
+            "capacity_kg": 2,
+            "speed_m_s": 5,
+            "trip_limit_s": 600,
+            "shift_end_s": 2700,
+            "turnaround_s": 120
+          },
+          {
+            "id": "AGV-01",
+            "type": "AGV",
+            "available": true,
+            "capacity_kg": 20,
+            "speed_m_s": 1,
+            "trip_limit_s": 1800,
+            "shift_end_s": 2700,
+            "turnaround_s": 120
+          }
+        ],
+        "distances_m": {
+          "UAV": {
+            "A": 600,
+            "B": 240,
+            "C": 360,
+            "D": 300
+          },
+          "AGV": {
+            "A": 360,
+            "B": 240,
+            "C": 360,
+            "D": 300
+          }
+        }
+      },
+      "after": {
+        "rule_profile_id": "demo-v1",
+        "tasks": [
+          {
+            "id": "T01",
+            "station": "A",
+            "load_kg": 1,
+            "service_s": 60,
+            "window_start_s": 60,
+            "window_end_s": 540,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T02",
+            "station": "B",
+            "load_kg": 10,
+            "window_start_s": 180,
+            "window_end_s": 420,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T03",
+            "station": "C",
+            "load_kg": 8,
+            "window_start_s": 600,
+            "window_end_s": 1200,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T04",
+            "station": "D",
+            "load_kg": 25,
+            "window_start_s": 0,
+            "window_end_s": 1800,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          }
+        ],
+        "vehicles": [
+          {
+            "id": "UAV-01",
+            "type": "UAV",
+            "available": false,
+            "capacity_kg": 2,
+            "speed_m_s": 5,
+            "trip_limit_s": 600,
+            "shift_end_s": 2700,
+            "turnaround_s": 120
+          },
+          {
+            "id": "AGV-01",
+            "type": "AGV",
+            "available": true,
+            "capacity_kg": 20,
+            "speed_m_s": 1,
+            "trip_limit_s": 1800,
+            "shift_end_s": 2700,
+            "turnaround_s": 120
+          }
+        ],
+        "distances_m": {
+          "UAV": {
+            "A": 600,
+            "B": 240,
+            "C": 360,
+            "D": 300
+          },
+          "AGV": {
+            "A": 360,
+            "B": 240,
+            "C": 360,
+            "D": 300
+          }
+        }
+      },
+      "affected_ids": [],
+      "rollback": false
+    }
+  ],
+  "exceptions": [
+    {
+      "event_id": "X-25aac2d3",
+      "time_s": 0,
+      "reason": "UAV-01 became unavailable.",
+      "before": {
+        "vehicle_id": "UAV-01",
+        "availability": "Available"
+      },
+      "after": {
+        "vehicle_id": "UAV-01",
+        "availability": "Unavailable"
+      },
+      "old_plan_id": "P-59d4668c",
+      "affected_task_ids": [
+        "T01",
+        "T02",
+        "T03"
+      ],
+      "delivered_ids": [],
+      "rollback": true,
+      "resolved": true
+    },
+    {
+      "event_id": "X-921bc437",
+      "time_s": 1560,
+      "reason": "Planning inputs changed; the previous approval is invalid.",
+      "before": {
+        "rule_profile_id": "demo-v1",
+        "tasks": [
+          {
+            "id": "T01",
+            "station": "A",
+            "load_kg": 1,
+            "window_start_s": 60,
+            "window_end_s": 300,
+            "service_s": 60,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T02",
+            "station": "B",
+            "load_kg": 10,
+            "window_start_s": 180,
+            "window_end_s": 420,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T03",
+            "station": "C",
+            "load_kg": 8,
+            "window_start_s": 600,
+            "window_end_s": 1200,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T04",
+            "station": "D",
+            "load_kg": 25,
+            "window_start_s": 0,
+            "window_end_s": 1800,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          }
+        ],
+        "vehicles": [
+          {
+            "id": "UAV-01",
+            "type": "UAV",
+            "available": false,
+            "capacity_kg": 2,
+            "speed_m_s": 5,
+            "trip_limit_s": 600,
+            "shift_end_s": 2700,
+            "turnaround_s": 120
+          },
+          {
+            "id": "AGV-01",
+            "type": "AGV",
+            "available": true,
+            "capacity_kg": 20,
+            "speed_m_s": 1,
+            "trip_limit_s": 1800,
+            "shift_end_s": 2700,
+            "turnaround_s": 120
+          }
+        ],
+        "distances_m": {
+          "UAV": {
+            "A": 600,
+            "B": 240,
+            "C": 360,
+            "D": 300
+          },
+          "AGV": {
+            "A": 360,
+            "B": 240,
+            "C": 360,
+            "D": 300
+          }
+        }
+      },
+      "after": {
+        "rule_profile_id": "demo-v1",
+        "tasks": [
+          {
+            "id": "T01",
+            "station": "A",
+            "load_kg": 1,
+            "service_s": 60,
+            "window_start_s": 60,
+            "window_end_s": 540,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T02",
+            "station": "B",
+            "load_kg": 10,
+            "window_start_s": 180,
+            "window_end_s": 420,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T03",
+            "station": "C",
+            "load_kg": 8,
+            "window_start_s": 600,
+            "window_end_s": 1200,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          {
+            "id": "T04",
+            "station": "D",
+            "load_kg": 25,
+            "window_start_s": 0,
+            "window_end_s": 1800,
+            "service_s": 120,
+            "eligible_types": [
+              "UAV",
+              "AGV"
+            ]
+          }
+        ],
+        "vehicles": [
+          {
+            "id": "UAV-01",
+            "type": "UAV",
+            "available": false,
+            "capacity_kg": 2,
+            "speed_m_s": 5,
+            "trip_limit_s": 600,
+            "shift_end_s": 2700,
+            "turnaround_s": 120
+          },
+          {
+            "id": "AGV-01",
+            "type": "AGV",
+            "available": true,
+            "capacity_kg": 20,
+            "speed_m_s": 1,
+            "trip_limit_s": 1800,
+            "shift_end_s": 2700,
+            "turnaround_s": 120
+          }
+        ],
+        "distances_m": {
+          "UAV": {
+            "A": 600,
+            "B": 240,
+            "C": 360,
+            "D": 300
+          },
+          "AGV": {
+            "A": 360,
+            "B": 240,
+            "C": 360,
+            "D": 300
+          }
+        }
+      },
+      "old_plan_id": "P-16a002ed",
+      "affected_task_ids": [],
+      "delivered_ids": [
+        "T02",
+        "T03"
+      ],
+      "rollback": false,
+      "resolved": false
+    }
+  ],
+  "archives": [],
+  "state_version": 11
+}

@@ -1,0 +1,530 @@
+[
+  {
+    "index": 0,
+    "source": "heuristic_seed",
+    "chromosome": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.26,
+      "transport_cost": 12.26,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 1,
+    "source": "perturbed_heuristic",
+    "chromosome": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T06",
+      "T05",
+      "T07",
+      "T08"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.26,
+      "transport_cost": 12.26,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 2,
+    "source": "perturbed_heuristic",
+    "chromosome": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T08",
+      "T07"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.26,
+      "transport_cost": 12.26,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 3,
+    "source": "perturbed_heuristic",
+    "chromosome": [
+      "T08",
+      "T04",
+      "T03",
+      "T01",
+      "T05",
+      "T06",
+      "T07",
+      "T02"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.97,
+      "transport_cost": 12.97,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 4,
+    "source": "perturbed_heuristic",
+    "chromosome": [
+      "T01",
+      "T02",
+      "T06",
+      "T03",
+      "T05",
+      "T08",
+      "T07",
+      "T04"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.26,
+      "transport_cost": 12.26,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 5,
+    "source": "perturbed_heuristic",
+    "chromosome": [
+      "T01",
+      "T04",
+      "T05",
+      "T03",
+      "T06",
+      "T02",
+      "T07",
+      "T08"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 13.13,
+      "transport_cost": 13.13,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 6,
+    "source": "perturbed_heuristic",
+    "chromosome": [
+      "T05",
+      "T02",
+      "T06",
+      "T01",
+      "T03",
+      "T04",
+      "T07",
+      "T08"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.7,
+      "transport_cost": 12.7,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 7,
+    "source": "perturbed_heuristic",
+    "chromosome": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T07",
+      "T05",
+      "T06",
+      "T08"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.26,
+      "transport_cost": 12.26,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 8,
+    "source": "perturbed_heuristic",
+    "chromosome": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T08",
+      "T07",
+      "T05",
+      "T06"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.26,
+      "transport_cost": 12.26,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 9,
+    "source": "perturbed_heuristic",
+    "chromosome": [
+      "T06",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T01",
+      "T07",
+      "T08"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.59,
+      "transport_cost": 12.59,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 10,
+    "source": "perturbed_heuristic",
+    "chromosome": [
+      "T01",
+      "T02",
+      "T03",
+      "T07",
+      "T05",
+      "T08",
+      "T06",
+      "T04"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.26,
+      "transport_cost": 12.26,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 11,
+    "source": "perturbed_heuristic",
+    "chromosome": [
+      "T01",
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T08",
+      "T04",
+      "T06"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.26,
+      "transport_cost": 12.26,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 12,
+    "source": "random_permutation",
+    "chromosome": [
+      "T06",
+      "T02",
+      "T04",
+      "T08",
+      "T01",
+      "T03",
+      "T07",
+      "T05"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 13.09,
+      "transport_cost": 13.09,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 13,
+    "source": "random_permutation",
+    "chromosome": [
+      "T01",
+      "T05",
+      "T06",
+      "T04",
+      "T07",
+      "T02",
+      "T03",
+      "T08"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.7,
+      "transport_cost": 12.7,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 14,
+    "source": "random_permutation",
+    "chromosome": [
+      "T08",
+      "T04",
+      "T02",
+      "T03",
+      "T01",
+      "T06",
+      "T05",
+      "T07"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.97,
+      "transport_cost": 12.97,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 15,
+    "source": "random_permutation",
+    "chromosome": [
+      "T07",
+      "T01",
+      "T08",
+      "T03",
+      "T05",
+      "T06",
+      "T04",
+      "T02"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.7,
+      "transport_cost": 12.7,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 16,
+    "source": "random_permutation",
+    "chromosome": [
+      "T05",
+      "T02",
+      "T03",
+      "T01",
+      "T04",
+      "T06",
+      "T08",
+      "T07"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.7,
+      "transport_cost": 12.7,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 17,
+    "source": "random_permutation",
+    "chromosome": [
+      "T07",
+      "T05",
+      "T06",
+      "T04",
+      "T02",
+      "T01",
+      "T03",
+      "T08"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 13.11,
+      "transport_cost": 13.11,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 18,
+    "source": "random_permutation",
+    "chromosome": [
+      "T02",
+      "T05",
+      "T03",
+      "T06",
+      "T04",
+      "T07",
+      "T08",
+      "T01"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.66,
+      "transport_cost": 12.66,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 19,
+    "source": "random_permutation",
+    "chromosome": [
+      "T06",
+      "T02",
+      "T08",
+      "T03",
+      "T07",
+      "T05",
+      "T01",
+      "T04"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 13.09,
+      "transport_cost": 13.09,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 20,
+    "source": "random_permutation",
+    "chromosome": [
+      "T02",
+      "T07",
+      "T06",
+      "T04",
+      "T05",
+      "T08",
+      "T01",
+      "T03"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.68,
+      "transport_cost": 12.68,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 21,
+    "source": "random_permutation",
+    "chromosome": [
+      "T07",
+      "T06",
+      "T01",
+      "T03",
+      "T02",
+      "T05",
+      "T08",
+      "T04"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 13.11,
+      "transport_cost": 13.11,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 22,
+    "source": "random_permutation",
+    "chromosome": [
+      "T06",
+      "T01",
+      "T07",
+      "T04",
+      "T08",
+      "T05",
+      "T02",
+      "T03"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 13.11,
+      "transport_cost": 13.11,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  },
+  {
+    "index": 23,
+    "source": "random_permutation",
+    "chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "objective": {
+      "unassigned_count": 0,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "independently_validated": true
+  }
+]

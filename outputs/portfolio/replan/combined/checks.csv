@@ -1,0 +1,73 @@
+﻿scope,trip_id,code,passed,evidence_json
+plan,,unique_trip_ids,True,{}
+plan,,unique_tasks_across_trips,True,"{""duplicate_task_ids"": []}"
+plan,,unique_unassigned_tasks,True,"{""duplicate_task_ids"": []}"
+plan,,assigned_unassigned_disjoint,True,"{""task_ids"": []}"
+plan,,all_tasks_accounted_for,True,"{""missing_task_ids"": []}"
+plan,,frozen_trip_records_unchanged,True,{}
+plan,,mode_unchanged,True,{}
+plan,,new_loads_after_checkpoint,True,{}
+plan,,failed_vehicle_has_no_new_trips,True,{}
+plan,,residual_independent_validation,True,{}
+plan,,combined_historical_physical_validation,True,{}
+trip,AGV-01-trip-1,nonempty_trip,True,{}
+trip,AGV-01-trip-1,vehicle_available,True,{}
+trip,AGV-01-trip-1,unique_tasks_in_trip,True,{}
+trip,AGV-01-trip-1,payload,True,"{""payload_kg"": 24.0, ""capacity_kg"": 35}"
+trip,AGV-01-trip-1,eligibility,True,"{""task_id"": ""T02"", ""vehicle_id"": ""AGV-01""}"
+trip,AGV-01-trip-1,load_start,True,"{""load_start_s"": 0, ""required_ready_s"": 0}"
+trip,AGV-01-trip-1,route_edge,True,"{""from_node"": ""DEPOT"", ""to_node"": ""S02""}"
+trip,AGV-01-trip-1,time_window,True,"{""task_id"": ""T02"", ""mode"": ""soft"", ""service_start_s"": 270, ""latest_s"": 680, ""lateness_s"": 0}"
+trip,AGV-01-trip-1,route_edge,True,"{""from_node"": ""S02"", ""to_node"": ""DEPOT""}"
+trip,AGV-01-trip-1,trip_limit,True,"{""mission_s"": 520, ""trip_limit_s"": 2000}"
+trip,AGV-01-trip-1,availability_end,True,"{""depot_unload_end_s"": 570, ""available_until_s"": 7200}"
+trip,replan-001,nonempty_trip,True,{}
+trip,replan-001,vehicle_available,True,{}
+trip,replan-001,unique_tasks_in_trip,True,{}
+trip,replan-001,payload,True,"{""payload_kg"": 41.0, ""capacity_kg"": 50}"
+trip,replan-001,eligibility,True,"{""task_id"": ""T06"", ""vehicle_id"": ""AGV-02""}"
+trip,replan-001,eligibility,True,"{""task_id"": ""T04"", ""vehicle_id"": ""AGV-02""}"
+trip,replan-001,load_start,True,"{""load_start_s"": 600, ""required_ready_s"": 600}"
+trip,replan-001,route_edge,True,"{""from_node"": ""DEPOT"", ""to_node"": ""S06""}"
+trip,replan-001,time_window,True,"{""task_id"": ""T06"", ""mode"": ""soft"", ""service_start_s"": 891, ""latest_s"": 1400, ""lateness_s"": 0}"
+trip,replan-001,route_edge,True,"{""from_node"": ""S06"", ""to_node"": ""S04""}"
+trip,replan-001,time_window,True,"{""task_id"": ""T04"", ""mode"": ""soft"", ""service_start_s"": 949, ""latest_s"": 1040, ""lateness_s"": 0}"
+trip,replan-001,route_edge,True,"{""from_node"": ""S04"", ""to_node"": ""DEPOT""}"
+trip,replan-001,trip_limit,True,"{""mission_s"": 644, ""trip_limit_s"": 2000}"
+trip,replan-001,availability_end,True,"{""depot_unload_end_s"": 1294, ""available_until_s"": 7200}"
+trip,UAV-01-trip-1,nonempty_trip,True,{}
+trip,UAV-01-trip-1,vehicle_available,True,{}
+trip,UAV-01-trip-1,unique_tasks_in_trip,True,{}
+trip,UAV-01-trip-1,payload,True,"{""payload_kg"": 2.45, ""capacity_kg"": 4}"
+trip,UAV-01-trip-1,eligibility,True,"{""task_id"": ""T05"", ""vehicle_id"": ""UAV-01""}"
+trip,UAV-01-trip-1,load_start,True,"{""load_start_s"": 0, ""required_ready_s"": 0}"
+trip,UAV-01-trip-1,route_edge,True,"{""from_node"": ""DEPOT"", ""to_node"": ""S05""}"
+trip,UAV-01-trip-1,time_window,True,"{""task_id"": ""T05"", ""mode"": ""soft"", ""service_start_s"": 46, ""latest_s"": 1220, ""lateness_s"": 0}"
+trip,UAV-01-trip-1,route_edge,True,"{""from_node"": ""S05"", ""to_node"": ""DEPOT""}"
+trip,UAV-01-trip-1,trip_limit,True,"{""mission_s"": 92, ""trip_limit_s"": 800}"
+trip,UAV-01-trip-1,availability_end,True,"{""depot_unload_end_s"": 122, ""available_until_s"": 3600}"
+trip,UAV-01-trip-2,nonempty_trip,True,{}
+trip,UAV-01-trip-2,vehicle_available,True,{}
+trip,UAV-01-trip-2,unique_tasks_in_trip,True,{}
+trip,UAV-01-trip-2,payload,True,"{""payload_kg"": 1.63, ""capacity_kg"": 4}"
+trip,UAV-01-trip-2,eligibility,True,"{""task_id"": ""T03"", ""vehicle_id"": ""UAV-01""}"
+trip,UAV-01-trip-2,load_start,True,"{""load_start_s"": 182, ""required_ready_s"": 182}"
+trip,UAV-01-trip-2,route_edge,True,"{""from_node"": ""DEPOT"", ""to_node"": ""S03""}"
+trip,UAV-01-trip-2,time_window,True,"{""task_id"": ""T03"", ""mode"": ""soft"", ""service_start_s"": 214, ""latest_s"": 860, ""lateness_s"": 0}"
+trip,UAV-01-trip-2,route_edge,True,"{""from_node"": ""S03"", ""to_node"": ""DEPOT""}"
+trip,UAV-01-trip-2,trip_limit,True,"{""mission_s"": 54, ""trip_limit_s"": 800}"
+trip,UAV-01-trip-2,availability_end,True,"{""depot_unload_end_s"": 266, ""available_until_s"": 3600}"
+trip,replan-002,nonempty_trip,True,{}
+trip,replan-002,vehicle_available,True,{}
+trip,replan-002,unique_tasks_in_trip,True,{}
+trip,replan-002,payload,True,"{""payload_kg"": 3.44, ""capacity_kg"": 4}"
+trip,replan-002,eligibility,True,"{""task_id"": ""T07"", ""vehicle_id"": ""UAV-01""}"
+trip,replan-002,eligibility,True,"{""task_id"": ""T01"", ""vehicle_id"": ""UAV-01""}"
+trip,replan-002,load_start,True,"{""load_start_s"": 326, ""required_ready_s"": 326}"
+trip,replan-002,route_edge,True,"{""from_node"": ""DEPOT"", ""to_node"": ""S07""}"
+trip,replan-002,time_window,True,"{""task_id"": ""T07"", ""mode"": ""soft"", ""service_start_s"": 374, ""latest_s"": 1580, ""lateness_s"": 0}"
+trip,replan-002,route_edge,True,"{""from_node"": ""S07"", ""to_node"": ""S01""}"
+trip,replan-002,time_window,True,"{""task_id"": ""T01"", ""mode"": ""soft"", ""service_start_s"": 415, ""latest_s"": 500, ""lateness_s"": 0}"
+trip,replan-002,route_edge,True,"{""from_node"": ""S01"", ""to_node"": ""DEPOT""}"
+trip,replan-002,trip_limit,True,"{""mission_s"": 109, ""trip_limit_s"": 800}"
+trip,replan-002,availability_end,True,"{""depot_unload_end_s"": 465, ""available_until_s"": 3600}"

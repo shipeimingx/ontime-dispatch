@@ -1,0 +1,32 @@
+2025 中国机械工程学会工业大数据与智能系统分会学术年会
+暨第八届大数据驱动的智能制造学术会议
+Collaborative Routing with Time Windows for Material Handling with
+UAVs and AGVs in Manufacturing Workshops
+Peiming SHI
+1
+, Luyang HOU2, Rong XIE
+3, * 1.The Hang Seng University of Hong Kong, Hong Kong, China
+2. Fuyao University of Science and Technology, Fujian, China
+3. Dalian University of Technology, Liaoning, China
+Abstract ： Material handling demands in smart manufacturing workshops, such as automotive production
+facilities, have become frequent and diverse. Traditional single-mode transportation methods struggle to meet the
+requirements for efficiency and flexibility in logistics. The collaborative operation of unmanned aerial vehicles
+(UAVs) and automated guided vehicles (AGVs) offers a novel solution to this challenge. However, existing
+research primarily focused on single vehicle types or simplistic scenarios, lacking comprehensive consideration of
+complex multi-trip demands, time-window constraints and integrated optimization of collaborative systems with
+UAVs and AGVs. This paper addresses the material handling scenario mentioned above by focusing on the
+Multi-Trip Capacitated Vehicle Routing Problem with Time Windows (MTCVRP-TW) and proposes a modeling
+and solution approach for collaborative routing of UAVs and AGVs. First, considering the heterogeneous
+characteristics of UAVs and AGVs, load and endurance constraints, multi-trip requirements, and time window
+constraints at production stations, we build an MTCVRP-TW model to minimize total transportation costs and
+time violation penalties. Second, we design a two-stage solution algorithm: the first stage employs an integrated
+heuristic algorithm to construct an initial feasible solution through task classification and greedy strategies, prioritizing time window constraints; the second stage introduces a genetic algorithm for global optimization, iteratively improving solution quality through selection, crossover, mutation, and local search (2-opt) operations to
+enhance overall routing efficiency. To validate the model's and algorithm's effectiveness, we made simulation
+experiments with a case study of parts delivery from a warehouse to multiple production stations. Experiments
+with varying task scales and time window distributions were designed to compare the performance of the
+collaborative system against single-mode transportation in terms of transportation cost, time window compliance
+rate, and delivery efficiency. The results showed that the UAV-AGV collaborative framework outperformed
+traditional methods, particularly in high-density task scenarios with strict time windows. The proposed two-stage
+algorithm achieved near-optimal solutions within a reasonable computational time with improved delivery
+efficiency and low time window violation rates. Key words： Collaborative Routing, Material Handling, UAV and AGV, Smart Manufacturing, Time Windows
+Fig. 1 Collaborative workflow for Material Handling of Manufacturing Workshops with UAVs and AGVs

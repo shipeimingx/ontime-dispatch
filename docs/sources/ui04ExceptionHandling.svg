@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img" aria-labelledby="title desc"><title id="title">Exception Handling — Proposed extension</title><desc id="desc">Editable low fidelity OnTime Dispatch design. Illustrative data, independently calculated with demo-v1, not an operational screenshot.</desc><style>text{font-family:"Source Han Sans SC","Source Han Sans CN","Noto Sans CJK SC",sans-serif;fill:#182936;font-size:16px} .muted{fill:#5C6C75}</style>
+<rect x="0" y="0" width="1440" height="1000" rx="0" fill="#FAFAF7"/>
+<text x="40" y="43" style="font-size:22px;fill:#182936;font-weight:600">OnTime Dispatch</text>
+<rect x="283" y="22" width="172" height="29" rx="4" fill="#EDF3FA"/>
+<text x="293" y="42" style="font-size:13px;fill:#3463A7;font-weight:600">Proposed extension</text>
+<text x="1400" y="41" style="font-size:13px;fill:#5C6C75;font-weight:400" text-anchor="end">SIMULATION ONLY</text>
+<line x1="40" y1="66" x2="1400" y2="66" stroke="#D6DDE2" stroke-width="1"/>
+<text x="56" y="106" style="font-size:16px;fill:#5C6C75;font-weight:400">01   Task Review</text>
+<line x1="40" y1="124" x2="350" y2="124" stroke="#D6DDE2" stroke-width="1"/>
+<text x="396" y="106" style="font-size:16px;fill:#5C6C75;font-weight:400">02   Plan Review</text>
+<line x1="380" y1="124" x2="690" y2="124" stroke="#D6DDE2" stroke-width="1"/>
+<text x="736" y="106" style="font-size:16px;fill:#5C6C75;font-weight:400">03   Execution Monitor</text>
+<line x1="720" y1="124" x2="1030" y2="124" stroke="#D6DDE2" stroke-width="1"/>
+<text x="1076" y="106" style="font-size:16px;fill:#3463A7;font-weight:600">04   Exception Handling</text>
+<line x1="1060" y1="124" x2="1370" y2="124" stroke="#3463A7" stroke-width="3"/>
+<text x="40" y="177" style="font-size:32px;fill:#182936;font-weight:600">Exception Handling</text>
+<text x="40" y="208" style="font-size:16px;fill:#5C6C75;font-weight:400">Understand the change, then review a new candidate.</text>
+<text x="1400" y="175" style="font-size:14px;fill:#5C6C75;font-weight:400" text-anchor="end">Input r2 · New plan P02</text>
+<text x="1400" y="204" style="font-size:14px;fill:#5C6C75;font-weight:400" text-anchor="end">Window: hard arrival · demo-v1</text>
+<line x1="40" y1="951" x2="1400" y2="951" stroke="#D6DDE2" stroke-width="1"/>
+<text x="40" y="978" style="font-size:13px;fill:#5C6C75;font-weight:400">Illustrative data · Proposed extension · Low-fidelity interface specification</text>
+<text x="1400" y="978" style="font-size:13px;fill:#3463A7;font-weight:400" text-anchor="end">ONTIME / 04</text>
+<rect x="40" y="234" width="1360" height="64" rx="6" fill="#F7F0E4"/>
+<text x="60" y="261" style="font-size:18px;fill:#8A5A14;font-weight:600">UAV-01 unavailable at 09:00</text>
+<text x="60" y="285" style="font-size:14px;fill:#8A5A14;font-weight:400">Simulation paused · Old approval invalidated · No automatic reassignment</text>
+<rect x="40" y="318" width="1360" height="285" rx="7" fill="white" stroke="#D6DDE2"/>
+<text x="60" y="351" style="font-size:18px;fill:#182936;font-weight:600">Impact and new suggestion · P02 is not approved</text>
+<rect x="60" y="373" width="1320" height="38" rx="0" fill="#EDF3FA"/>
+<text x="72" y="398" style="font-size:13px;fill:#5C6C75;font-weight:600">Task</text>
+<text x="192" y="398" style="font-size:13px;fill:#5C6C75;font-weight:600">Previous / ETA</text>
+<text x="482" y="398" style="font-size:13px;fill:#5C6C75;font-weight:600">New suggestion / ETA</text>
+<text x="862" y="398" style="font-size:13px;fill:#5C6C75;font-weight:600">Outcome</text>
+<rect x="60" y="411" width="1320" height="45" rx="0" fill="#FCFCFA"/>
+<line x1="60" y1="456" x2="1380" y2="456" stroke="#D6DDE2" stroke-width="1"/>
+<text x="72" y="438.5" style="font-size:14px;fill:#182936;font-weight:400">T01</text>
+<text x="192" y="438.5" style="font-size:14px;fill:#182936;font-weight:400">UAV-01 / 09:02</text>
+<text x="482" y="438.5" style="font-size:14px;fill:#8A5A14;font-weight:400">Unassigned / —</text>
+<text x="862" y="438.5" style="font-size:14px;fill:#182936;font-weight:400">Arrival window cannot be met</text>
+<line x1="60" y1="501" x2="1380" y2="501" stroke="#D6DDE2" stroke-width="1"/>
+<text x="72" y="483.5" style="font-size:14px;fill:#182936;font-weight:400">T02</text>
+<text x="192" y="483.5" style="font-size:14px;fill:#182936;font-weight:400">AGV-01 / 09:04</text>
+<text x="482" y="483.5" style="font-size:14px;fill:#182936;font-weight:400">AGV-01 / 09:04</text>
+<text x="862" y="483.5" style="font-size:14px;fill:#182936;font-weight:400">Assignment retained in new suggestion</text>
+<rect x="60" y="501" width="1320" height="45" rx="0" fill="#FCFCFA"/>
+<line x1="60" y1="546" x2="1380" y2="546" stroke="#D6DDE2" stroke-width="1"/>
+<text x="72" y="528.5" style="font-size:14px;fill:#182936;font-weight:400">T03</text>
+<text x="192" y="528.5" style="font-size:14px;fill:#182936;font-weight:400">AGV-01 / 09:18</text>
+<text x="482" y="528.5" style="font-size:14px;fill:#182936;font-weight:400">AGV-01 / 09:18</text>
+<text x="862" y="528.5" style="font-size:14px;fill:#182936;font-weight:400">Assignment retained in new suggestion</text>
+<line x1="60" y1="591" x2="1380" y2="591" stroke="#D6DDE2" stroke-width="1"/>
+<text x="72" y="573.5" style="font-size:14px;fill:#182936;font-weight:400">T04</text>
+<text x="192" y="573.5" style="font-size:14px;fill:#8A5A14;font-weight:400">Unassigned / —</text>
+<text x="482" y="573.5" style="font-size:14px;fill:#8A5A14;font-weight:400">Unassigned / —</text>
+<text x="862" y="573.5" style="font-size:14px;fill:#182936;font-weight:400">Load exceeds available payload</text>
+<rect x="40" y="623" width="700" height="234" rx="7" fill="white" stroke="#D6DDE2"/>
+<text x="60" y="656" style="font-size:18px;fill:#182936;font-weight:600">Why T01 remains unassigned</text>
+<text x="60" y="692" style="font-size:21px;fill:#8A5A14;font-weight:600">Earliest checked AGV arrival: 09:06</text>
+<text x="60" y="728" style="font-size:15px;fill:#5C6C75;font-weight:400">Arrival window ends at 09:05 · 1 minute outside</text>
+<text x="60" y="764" style="font-size:15px;fill:#5C6C75;font-weight:400">360 m ÷ 1 m/s = 6 minutes · start at 09:00</text>
+<text x="60" y="807" style="font-size:14px;fill:#5C6C75;font-weight:400">The rejected check is not a scheduled ETA.</text>
+<rect x="760" y="623" width="640" height="234" rx="7" fill="white" stroke="#D6DDE2"/>
+<text x="780" y="656" style="font-size:18px;fill:#182936;font-weight:600">Decision required</text>
+<rect x="780" y="678" width="114" height="29" rx="4" fill="#EDF3FA"/>
+<text x="790" y="698" style="font-size:13px;fill:#3463A7;font-weight:600">Suggested</text>
+<rect x="908" y="678" width="86" height="29" rx="4" fill="#F7F0E4"/>
+<text x="918" y="698" style="font-size:13px;fill:#8A5A14;font-weight:600">Partial</text>
+<text x="780" y="739" style="font-size:23px;fill:#182936;font-weight:600">2 assigned · 2 unassigned</text>
+<text x="780" y="778" style="font-size:16px;fill:#5C6C75;font-weight:400">New plan requires approval before resuming.</text>
+<text x="780" y="818" style="font-size:14px;fill:#8A5A14;font-weight:400">No feasible assignments? Keep all tasks unassigned.</text>
+<rect x="40" y="887" width="155" height="42" rx="5" fill="white" stroke="#D6DDE2"/>
+<text x="117.5" y="914" style="font-size:14px;fill:#3463A7;font-weight:600" text-anchor="middle">Edit inputs</text>
+<rect x="212" y="887" width="235" height="42" rx="5" fill="white" stroke="#D6DDE2"/>
+<text x="329.5" y="914" style="font-size:14px;fill:#3463A7;font-weight:600" text-anchor="middle">Keep tasks unassigned</text>
+<text x="710" y="914" style="font-size:15px;fill:#3463A7;font-weight:600">Review → approve → resume</text>
+<rect x="1160" y="887" width="240" height="42" rx="5" fill="#3463A7"/>
+<text x="1280.0" y="914" style="font-size:14px;fill:white;font-weight:600" text-anchor="middle">Review new plan</text>
+</svg>

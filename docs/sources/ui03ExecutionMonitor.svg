@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img" aria-labelledby="title desc"><title id="title">Execution Monitor — Proposed extension</title><desc id="desc">Editable low fidelity OnTime Dispatch design. Illustrative data, independently calculated with demo-v1, not an operational screenshot.</desc><style>text{font-family:"Source Han Sans SC","Source Han Sans CN","Noto Sans CJK SC",sans-serif;fill:#182936;font-size:16px} .muted{fill:#5C6C75}</style>
+<rect x="0" y="0" width="1440" height="1000" rx="0" fill="#FAFAF7"/>
+<text x="40" y="43" style="font-size:22px;fill:#182936;font-weight:600">OnTime Dispatch</text>
+<rect x="283" y="22" width="172" height="29" rx="4" fill="#EDF3FA"/>
+<text x="293" y="42" style="font-size:13px;fill:#3463A7;font-weight:600">Proposed extension</text>
+<text x="1400" y="41" style="font-size:13px;fill:#5C6C75;font-weight:400" text-anchor="end">SIMULATION ONLY</text>
+<line x1="40" y1="66" x2="1400" y2="66" stroke="#D6DDE2" stroke-width="1"/>
+<text x="56" y="106" style="font-size:16px;fill:#5C6C75;font-weight:400">01   Task Review</text>
+<line x1="40" y1="124" x2="350" y2="124" stroke="#D6DDE2" stroke-width="1"/>
+<text x="396" y="106" style="font-size:16px;fill:#5C6C75;font-weight:400">02   Plan Review</text>
+<line x1="380" y1="124" x2="690" y2="124" stroke="#D6DDE2" stroke-width="1"/>
+<text x="736" y="106" style="font-size:16px;fill:#3463A7;font-weight:600">03   Execution Monitor</text>
+<line x1="720" y1="124" x2="1030" y2="124" stroke="#3463A7" stroke-width="3"/>
+<text x="1076" y="106" style="font-size:16px;fill:#5C6C75;font-weight:400">04   Exception Handling</text>
+<line x1="1060" y1="124" x2="1370" y2="124" stroke="#D6DDE2" stroke-width="1"/>
+<text x="40" y="177" style="font-size:32px;fill:#182936;font-weight:600">Execution Monitor</text>
+<text x="40" y="208" style="font-size:16px;fill:#5C6C75;font-weight:400">Review the simulation state and the last approved plan.</text>
+<text x="1400" y="175" style="font-size:14px;fill:#5C6C75;font-weight:400" text-anchor="end">Run S01 · Plan P01</text>
+<text x="1400" y="204" style="font-size:14px;fill:#5C6C75;font-weight:400" text-anchor="end">Window: hard arrival · demo-v1</text>
+<line x1="40" y1="951" x2="1400" y2="951" stroke="#D6DDE2" stroke-width="1"/>
+<text x="40" y="978" style="font-size:13px;fill:#5C6C75;font-weight:400">Illustrative data · Proposed extension · Low-fidelity interface specification</text>
+<text x="1400" y="978" style="font-size:13px;fill:#3463A7;font-weight:400" text-anchor="end">ONTIME / 03</text>
+<rect x="40" y="234" width="143" height="29" rx="4" fill="#F7F0E4"/>
+<text x="50" y="254" style="font-size:13px;fill:#8A5A14;font-weight:600">Needs replan</text>
+<text x="206" y="255" style="font-size:19px;fill:#182936;font-weight:600">Simulation paused at 09:00</text>
+<text x="1400" y="255" style="font-size:15px;fill:#8A5A14;font-weight:400" text-anchor="end">Old approval invalidated · Input r2</text>
+<rect x="40" y="286" width="910" height="225" rx="7" fill="white" stroke="#D6DDE2"/>
+<text x="60" y="319" style="font-size:18px;fill:#182936;font-weight:600">Simulation devices</text>
+<rect x="60" y="343" width="870" height="38" rx="0" fill="#EDF3FA"/>
+<text x="72" y="368" style="font-size:13px;fill:#5C6C75;font-weight:600">Vehicle</text>
+<text x="222" y="368" style="font-size:13px;fill:#5C6C75;font-weight:600">Availability</text>
+<text x="394" y="368" style="font-size:13px;fill:#5C6C75;font-weight:600">Simulation state</text>
+<text x="584" y="368" style="font-size:13px;fill:#5C6C75;font-weight:600">Task / Trip</text>
+<text x="747" y="368" style="font-size:13px;fill:#5C6C75;font-weight:600">Next event</text>
+<rect x="60" y="381" width="870" height="57" rx="0" fill="#FCFCFA"/>
+<line x1="60" y1="438" x2="930" y2="438" stroke="#D6DDE2" stroke-width="1"/>
+<text x="72" y="414.5" style="font-size:14px;fill:#182936;font-weight:400">UAV-01</text>
+<text x="222" y="414.5" style="font-size:14px;fill:#182936;font-weight:400">Unavailable</text>
+<text x="394" y="414.5" style="font-size:14px;fill:#182936;font-weight:400">Needs replan</text>
+<text x="584" y="414.5" style="font-size:14px;fill:#182936;font-weight:400">T01 / 1</text>
+<text x="747" y="414.5" style="font-size:14px;fill:#182936;font-weight:400">Replan required</text>
+<line x1="60" y1="495" x2="930" y2="495" stroke="#D6DDE2" stroke-width="1"/>
+<text x="72" y="471.5" style="font-size:14px;fill:#182936;font-weight:400">AGV-01</text>
+<text x="222" y="471.5" style="font-size:14px;fill:#182936;font-weight:400">Available</text>
+<text x="394" y="471.5" style="font-size:14px;fill:#182936;font-weight:400">Paused at depot</text>
+<text x="584" y="471.5" style="font-size:14px;fill:#182936;font-weight:400">T02 / 1</text>
+<text x="747" y="471.5" style="font-size:14px;fill:#182936;font-weight:400">Waiting for approval</text>
+<rect x="970" y="286" width="430" height="225" rx="7" fill="white" stroke="#D6DDE2"/>
+<text x="990" y="319" style="font-size:18px;fill:#182936;font-weight:600">Task summary</text>
+<text x="990" y="355" style="font-size:15px;fill:#5C6C75;font-weight:400">Delivered</text>
+<text x="1378" y="355" style="font-size:22px;fill:#3463A7;font-weight:600" text-anchor="end">0 / 4</text>
+<text x="990" y="406" style="font-size:15px;fill:#5C6C75;font-weight:400">Needs replanning</text>
+<text x="1378" y="406" style="font-size:22px;fill:#3463A7;font-weight:600" text-anchor="end">3</text>
+<text x="990" y="457" style="font-size:15px;fill:#5C6C75;font-weight:400">Previously unassigned</text>
+<text x="1378" y="457" style="font-size:22px;fill:#3463A7;font-weight:600" text-anchor="end">1</text>
+<rect x="40" y="534" width="910" height="328" rx="7" fill="white" stroke="#D6DDE2"/>
+<text x="60" y="567" style="font-size:18px;fill:#182936;font-weight:600">Previous approved plan · now invalid</text>
+<text x="60" y="607" style="font-size:12px;fill:#5C6C75;font-weight:600">CALCULATED TRIPS · ARRIVAL CHECK</text>
+<line x1="195.0" y1="637" x2="195.0" y2="769" stroke="#D6DDE2" stroke-width="1"/>
+<text x="195.0" y="630" style="font-size:11px;fill:#5C6C75;font-weight:400" text-anchor="middle">09:00</text>
+<line x1="314.0" y1="637" x2="314.0" y2="769" stroke="#D6DDE2" stroke-width="1"/>
+<text x="314.0" y="630" style="font-size:11px;fill:#5C6C75;font-weight:400" text-anchor="middle">09:05</text>
+<line x1="433.0" y1="637" x2="433.0" y2="769" stroke="#D6DDE2" stroke-width="1"/>
+<text x="433.0" y="630" style="font-size:11px;fill:#5C6C75;font-weight:400" text-anchor="middle">09:10</text>
+<line x1="552.0" y1="637" x2="552.0" y2="769" stroke="#D6DDE2" stroke-width="1"/>
+<text x="552.0" y="630" style="font-size:11px;fill:#5C6C75;font-weight:400" text-anchor="middle">09:15</text>
+<line x1="671.0" y1="637" x2="671.0" y2="769" stroke="#D6DDE2" stroke-width="1"/>
+<text x="671.0" y="630" style="font-size:11px;fill:#5C6C75;font-weight:400" text-anchor="middle">09:20</text>
+<line x1="790.0" y1="637" x2="790.0" y2="769" stroke="#D6DDE2" stroke-width="1"/>
+<text x="790.0" y="630" style="font-size:11px;fill:#5C6C75;font-weight:400" text-anchor="middle">09:25</text>
+<line x1="909.0" y1="637" x2="909.0" y2="769" stroke="#D6DDE2" stroke-width="1"/>
+<text x="909.0" y="630" style="font-size:11px;fill:#5C6C75;font-weight:400" text-anchor="middle">09:30</text>
+<text x="60" y="667" style="font-size:13px;fill:#5C6C75;font-weight:400">UAV / T01</text>
+<rect x="218.8" y="652" width="95.2" height="23" rx="2" fill="#EAF0F7" stroke="#D6DDE2"/>
+<rect x="195.0" y="655" width="47.6" height="17" rx="2" fill="#3463A7"/>
+<rect x="242.6" y="655" width="23.8" height="17" rx="2" fill="#97AACA"/>
+<rect x="266.4" y="655" width="47.6" height="17" rx="2" fill="#CCD6E5"/>
+<text x="242.6" y="651" style="font-size:11px;fill:#3463A7;font-weight:400" text-anchor="middle">09:02</text>
+<text x="60" y="709" style="font-size:13px;fill:#5C6C75;font-weight:400">AGV / T02</text>
+<rect x="266.4" y="694" width="95.2" height="23" rx="2" fill="#EAF0F7" stroke="#D6DDE2"/>
+<rect x="195.0" y="697" width="95.2" height="17" rx="2" fill="#3463A7"/>
+<rect x="290.2" y="697" width="47.6" height="17" rx="2" fill="#97AACA"/>
+<rect x="337.8" y="697" width="95.2" height="17" rx="2" fill="#CCD6E5"/>
+<text x="290.2" y="693" style="font-size:11px;fill:#3463A7;font-weight:400" text-anchor="middle">09:04</text>
+<text x="60" y="751" style="font-size:13px;fill:#5C6C75;font-weight:400">AGV / T03</text>
+<rect x="433.0" y="736" width="238.0" height="23" rx="2" fill="#EAF0F7" stroke="#D6DDE2"/>
+<rect x="480.6" y="739" width="142.8" height="17" rx="2" fill="#3463A7"/>
+<rect x="623.4000000000001" y="739" width="47.6" height="17" rx="2" fill="#97AACA"/>
+<rect x="671.0" y="739" width="142.8" height="17" rx="2" fill="#CCD6E5"/>
+<text x="623.4000000000001" y="735" style="font-size:11px;fill:#3463A7;font-weight:400" text-anchor="middle">09:18</text>
+<text x="195" y="795" style="font-size:11px;fill:#3463A7;font-weight:400">Travel</text>
+<text x="265" y="795" style="font-size:11px;fill:#5C6C75;font-weight:400">Service</text>
+<text x="340" y="795" style="font-size:11px;fill:#5C6C75;font-weight:400">Return</text>
+<text x="420" y="795" style="font-size:11px;fill:#5C6C75;font-weight:400">Window band</text>
+<text x="60" y="835" style="font-size:14px;fill:#5C6C75;font-weight:400">Read-only reference. No task has departed or arrived.</text>
+<rect x="970" y="534" width="430" height="328" rx="7" fill="white" stroke="#D6DDE2"/>
+<text x="990" y="567" style="font-size:18px;fill:#182936;font-weight:600">Simulation events</text>
+<text x="990" y="604" style="font-size:16px;fill:#8A5A14;font-weight:600">09:00  Device unavailable</text>
+<text x="990" y="635" style="font-size:14px;fill:#5C6C75;font-weight:400">UAV-01 changed before departure.</text>
+<line x1="990" y1="661" x2="1378" y2="661" stroke="#D6DDE2" stroke-width="1"/>
+<text x="990" y="696" style="font-size:16px;fill:#182936;font-weight:600">09:00  Approval invalidated</text>
+<text x="990" y="727" style="font-size:14px;fill:#5C6C75;font-weight:400">All simulated movement paused.</text>
+<text x="990" y="783" style="font-size:14px;fill:#5C6C75;font-weight:400">No live vehicle telemetry.</text>
+<text x="990" y="814" style="font-size:14px;fill:#5C6C75;font-weight:400">Event processed before departures.</text>
+<rect x="40" y="887" width="188" height="42" rx="5" fill="white" stroke="#D6DDE2"/>
+<text x="134.0" y="914" style="font-size:14px;fill:#3463A7;font-weight:600" text-anchor="middle">Review old plan</text>
+<text x="252" y="914" style="font-size:15px;fill:#5C6C75;font-weight:400">Resume is blocked until a new plan is approved.</text>
+<rect x="1170" y="887" width="230" height="42" rx="5" fill="#3463A7"/>
+<text x="1285.0" y="914" style="font-size:14px;fill:white;font-weight:600" text-anchor="middle">View exception</text>
+</svg>

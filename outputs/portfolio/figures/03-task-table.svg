@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="795" viewBox="0 0 1440 795">
+<title>任务分配、服务开始窗与未分配原因</title>
+<metadata>{&quot;input_sha256&quot;: &quot;62c99a49c4505945319ea2e568b2211f0bb5fe7c9379947fbe4887a4380619c2&quot;, &quot;parameters&quot;: {&quot;population_size&quot;: 24, &quot;max_generations&quot;: 40, &quot;elite_count&quot;: 2, &quot;tournament_size&quot;: 3, &quot;crossover_rate&quot;: 0.9, &quot;mutation_rate&quot;: 0.25, &quot;patience&quot;: 12, &quot;seed&quot;: 2026, &quot;decoder_seed&quot;: 2026, &quot;costs&quot;: {&quot;uav_transport_per_s&quot;: 0.02, &quot;agv_transport_per_s&quot;: 0.01, &quot;lateness_multiplier&quot;: 1.0, &quot;transport_coefficient_unit&quot;: &quot;penalty_unit/s&quot;, &quot;task_lateness_coefficient_unit&quot;: &quot;penalty_unit/s&quot;, &quot;lateness_multiplier_unit&quot;: &quot;dimensionless&quot;, &quot;cost_unit&quot;: &quot;penalty_unit&quot;, &quot;transport_basis&quot;: &quot;travel seconds on all legs, including depot return&quot;, &quot;objective_priority&quot;: [&quot;unassigned_count&quot;, &quot;transport_cost + lateness_penalty&quot;], &quot;illustrative_coefficients&quot;: true}, &quot;two_opt_implemented&quot;: false}, &quot;data_label&quot;: &quot;Illustrative data&quot;, &quot;source&quot;: &quot;../run.json&quot;, &quot;map_kind&quot;: &quot;schematic only&quot;}</metadata>
+<defs><style>@font-face{font-family:"Source Han Sans CN";src:url("fonts/SourceHanSansCN-Regular.otf")} @font-face{font-family:"Sarasa Mono SC";src:url("fonts/SarasaMonoSC-Regular.ttf")}</style></defs>
+<rect x="0.00" y="0.00" width="1440.00" height="795.00" fill="#f7f6f2"/>
+<text x="42.00" y="44.00" font-family="Sarasa Mono SC" font-size="18" fill="#596b76">OnTime Dispatch</text>
+<text x="42.00" y="89.00" font-family="Source Han Sans CN" font-size="31" fill="#142c3c">任务分配、服务开始窗与未分配原因</text>
+<text x="42.00" y="121.00" font-family="Sarasa Mono SC" font-size="15" fill="#596b76">Illustrative data | mode=soft | seed=2026 | population=24 | generations=12/40</text>
+<text x="42.00" y="753.00" font-family="Source Han Sans CN" font-size="15" fill="#596b76">2026 新实现 · 功能演示 · 候选计划未经人工批准 · 非真实工厂 / 非部署结果</text>
+<text x="42.00" y="777.00" font-family="Sarasa Mono SC" font-size="12" fill="#596b76">input SHA256: 62c99a49c4505945319ea2e568b2211f0bb5fe7c9379947fbe4887a4380619c2</text>
+<text x="42.00" y="163.00" font-family="Source Han Sans CN" font-size="17" fill="#596b76">时间窗针对卸载 / 服务开始；soft 模式保留迟到。表格来自同一 GA 候选计划。</text>
+<rect x="34.00" y="191.00" width="1370.00" height="45.00" fill="#142c3c"/>
+<text x="42.00" y="217.00" font-family="Source Han Sans CN" font-size="16" fill="#ffffff">任务</text>
+<text x="112.00" y="217.00" font-family="Source Han Sans CN" font-size="16" fill="#ffffff">工位</text>
+<text x="202.00" y="217.00" font-family="Source Han Sans CN" font-size="16" fill="#ffffff">重量 kg</text>
+<text x="296.00" y="217.00" font-family="Source Han Sans CN" font-size="16" fill="#ffffff">设备</text>
+<text x="454.00" y="217.00" font-family="Source Han Sans CN" font-size="16" fill="#ffffff">行程序号</text>
+<text x="609.00" y="217.00" font-family="Source Han Sans CN" font-size="16" fill="#ffffff">时间窗 s</text>
+<text x="752.00" y="217.00" font-family="Source Han Sans CN" font-size="16" fill="#ffffff">到达 s</text>
+<text x="852.00" y="217.00" font-family="Source Han Sans CN" font-size="16" fill="#ffffff">开始 s</text>
+<text x="944.00" y="217.00" font-family="Source Han Sans CN" font-size="16" fill="#ffffff">迟到 s</text>
+<text x="1059.00" y="217.00" font-family="Source Han Sans CN" font-size="16" fill="#ffffff">状态 / 原因</text>
+<rect x="34.00" y="236.00" width="1370.00" height="52.00" fill="#ffffff"/>
+<text x="42.00" y="266.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">T01</text>
+<text x="112.00" y="266.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">S01</text>
+<text x="202.00" y="266.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">1.01</text>
+<text x="296.00" y="266.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">UAV-02</text>
+<text x="454.00" y="266.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">1</text>
+<text x="609.00" y="266.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">[5,500]</text>
+<text x="752.00" y="266.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">275</text>
+<text x="852.00" y="266.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">275</text>
+<text x="944.00" y="266.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">0</text>
+<text x="1059.00" y="266.00" font-family="Source Han Sans CN" font-size="16" fill="#142c3c">候选 · 窗内</text>
+<rect x="34.00" y="288.00" width="1370.00" height="52.00" fill="#edf1ef"/>
+<text x="42.00" y="318.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">T02</text>
+<text x="112.00" y="318.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">S02</text>
+<text x="202.00" y="318.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">24</text>
+<text x="296.00" y="318.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">AGV-01</text>
+<text x="454.00" y="318.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">1</text>
+<text x="609.00" y="318.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">[0,680]</text>
+<text x="752.00" y="318.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">270</text>
+<text x="852.00" y="318.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">270</text>
+<text x="944.00" y="318.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">0</text>
+<text x="1059.00" y="318.00" font-family="Source Han Sans CN" font-size="16" fill="#142c3c">候选 · 窗内</text>
+<rect x="34.00" y="340.00" width="1370.00" height="52.00" fill="#ffffff"/>
+<text x="42.00" y="370.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">T03</text>
+<text x="112.00" y="370.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">S03</text>
+<text x="202.00" y="370.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">1.63</text>
+<text x="296.00" y="370.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">UAV-01</text>
+<text x="454.00" y="370.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">2</text>
+<text x="609.00" y="370.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">[25,860]</text>
+<text x="752.00" y="370.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">214</text>
+<text x="852.00" y="370.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">214</text>
+<text x="944.00" y="370.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">0</text>
+<text x="1059.00" y="370.00" font-family="Source Han Sans CN" font-size="16" fill="#142c3c">候选 · 窗内</text>
+<rect x="34.00" y="392.00" width="1370.00" height="52.00" fill="#edf1ef"/>
+<text x="42.00" y="422.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">T04</text>
+<text x="112.00" y="422.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">S04</text>
+<text x="202.00" y="422.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">22</text>
+<text x="296.00" y="422.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">AGV-02</text>
+<text x="454.00" y="422.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">1</text>
+<text x="609.00" y="422.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">[47,1040]</text>
+<text x="752.00" y="422.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">912</text>
+<text x="852.00" y="422.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">912</text>
+<text x="944.00" y="422.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">0</text>
+<text x="1059.00" y="422.00" font-family="Source Han Sans CN" font-size="16" fill="#142c3c">候选 · 窗内</text>
+<rect x="34.00" y="444.00" width="1370.00" height="52.00" fill="#ffffff"/>
+<text x="42.00" y="474.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">T05</text>
+<text x="112.00" y="474.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">S05</text>
+<text x="202.00" y="474.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">2.45</text>
+<text x="296.00" y="474.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">UAV-01</text>
+<text x="454.00" y="474.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">1</text>
+<text x="609.00" y="474.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">[5,1220]</text>
+<text x="752.00" y="474.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">46</text>
+<text x="852.00" y="474.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">46</text>
+<text x="944.00" y="474.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">0</text>
+<text x="1059.00" y="474.00" font-family="Source Han Sans CN" font-size="16" fill="#142c3c">候选 · 窗内</text>
+<rect x="34.00" y="496.00" width="1370.00" height="52.00" fill="#edf1ef"/>
+<text x="42.00" y="526.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">T06</text>
+<text x="112.00" y="526.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">S06</text>
+<text x="202.00" y="526.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">19</text>
+<text x="296.00" y="526.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">AGV-02</text>
+<text x="454.00" y="526.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">1</text>
+<text x="609.00" y="526.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">[29,1400]</text>
+<text x="752.00" y="526.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">976</text>
+<text x="852.00" y="526.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">976</text>
+<text x="944.00" y="526.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">0</text>
+<text x="1059.00" y="526.00" font-family="Source Han Sans CN" font-size="16" fill="#142c3c">候选 · 窗内</text>
+<rect x="34.00" y="548.00" width="1370.00" height="52.00" fill="#ffffff"/>
+<text x="42.00" y="578.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">T07</text>
+<text x="112.00" y="578.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">S07</text>
+<text x="202.00" y="578.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">2.43</text>
+<text x="296.00" y="578.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">UAV-02</text>
+<text x="454.00" y="578.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">1</text>
+<text x="609.00" y="578.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">[19,1580]</text>
+<text x="752.00" y="578.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">315</text>
+<text x="852.00" y="578.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">315</text>
+<text x="944.00" y="578.00" font-family="Sarasa Mono SC" font-size="16" fill="#142c3c">0</text>
+<text x="1059.00" y="578.00" font-family="Source Han Sans CN" font-size="16" fill="#142c3c">候选 · 窗内</text>
+<rect x="34.00" y="600.00" width="1370.00" height="52.00" fill="#edf1ef"/>
+<text x="42.00" y="630.00" font-family="Sarasa Mono SC" font-size="16" fill="#a93f48">T08</text>
+<text x="112.00" y="630.00" font-family="Sarasa Mono SC" font-size="16" fill="#a93f48">S08</text>
+<text x="202.00" y="630.00" font-family="Sarasa Mono SC" font-size="16" fill="#a93f48">60</text>
+<text x="296.00" y="630.00" font-family="Sarasa Mono SC" font-size="16" fill="#a93f48">—</text>
+<text x="454.00" y="630.00" font-family="Sarasa Mono SC" font-size="16" fill="#a93f48">—</text>
+<text x="609.00" y="630.00" font-family="Sarasa Mono SC" font-size="16" fill="#a93f48">[5,1760]</text>
+<text x="752.00" y="630.00" font-family="Sarasa Mono SC" font-size="16" fill="#a93f48">—</text>
+<text x="852.00" y="630.00" font-family="Sarasa Mono SC" font-size="16" fill="#a93f48">—</text>
+<text x="944.00" y="630.00" font-family="Sarasa Mono SC" font-size="16" fill="#a93f48">—</text>
+<text x="1059.00" y="630.00" font-family="Sarasa Mono SC" font-size="16" fill="#a93f48">payload_exceeded</text>
+<text x="42.00" y="694.00" font-family="Source Han Sans CN" font-size="17" fill="#a93f48">T08 未分配：所有可用且适配的设备容量均小于 60 kg；不会通过违规装载提高覆盖。</text>
+</svg>

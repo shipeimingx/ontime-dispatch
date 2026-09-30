@@ -1,0 +1,39 @@
+{
+  "scope": "Observed during this validation session, 2026-09-30",
+  "resolved": [
+    {
+      "kind": "execution-history metadata defect in new extension",
+      "test": "test_replan.ReplanningTests.test_completed_and_active_loaded_tasks_are_frozen",
+      "observed": "Future frozen segments had executed_s=0 but executed_until_s equal to their future start, after the checkpoint. A new assertion requiring executed_until_s <= checkpoint or null failed.",
+      "fix": "Set executed_until_s=null for segments that have not begun. Keep actual simulated prefix end <= checkpoint and executed_s=0 for future segments.",
+      "rerun": "Affected checkpoint tests and final complete suite rerun. Future commitments remain frozen without being represented as already executed."
+    },
+    {
+      "kind": "implementation defect in new extension",
+      "test": "test_replan_cli.CheckpointCLITests.test_malformed_plan_json_has_clean_input_error_exit",
+      "observed": "replan CLI given plan JSON [] raised AttributeError from raw.get, printed a traceback and exited 1 rather than clean input-error exit 2. New regression failed before the fix.",
+      "fix": "Check plan root is a JSON object before extracting exported plan fields; raise InputError otherwise.",
+      "rerun": "Both affected CLI tests and final complete suite rerun after the fix."
+    },
+    {
+      "kind": "implementation defect",
+      "test": "test_replan.ExplicitBoundaryTests.test_dictionary_adapter_cannot_override_device_capacity",
+      "observed": "Input capacity 3 kg, two tasks totalling 4 kg: evaluate_trip accepted a caller-supplied device capacity 4 kg rather than rejecting the conflicting device record. Expected InputError was not raised.",
+      "fix": "Require the dictionary adapter device to match the validated Problem device before evaluating. Forged capacity or availability cannot override input parameters.",
+      "rerun": "Affected regression then complete suite rerun successfully. Final status is read from validation-results.json."
+    },
+    {
+      "kind": "test expectation error",
+      "test": "test_replan.ReplanningTests.test_completed_and_active_loaded_tasks_are_frozen",
+      "observed": "New test initially expected U2 ready at 130 s; independently reconstructed arithmetic gives 30+10+20+5+25+10+20=120 s.",
+      "fix": "Correct expected ready time to 120 s. Production timeline calculation did not need changing.",
+      "rerun": "All 10 checkpoint/boundary tests then passed; subsequent complete suite also passed."
+    },
+    {
+      "kind": "command invocation correction",
+      "observed": "Run-OnTime-Python.cmd -m unittest invokes run_ontime.py and rejects unittest as a CLI subcommand (exit 1).",
+      "fix": "Use Python -m unittest, or the new Run-Validation.cmd. Scheduling wrapper remains a CLI wrapper.",
+      "rerun": "Python -m unittest executed the existing 53 tests successfully."
+    }
+  ]
+}

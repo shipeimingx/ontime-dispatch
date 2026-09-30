@@ -1,0 +1,349 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ontime:input:2026:2",
+  "title": "OnTime Dispatch 2026 illustrative input",
+  "description": "Units kg/m/s. Cross-field constraints and exact matrix nodes are enforced by the Python validator; this schema alone does not establish feasibility.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_label",
+    "depot_id",
+    "stations",
+    "vehicles",
+    "tasks",
+    "travel_time_s"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "enum": [
+        1,
+        2
+      ]
+    },
+    "scenario_label": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": ".*\\S.*"
+    },
+    "depot_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": ".*\\S.*"
+    },
+    "stations": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": ".*\\S.*"
+      }
+    },
+    "window_mode": {
+      "enum": [
+        "soft",
+        "hard"
+      ],
+      "default": "soft"
+    },
+    "vehicles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type",
+          "available",
+          "capacity_kg",
+          "trip_limit_s",
+          "available_from_s",
+          "available_until_s",
+          "load_s",
+          "depot_unload_s",
+          "turnaround_s"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "type": {
+            "enum": [
+              "UAV",
+              "AGV"
+            ]
+          },
+          "available": {
+            "type": "boolean"
+          },
+          "capacity_kg": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "trip_limit_s": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "available_from_s": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "available_until_s": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "load_s": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "depot_unload_s": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "turnaround_s": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "speed_m_s": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "description": "m/s metadata; explicit travel_time_s matrix remains authoritative."
+          }
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "station_id",
+          "demand_kg",
+          "earliest_s",
+          "latest_s",
+          "unload_s",
+          "service_s",
+          "eligible_types"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "station_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "demand_kg": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "earliest_s": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "latest_s": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "unload_s": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "service_s": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "eligible_types": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "UAV",
+                "AGV"
+              ]
+            }
+          },
+          "eligible_vehicle_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": ".*\\S.*"
+            }
+          },
+          "lateness_cost_per_s": {
+            "type": "number",
+            "minimum": 0,
+            "default": 1,
+            "description": "2026 illustrative penalty_unit/s; not money or an original research weight."
+          }
+        }
+      }
+    },
+    "travel_time_s": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "UAV",
+        "AGV"
+      ],
+      "properties": {
+        "UAV": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "AGV": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "distance_m": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "UAV",
+        "AGV"
+      ],
+      "properties": {
+        "UAV": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "AGV": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "units": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mass",
+        "distance",
+        "time",
+        "speed",
+        "cost"
+      ],
+      "properties": {
+        "mass": {
+          "const": "kg"
+        },
+        "distance": {
+          "const": "m"
+        },
+        "time": {
+          "const": "s"
+        },
+        "speed": {
+          "const": "m/s"
+        },
+        "cost": {
+          "const": "penalty_unit"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Descriptive generation evidence only; ignored by scheduling."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": 2
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "units"
+        ],
+        "properties": {
+          "vehicles": {
+            "items": {
+              "required": [
+                "speed_m_s"
+              ]
+            }
+          },
+          "tasks": {
+            "items": {
+              "required": [
+                "lateness_cost_per_s"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="770" viewBox="0 0 1400 770">
+<title>设备不可用后：固定历史与待批准新计划</title>
+<metadata>{&quot;input_sha256&quot;: &quot;62c99a49c4505945319ea2e568b2211f0bb5fe7c9379947fbe4887a4380619c2&quot;, &quot;parameters&quot;: {&quot;population_size&quot;: 24, &quot;max_generations&quot;: 40, &quot;elite_count&quot;: 2, &quot;tournament_size&quot;: 3, &quot;crossover_rate&quot;: 0.9, &quot;mutation_rate&quot;: 0.25, &quot;patience&quot;: 12, &quot;seed&quot;: 2026, &quot;decoder_seed&quot;: 2026, &quot;costs&quot;: {&quot;uav_transport_per_s&quot;: 0.02, &quot;agv_transport_per_s&quot;: 0.01, &quot;lateness_multiplier&quot;: 1.0, &quot;transport_coefficient_unit&quot;: &quot;penalty_unit/s&quot;, &quot;task_lateness_coefficient_unit&quot;: &quot;penalty_unit/s&quot;, &quot;lateness_multiplier_unit&quot;: &quot;dimensionless&quot;, &quot;cost_unit&quot;: &quot;penalty_unit&quot;, &quot;transport_basis&quot;: &quot;travel seconds on all legs, including depot return&quot;, &quot;objective_priority&quot;: [&quot;unassigned_count&quot;, &quot;transport_cost + lateness_penalty&quot;], &quot;illustrative_coefficients&quot;: true}, &quot;two_opt_implemented&quot;: false}, &quot;data_label&quot;: &quot;Illustrative data&quot;, &quot;source&quot;: &quot;../run.json&quot;, &quot;map_kind&quot;: &quot;schematic only&quot;}</metadata>
+<defs><style>@font-face{font-family:"Source Han Sans CN";src:url("fonts/SourceHanSansCN-Regular.otf")} @font-face{font-family:"Sarasa Mono SC";src:url("fonts/SarasaMonoSC-Regular.ttf")}</style></defs>
+<rect x="0.00" y="0.00" width="1400.00" height="770.00" fill="#f7f6f2"/>
+<text x="42.00" y="44.00" font-family="Sarasa Mono SC" font-size="18" fill="#596b76">OnTime Dispatch</text>
+<text x="42.00" y="89.00" font-family="Source Han Sans CN" font-size="31" fill="#142c3c">设备不可用后：固定历史与待批准新计划</text>
+<text x="42.00" y="121.00" font-family="Sarasa Mono SC" font-size="15" fill="#596b76">Illustrative data | mode=soft | seed=2026 | population=24 | generations=12/40</text>
+<text x="42.00" y="728.00" font-family="Source Han Sans CN" font-size="15" fill="#596b76">2026 新实现 · 功能演示 · 候选计划未经人工批准 · 非真实工厂 / 非部署结果</text>
+<text x="42.00" y="752.00" font-family="Sarasa Mono SC" font-size="12" fill="#596b76">input SHA256: 62c99a49c4505945319ea2e568b2211f0bb5fe7c9379947fbe4887a4380619c2</text>
+<line x1="310.00" y1="213.00" x2="310.00" y2="640.00" stroke="#dae1e3" stroke-width="1"/>
+<text x="299.00" y="203.00" font-family="Sarasa Mono SC" font-size="14" fill="#596b76">0</text>
+<line x1="457.14" y1="213.00" x2="457.14" y2="640.00" stroke="#dae1e3" stroke-width="1"/>
+<text x="446.14" y="203.00" font-family="Sarasa Mono SC" font-size="14" fill="#596b76">200</text>
+<line x1="604.29" y1="213.00" x2="604.29" y2="640.00" stroke="#dae1e3" stroke-width="1"/>
+<text x="593.29" y="203.00" font-family="Sarasa Mono SC" font-size="14" fill="#596b76">400</text>
+<line x1="751.43" y1="213.00" x2="751.43" y2="640.00" stroke="#dae1e3" stroke-width="1"/>
+<text x="740.43" y="203.00" font-family="Sarasa Mono SC" font-size="14" fill="#596b76">600</text>
+<line x1="898.57" y1="213.00" x2="898.57" y2="640.00" stroke="#dae1e3" stroke-width="1"/>
+<text x="887.57" y="203.00" font-family="Sarasa Mono SC" font-size="14" fill="#596b76">800</text>
+<line x1="1045.71" y1="213.00" x2="1045.71" y2="640.00" stroke="#dae1e3" stroke-width="1"/>
+<text x="1034.71" y="203.00" font-family="Sarasa Mono SC" font-size="14" fill="#596b76">1000</text>
+<line x1="1192.86" y1="213.00" x2="1192.86" y2="640.00" stroke="#dae1e3" stroke-width="1"/>
+<text x="1181.86" y="203.00" font-family="Sarasa Mono SC" font-size="14" fill="#596b76">1200</text>
+<line x1="1340.00" y1="213.00" x2="1340.00" y2="640.00" stroke="#dae1e3" stroke-width="1"/>
+<text x="1329.00" y="203.00" font-family="Sarasa Mono SC" font-size="14" fill="#596b76">1400</text>
+<text x="1288.00" y="176.00" font-family="Sarasa Mono SC" font-size="14" fill="#596b76">time (s)</text>
+<rect x="42.00" y="157.00" width="14.00" height="14.00" fill="#ddac50"/>
+<text x="62.00" y="166.00" font-family="Source Han Sans CN" font-size="14" fill="#596b76">仓库装载</text>
+<rect x="229.00" y="157.00" width="14.00" height="14.00" fill="#247faa"/>
+<text x="249.00" y="166.00" font-family="Source Han Sans CN" font-size="14" fill="#596b76">行驶 / 返仓</text>
+<rect x="416.00" y="157.00" width="14.00" height="14.00" fill="#9acbc1"/>
+<text x="436.00" y="166.00" font-family="Source Han Sans CN" font-size="14" fill="#596b76">工位等待</text>
+<rect x="603.00" y="157.00" width="14.00" height="14.00" fill="#66a897"/>
+<text x="623.00" y="166.00" font-family="Source Han Sans CN" font-size="14" fill="#596b76">工位卸载</text>
+<rect x="790.00" y="157.00" width="14.00" height="14.00" fill="#715d9c"/>
+<text x="810.00" y="166.00" font-family="Source Han Sans CN" font-size="14" fill="#596b76">工位服务</text>
+<rect x="977.00" y="157.00" width="14.00" height="14.00" fill="#d28659"/>
+<text x="997.00" y="166.00" font-family="Source Han Sans CN" font-size="14" fill="#596b76">仓库卸载</text>
+<rect x="1164.00" y="157.00" width="14.00" height="14.00" fill="#aaaeb2"/>
+<text x="1184.00" y="166.00" font-family="Source Han Sans CN" font-size="14" fill="#596b76">仓库周转</text>
+<text x="42.00" y="251.00" font-family="Sarasa Mono SC" font-size="18" fill="#b86525">AGV-01</text>
+<text x="42.00" y="272.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">AGV-01-trip-1</text>
+<text x="42.00" y="295.00" font-family="Sarasa Mono SC" font-size="14" fill="#142c3c">T02</text>
+<text x="168.00" y="294.00" font-family="Source Han Sans CN" font-size="13" fill="#596b76">固定行程</text>
+<rect x="310.00" y="243.00" width="22.07" height="29.00" fill="#ddac50"/>
+<rect x="332.07" y="243.00" width="176.57" height="29.00" fill="#247faa"/>
+<rect x="508.64" y="243.00" width="11.04" height="29.00" fill="#66a897"/>
+<rect x="519.68" y="243.00" width="18.39" height="29.00" fill="#715d9c"/>
+<rect x="538.07" y="243.00" width="176.57" height="29.00" fill="#247faa"/>
+<rect x="714.64" y="243.00" width="14.71" height="29.00" fill="#d28659"/>
+<text x="310.00" y="230.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">0 → 570 s</text>
+<text x="42.00" y="339.00" font-family="Sarasa Mono SC" font-size="18" fill="#d89938">AGV-02</text>
+<text x="42.00" y="360.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">replan-001</text>
+<text x="42.00" y="383.00" font-family="Sarasa Mono SC" font-size="14" fill="#142c3c">T06,T04</text>
+<text x="168.00" y="382.00" font-family="Source Han Sans CN" font-size="13" fill="#a93f48">待批准新行程</text>
+<rect x="751.43" y="331.00" width="22.07" height="29.00" fill="#ddac50"/>
+<rect x="773.50" y="331.00" width="192.02" height="29.00" fill="#247faa"/>
+<rect x="965.52" y="331.00" width="5.15" height="29.00" fill="#66a897"/>
+<rect x="970.67" y="331.00" width="22.07" height="29.00" fill="#715d9c"/>
+<rect x="992.74" y="331.00" width="15.45" height="29.00" fill="#247faa"/>
+<rect x="1008.19" y="331.00" width="9.56" height="29.00" fill="#66a897"/>
+<rect x="1017.76" y="331.00" width="22.07" height="29.00" fill="#715d9c"/>
+<rect x="1039.83" y="331.00" width="207.47" height="29.00" fill="#247faa"/>
+<rect x="1247.30" y="331.00" width="14.71" height="29.00" fill="#d28659"/>
+<text x="751.43" y="318.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">600 → 1294 s</text>
+<text x="42.00" y="427.00" font-family="Sarasa Mono SC" font-size="18" fill="#1876a3">UAV-01</text>
+<text x="42.00" y="448.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">UAV-01-trip-1</text>
+<text x="42.00" y="471.00" font-family="Sarasa Mono SC" font-size="14" fill="#142c3c">T05</text>
+<text x="168.00" y="470.00" font-family="Source Han Sans CN" font-size="13" fill="#596b76">固定行程</text>
+<rect x="310.00" y="419.00" width="14.71" height="29.00" fill="#ddac50"/>
+<rect x="324.71" y="419.00" width="19.13" height="29.00" fill="#247faa"/>
+<rect x="343.84" y="419.00" width="9.56" height="29.00" fill="#66a897"/>
+<rect x="353.41" y="419.00" width="19.86" height="29.00" fill="#715d9c"/>
+<rect x="373.27" y="419.00" width="19.13" height="29.00" fill="#247faa"/>
+<rect x="392.40" y="419.00" width="7.36" height="29.00" fill="#d28659"/>
+<rect x="399.76" y="419.00" width="44.14" height="29.00" fill="#aaaeb2"/>
+<text x="310.00" y="406.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">0 → 182 s</text>
+<text x="42.00" y="515.00" font-family="Sarasa Mono SC" font-size="18" fill="#1876a3">UAV-01</text>
+<text x="42.00" y="536.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">UAV-01-trip-2</text>
+<text x="42.00" y="559.00" font-family="Sarasa Mono SC" font-size="14" fill="#142c3c">T03</text>
+<text x="168.00" y="558.00" font-family="Source Han Sans CN" font-size="13" fill="#596b76">固定行程</text>
+<rect x="443.90" y="507.00" width="14.71" height="29.00" fill="#ddac50"/>
+<rect x="458.61" y="507.00" width="8.83" height="29.00" fill="#247faa"/>
+<rect x="467.44" y="507.00" width="6.62" height="29.00" fill="#66a897"/>
+<rect x="474.06" y="507.00" width="15.45" height="29.00" fill="#715d9c"/>
+<rect x="489.51" y="507.00" width="8.83" height="29.00" fill="#247faa"/>
+<rect x="498.34" y="507.00" width="7.36" height="29.00" fill="#d28659"/>
+<rect x="505.70" y="507.00" width="44.14" height="29.00" fill="#aaaeb2"/>
+<text x="443.90" y="494.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">182 → 326 s</text>
+<text x="42.00" y="603.00" font-family="Sarasa Mono SC" font-size="18" fill="#1876a3">UAV-01</text>
+<text x="42.00" y="624.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">replan-002</text>
+<text x="42.00" y="647.00" font-family="Sarasa Mono SC" font-size="14" fill="#142c3c">T07,T01</text>
+<text x="168.00" y="646.00" font-family="Source Han Sans CN" font-size="13" fill="#a93f48">待批准新行程</text>
+<rect x="549.84" y="595.00" width="14.71" height="29.00" fill="#ddac50"/>
+<rect x="564.56" y="595.00" width="20.60" height="29.00" fill="#247faa"/>
+<rect x="585.16" y="595.00" width="3.68" height="29.00" fill="#66a897"/>
+<rect x="588.84" y="595.00" width="15.45" height="29.00" fill="#715d9c"/>
+<rect x="604.29" y="595.00" width="11.04" height="29.00" fill="#247faa"/>
+<rect x="615.32" y="595.00" width="4.41" height="29.00" fill="#66a897"/>
+<rect x="619.74" y="595.00" width="13.98" height="29.00" fill="#715d9c"/>
+<rect x="633.71" y="595.00" width="11.04" height="29.00" fill="#247faa"/>
+<rect x="644.75" y="595.00" width="7.36" height="29.00" fill="#d28659"/>
+<text x="549.84" y="582.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">326 → 465 s</text>
+<line x1="457.14" y1="220.00" x2="457.14" y2="226.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="232.00" x2="457.14" y2="238.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="244.00" x2="457.14" y2="250.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="256.00" x2="457.14" y2="262.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="268.00" x2="457.14" y2="274.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="280.00" x2="457.14" y2="286.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="292.00" x2="457.14" y2="298.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="304.00" x2="457.14" y2="310.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="316.00" x2="457.14" y2="322.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="328.00" x2="457.14" y2="334.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="340.00" x2="457.14" y2="346.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="352.00" x2="457.14" y2="358.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="364.00" x2="457.14" y2="370.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="376.00" x2="457.14" y2="382.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="388.00" x2="457.14" y2="394.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="400.00" x2="457.14" y2="406.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="412.00" x2="457.14" y2="418.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="424.00" x2="457.14" y2="430.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="436.00" x2="457.14" y2="442.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="448.00" x2="457.14" y2="454.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="460.00" x2="457.14" y2="466.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="472.00" x2="457.14" y2="478.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="484.00" x2="457.14" y2="490.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="496.00" x2="457.14" y2="502.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="508.00" x2="457.14" y2="514.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="520.00" x2="457.14" y2="526.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="532.00" x2="457.14" y2="538.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="544.00" x2="457.14" y2="550.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="556.00" x2="457.14" y2="562.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="568.00" x2="457.14" y2="574.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="580.00" x2="457.14" y2="586.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="592.00" x2="457.14" y2="598.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="604.00" x2="457.14" y2="610.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="616.00" x2="457.14" y2="622.00" stroke="#a93f48" stroke-width="2"/>
+<line x1="457.14" y1="628.00" x2="457.14" y2="634.00" stroke="#a93f48" stroke-width="2"/>
+<text x="463.14" y="229.00" font-family="Sarasa Mono SC" font-size="14" fill="#a93f48">checkpoint=200s</text>
+<text x="42.00" y="673.00" font-family="Source Han Sans CN" font-size="16" fill="#596b76">横轴包含装载、工位等待 / 卸载 / 服务、返仓、仓库卸载；同车后续行程包含周转。</text>
+<text x="42.00" y="699.00" font-family="Source Han Sans CN" font-size="15" fill="#596b76">末趟未执行的周转不画入条形；设备初始不可用与仓库空闲表现为空白。</text>
+</svg>

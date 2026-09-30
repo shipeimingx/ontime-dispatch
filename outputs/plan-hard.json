@@ -1,0 +1,520 @@
+{
+  "profile": "python-demo-2026-v1",
+  "window_event": "service_start",
+  "mode": "hard",
+  "valid": true,
+  "complete": false,
+  "coverage": "Partial",
+  "assigned_task_ids": [
+    "T01",
+    "T02",
+    "T04"
+  ],
+  "unassigned_task_ids": [
+    "T03",
+    "T05"
+  ],
+  "trips": [
+    {
+      "vehicle_id": "UAV-01",
+      "type": "UAV",
+      "task_ids": [
+        "T01",
+        "T02"
+      ],
+      "route": [
+        "DEPOT",
+        "A",
+        "B",
+        "DEPOT"
+      ],
+      "load_start_s": 0,
+      "load_s": 30,
+      "departure_s": 30,
+      "depot_wait_s": 0,
+      "payload_kg": 4.0,
+      "capacity_kg": 5,
+      "stops": [
+        {
+          "task_id": "T01",
+          "station_id": "A",
+          "arrival_s": 80,
+          "earliest_s": 100,
+          "latest_s": 140,
+          "waiting_s": 20,
+          "service_start_s": 100,
+          "unload_s": 10,
+          "unload_end_s": 110,
+          "service_s": 20,
+          "completion_s": 130,
+          "lateness_s": 0,
+          "remaining_payload_kg": 2.0,
+          "status": "planned"
+        },
+        {
+          "task_id": "T02",
+          "station_id": "B",
+          "arrival_s": 170,
+          "earliest_s": 160,
+          "latest_s": 210,
+          "waiting_s": 0,
+          "service_start_s": 170,
+          "unload_s": 10,
+          "unload_end_s": 180,
+          "service_s": 20,
+          "completion_s": 200,
+          "lateness_s": 0,
+          "remaining_payload_kg": 0.0,
+          "status": "planned"
+        }
+      ],
+      "legs": [
+        {
+          "from": "DEPOT",
+          "to": "A",
+          "start_s": 30,
+          "end_s": 80,
+          "travel_s": 50,
+          "distance_m": null
+        },
+        {
+          "from": "A",
+          "to": "B",
+          "start_s": 130,
+          "end_s": 170,
+          "travel_s": 40,
+          "distance_m": null
+        },
+        {
+          "from": "B",
+          "to": "DEPOT",
+          "start_s": 200,
+          "end_s": 290,
+          "travel_s": 90,
+          "distance_m": null
+        }
+      ],
+      "checks": [
+        {
+          "code": "vehicle_available",
+          "passed": true
+        },
+        {
+          "code": "unique_tasks_in_trip",
+          "passed": true
+        },
+        {
+          "code": "payload",
+          "passed": true,
+          "payload_kg": 4.0,
+          "capacity_kg": 5
+        },
+        {
+          "code": "eligibility",
+          "passed": true,
+          "task_id": "T01",
+          "vehicle_id": "UAV-01"
+        },
+        {
+          "code": "eligibility",
+          "passed": true,
+          "task_id": "T02",
+          "vehicle_id": "UAV-01"
+        },
+        {
+          "code": "load_start",
+          "passed": true,
+          "load_start_s": 0,
+          "required_ready_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "DEPOT",
+          "to_node": "A"
+        },
+        {
+          "code": "time_window",
+          "passed": true,
+          "task_id": "T01",
+          "mode": "hard",
+          "service_start_s": 100,
+          "latest_s": 140,
+          "lateness_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "A",
+          "to_node": "B"
+        },
+        {
+          "code": "time_window",
+          "passed": true,
+          "task_id": "T02",
+          "mode": "hard",
+          "service_start_s": 170,
+          "latest_s": 210,
+          "lateness_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "B",
+          "to_node": "DEPOT"
+        },
+        {
+          "code": "trip_limit",
+          "passed": true,
+          "mission_s": 260,
+          "trip_limit_s": 420
+        },
+        {
+          "code": "availability_end",
+          "passed": true,
+          "depot_unload_end_s": 310,
+          "available_until_s": 1800
+        }
+      ],
+      "return_s": 290,
+      "mission_s": 260,
+      "depot_unload_end_s": 310,
+      "next_ready_s": 370,
+      "depot_unload_s": 20,
+      "turnaround_s": 60,
+      "travel_s": 180,
+      "waiting_s": 20,
+      "station_unload_s": 20,
+      "service_s": 40,
+      "lateness_s": 0,
+      "distance_m": null,
+      "valid": true,
+      "trip_id": "UAV-01-trip-1",
+      "turnaround_applied": true,
+      "planned_end_s": 370
+    },
+    {
+      "vehicle_id": "UAV-01",
+      "type": "UAV",
+      "task_ids": [
+        "T04"
+      ],
+      "route": [
+        "DEPOT",
+        "C",
+        "DEPOT"
+      ],
+      "load_start_s": 370,
+      "load_s": 30,
+      "departure_s": 400,
+      "depot_wait_s": 0,
+      "payload_kg": 4.0,
+      "capacity_kg": 5,
+      "stops": [
+        {
+          "task_id": "T04",
+          "station_id": "C",
+          "arrival_s": 500,
+          "earliest_s": 300,
+          "latest_s": 500,
+          "waiting_s": 0,
+          "service_start_s": 500,
+          "unload_s": 10,
+          "unload_end_s": 510,
+          "service_s": 20,
+          "completion_s": 530,
+          "lateness_s": 0,
+          "remaining_payload_kg": 0.0,
+          "status": "planned"
+        }
+      ],
+      "legs": [
+        {
+          "from": "DEPOT",
+          "to": "C",
+          "start_s": 400,
+          "end_s": 500,
+          "travel_s": 100,
+          "distance_m": null
+        },
+        {
+          "from": "C",
+          "to": "DEPOT",
+          "start_s": 530,
+          "end_s": 650,
+          "travel_s": 120,
+          "distance_m": null
+        }
+      ],
+      "checks": [
+        {
+          "code": "vehicle_available",
+          "passed": true
+        },
+        {
+          "code": "unique_tasks_in_trip",
+          "passed": true
+        },
+        {
+          "code": "payload",
+          "passed": true,
+          "payload_kg": 4.0,
+          "capacity_kg": 5
+        },
+        {
+          "code": "eligibility",
+          "passed": true,
+          "task_id": "T04",
+          "vehicle_id": "UAV-01"
+        },
+        {
+          "code": "load_start",
+          "passed": true,
+          "load_start_s": 370,
+          "required_ready_s": 370
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "DEPOT",
+          "to_node": "C"
+        },
+        {
+          "code": "time_window",
+          "passed": true,
+          "task_id": "T04",
+          "mode": "hard",
+          "service_start_s": 500,
+          "latest_s": 500,
+          "lateness_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "C",
+          "to_node": "DEPOT"
+        },
+        {
+          "code": "trip_limit",
+          "passed": true,
+          "mission_s": 250,
+          "trip_limit_s": 420
+        },
+        {
+          "code": "availability_end",
+          "passed": true,
+          "depot_unload_end_s": 670,
+          "available_until_s": 1800
+        }
+      ],
+      "return_s": 650,
+      "mission_s": 250,
+      "depot_unload_end_s": 670,
+      "next_ready_s": 730,
+      "depot_unload_s": 20,
+      "turnaround_s": 60,
+      "travel_s": 220,
+      "waiting_s": 0,
+      "station_unload_s": 10,
+      "service_s": 20,
+      "lateness_s": 0,
+      "distance_m": null,
+      "valid": true,
+      "trip_id": "UAV-01-trip-2",
+      "turnaround_applied": false,
+      "planned_end_s": 670
+    }
+  ],
+  "checks": [
+    {
+      "code": "unique_trip_ids",
+      "passed": true
+    },
+    {
+      "code": "unique_tasks_across_trips",
+      "passed": true,
+      "duplicate_task_ids": []
+    }
+  ],
+  "summary": {
+    "assigned_count": 3,
+    "unassigned_count": 2,
+    "trip_count": 2,
+    "travel_s": 400,
+    "waiting_s": 20,
+    "lateness_s": 0
+  },
+  "execution_status": "candidate_only",
+  "scenario_label": "Illustrative data — newly created 2026 model example",
+  "algorithm": "deterministic_greedy_v1",
+  "search_exhaustive": false,
+  "unassigned": [
+    {
+      "task_id": "T03",
+      "reason_code": "no_feasible_candidate_found",
+      "explanation": "This bounded search did not find an assignment; not a global infeasibility proof.",
+      "attempts": [
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T03"
+          ],
+          "failed_checks": [
+            {
+              "code": "time_window",
+              "passed": false,
+              "task_id": "T03",
+              "mode": "hard",
+              "service_start_s": 240,
+              "latest_s": 220,
+              "lateness_s": 20
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-01",
+          "candidate_kind": "append_last_trip",
+          "candidate_task_ids": [
+            "T01",
+            "T02",
+            "T03"
+          ],
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 34.0,
+              "capacity_kg": 5
+            },
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T03",
+              "vehicle_id": "UAV-01"
+            },
+            {
+              "code": "time_window",
+              "passed": false,
+              "task_id": "T03",
+              "mode": "hard",
+              "service_start_s": 240,
+              "latest_s": 220,
+              "lateness_s": 20
+            },
+            {
+              "code": "trip_limit",
+              "passed": false,
+              "mission_s": 450,
+              "trip_limit_s": 420
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T03"
+          ],
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 30.0,
+              "capacity_kg": 5
+            },
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T03",
+              "vehicle_id": "UAV-01"
+            },
+            {
+              "code": "time_window",
+              "passed": false,
+              "task_id": "T03",
+              "mode": "hard",
+              "service_start_s": 500,
+              "latest_s": 220,
+              "lateness_s": 280
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "T05",
+      "reason_code": "no_feasible_candidate_found",
+      "explanation": "This bounded search did not find an assignment; not a global infeasibility proof.",
+      "attempts": [
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T05"
+          ],
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 150.0,
+              "capacity_kg": 100
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-01",
+          "candidate_kind": "append_last_trip",
+          "candidate_task_ids": [
+            "T04",
+            "T05"
+          ],
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 154.0,
+              "capacity_kg": 5
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T05"
+          ],
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 150.0,
+              "capacity_kg": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "plan_input": {
+    "trips": [
+      {
+        "trip_id": "UAV-01-trip-1",
+        "vehicle_id": "UAV-01",
+        "task_ids": [
+          "T01",
+          "T02"
+        ],
+        "load_start_s": 0
+      },
+      {
+        "trip_id": "UAV-01-trip-2",
+        "vehicle_id": "UAV-01",
+        "task_ids": [
+          "T04"
+        ],
+        "load_start_s": 370
+      }
+    ]
+  }
+}

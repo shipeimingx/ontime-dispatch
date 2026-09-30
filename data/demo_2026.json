@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "scenario_label": "Illustrative data — newly created 2026 model example",
+  "depot_id": "DEPOT",
+  "stations": [
+    "A",
+    "B",
+    "C"
+  ],
+  "window_mode": "soft",
+  "vehicles": [
+    {
+      "id": "UAV-01",
+      "type": "UAV",
+      "available": true,
+      "capacity_kg": 5,
+      "trip_limit_s": 420,
+      "available_from_s": 0,
+      "available_until_s": 1800,
+      "load_s": 30,
+      "depot_unload_s": 20,
+      "turnaround_s": 60
+    },
+    {
+      "id": "AGV-01",
+      "type": "AGV",
+      "available": true,
+      "capacity_kg": 100,
+      "trip_limit_s": 1500,
+      "available_from_s": 0,
+      "available_until_s": 2400,
+      "load_s": 60,
+      "depot_unload_s": 30,
+      "turnaround_s": 90
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T01",
+      "station_id": "A",
+      "demand_kg": 2,
+      "earliest_s": 100,
+      "latest_s": 140,
+      "unload_s": 10,
+      "service_s": 20,
+      "eligible_types": [
+        "UAV",
+        "AGV"
+      ]
+    },
+    {
+      "id": "T02",
+      "station_id": "B",
+      "demand_kg": 2,
+      "earliest_s": 160,
+      "latest_s": 210,
+      "unload_s": 10,
+      "service_s": 20,
+      "eligible_types": [
+        "UAV",
+        "AGV"
+      ]
+    },
+    {
+      "id": "T03",
+      "station_id": "C",
+      "demand_kg": 30,
+      "earliest_s": 200,
+      "latest_s": 220,
+      "unload_s": 30,
+      "service_s": 90,
+      "eligible_types": [
+        "AGV"
+      ]
+    },
+    {
+      "id": "T04",
+      "station_id": "C",
+      "demand_kg": 4,
+      "earliest_s": 300,
+      "latest_s": 500,
+      "unload_s": 10,
+      "service_s": 20,
+      "eligible_types": [
+        "UAV"
+      ]
+    },
+    {
+      "id": "T05",
+      "station_id": "A",
+      "demand_kg": 150,
+      "earliest_s": 0,
+      "latest_s": 900,
+      "unload_s": 10,
+      "service_s": 20,
+      "eligible_types": [
+        "UAV",
+        "AGV"
+      ]
+    }
+  ],
+  "travel_time_s": {
+    "UAV": {
+      "DEPOT": {
+        "DEPOT": 0,
+        "A": 50,
+        "B": 80,
+        "C": 100
+      },
+      "A": {
+        "DEPOT": 60,
+        "A": 0,
+        "B": 40,
+        "C": 70
+      },
+      "B": {
+        "DEPOT": 90,
+        "A": 70,
+        "B": 0,
+        "C": 40
+      },
+      "C": {
+        "DEPOT": 120,
+        "A": 80,
+        "B": 50,
+        "C": 0
+      }
+    },
+    "AGV": {
+      "DEPOT": {
+        "DEPOT": 0,
+        "A": 120,
+        "B": 240,
+        "C": 180
+      },
+      "A": {
+        "DEPOT": 150,
+        "A": 0,
+        "B": 160,
+        "C": 140
+      },
+      "B": {
+        "DEPOT": 260,
+        "A": 180,
+        "B": 0,
+        "C": 120
+      },
+      "C": {
+        "DEPOT": 210,
+        "A": 150,
+        "B": 130,
+        "C": 0
+      }
+    }
+  }
+}

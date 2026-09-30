@@ -1,0 +1,316 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="800" viewBox="0 0 1240 800">
+<title>仓库与工位：GA 候选路线示意</title>
+<metadata>{&quot;input_sha256&quot;: &quot;62c99a49c4505945319ea2e568b2211f0bb5fe7c9379947fbe4887a4380619c2&quot;, &quot;parameters&quot;: {&quot;population_size&quot;: 24, &quot;max_generations&quot;: 40, &quot;elite_count&quot;: 2, &quot;tournament_size&quot;: 3, &quot;crossover_rate&quot;: 0.9, &quot;mutation_rate&quot;: 0.25, &quot;patience&quot;: 12, &quot;seed&quot;: 2026, &quot;decoder_seed&quot;: 2026, &quot;costs&quot;: {&quot;uav_transport_per_s&quot;: 0.02, &quot;agv_transport_per_s&quot;: 0.01, &quot;lateness_multiplier&quot;: 1.0, &quot;transport_coefficient_unit&quot;: &quot;penalty_unit/s&quot;, &quot;task_lateness_coefficient_unit&quot;: &quot;penalty_unit/s&quot;, &quot;lateness_multiplier_unit&quot;: &quot;dimensionless&quot;, &quot;cost_unit&quot;: &quot;penalty_unit&quot;, &quot;transport_basis&quot;: &quot;travel seconds on all legs, including depot return&quot;, &quot;objective_priority&quot;: [&quot;unassigned_count&quot;, &quot;transport_cost + lateness_penalty&quot;], &quot;illustrative_coefficients&quot;: true}, &quot;two_opt_implemented&quot;: false}, &quot;data_label&quot;: &quot;Illustrative data&quot;, &quot;source&quot;: &quot;../run.json&quot;, &quot;map_kind&quot;: &quot;schematic only&quot;}</metadata>
+<defs><style>@font-face{font-family:"Source Han Sans CN";src:url("fonts/SourceHanSansCN-Regular.otf")} @font-face{font-family:"Sarasa Mono SC";src:url("fonts/SarasaMonoSC-Regular.ttf")}</style></defs>
+<rect x="0.00" y="0.00" width="1240.00" height="800.00" fill="#f7f6f2"/>
+<text x="42.00" y="44.00" font-family="Sarasa Mono SC" font-size="18" fill="#596b76">OnTime Dispatch</text>
+<text x="42.00" y="89.00" font-family="Source Han Sans CN" font-size="31" fill="#142c3c">仓库与工位：GA 候选路线示意</text>
+<text x="42.00" y="121.00" font-family="Sarasa Mono SC" font-size="15" fill="#596b76">Illustrative data | mode=soft | seed=2026 | population=24 | generations=12/40</text>
+<text x="42.00" y="758.00" font-family="Source Han Sans CN" font-size="15" fill="#596b76">2026 新实现 · 功能演示 · 候选计划未经人工批准 · 非真实工厂 / 非部署结果</text>
+<text x="42.00" y="782.00" font-family="Sarasa Mono SC" font-size="12" fill="#596b76">input SHA256: 62c99a49c4505945319ea2e568b2211f0bb5fe7c9379947fbe4887a4380619c2</text>
+<text x="42.00" y="163.00" font-family="Source Han Sans CN" font-size="17" fill="#596b76">坐标为合成布局（m）；连线表示访问关系，不表示真实障碍物规避路径。</text>
+<line x1="72.00" y1="180.00" x2="72.00" y2="650.00" stroke="#dae1e3" stroke-width="1"/>
+<line x1="72.00" y1="650.00" x2="622.00" y2="650.00" stroke="#dae1e3" stroke-width="1"/>
+<text x="66.00" y="678.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">0</text>
+<text x="43.00" y="653.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">0</text>
+<line x1="209.50" y1="180.00" x2="209.50" y2="650.00" stroke="#dae1e3" stroke-width="1"/>
+<line x1="72.00" y1="532.50" x2="622.00" y2="532.50" stroke="#dae1e3" stroke-width="1"/>
+<text x="203.50" y="678.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">50</text>
+<text x="43.00" y="535.50" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">50</text>
+<line x1="347.00" y1="180.00" x2="347.00" y2="650.00" stroke="#dae1e3" stroke-width="1"/>
+<line x1="72.00" y1="415.00" x2="622.00" y2="415.00" stroke="#dae1e3" stroke-width="1"/>
+<text x="341.00" y="678.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">100</text>
+<text x="43.00" y="418.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">100</text>
+<line x1="484.50" y1="180.00" x2="484.50" y2="650.00" stroke="#dae1e3" stroke-width="1"/>
+<line x1="72.00" y1="297.50" x2="622.00" y2="297.50" stroke="#dae1e3" stroke-width="1"/>
+<text x="478.50" y="678.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">150</text>
+<text x="43.00" y="300.50" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">150</text>
+<line x1="622.00" y1="180.00" x2="622.00" y2="650.00" stroke="#dae1e3" stroke-width="1"/>
+<line x1="72.00" y1="180.00" x2="622.00" y2="180.00" stroke="#dae1e3" stroke-width="1"/>
+<text x="616.00" y="678.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">200</text>
+<text x="43.00" y="183.00" font-family="Sarasa Mono SC" font-size="13" fill="#596b76">200</text>
+<text x="562.00" y="702.00" font-family="Sarasa Mono SC" font-size="14" fill="#596b76">x (m)</text>
+<text x="82.00" y="196.00" font-family="Sarasa Mono SC" font-size="14" fill="#596b76">y (m)</text>
+<line x1="72.00" y1="650.00" x2="479.00" y2="295.15" stroke="#b86525" stroke-width="2"/>
+<polygon points="341.07,415.40 330.15,419.62 335.41,425.65" fill="#b86525"/>
+<line x1="479.00" y1="295.15" x2="72.00" y2="650.00" stroke="#b86525" stroke-width="2"/>
+<polygon points="209.93,529.75 220.85,525.53 215.59,519.50" fill="#b86525"/>
+<rect x="698.00" y="200.00" width="8.00" height="65.00" fill="#b86525"/>
+<text x="721.00" y="211.00" font-family="Sarasa Mono SC" font-size="18" fill="#b86525">AGV-01-trip-1</text>
+<text x="721.00" y="239.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">仓库 → S02 → 仓库</text>
+<text x="721.00" y="263.00" font-family="Source Han Sans CN" font-size="16" fill="#596b76">载荷 24/35 kg · 行驶 480 s</text>
+<line x1="72.00" y1="650.00" x2="547.75" y2="229.35" stroke="#d89938" stroke-width="2"/>
+<polygon points="385.73,372.60 374.84,376.89 380.14,382.89" fill="#d89938"/>
+<line x1="547.75" y1="229.35" x2="528.50" y2="274.00" stroke="#d89938" stroke-width="2"/>
+<polygon points="532.86,263.88 540.89,255.36 533.54,252.20" fill="#d89938"/>
+<line x1="528.50" y1="274.00" x2="72.00" y2="650.00" stroke="#d89938" stroke-width="2"/>
+<polygon points="227.14,522.21 238.18,518.31 233.09,512.13" fill="#d89938"/>
+<rect x="698.00" y="289.00" width="8.00" height="65.00" fill="#d89938"/>
+<text x="721.00" y="300.00" font-family="Sarasa Mono SC" font-size="18" fill="#d89938">AGV-02-trip-1</text>
+<text x="721.00" y="328.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">仓库 → S04 → S06 → 仓库</text>
+<text x="721.00" y="352.00" font-family="Source Han Sans CN" font-size="16" fill="#596b76">载荷 41/50 kg · 行驶 564 s</text>
+<line x1="72.00" y1="650.00" x2="76.98" y2="646.66" stroke="#1876a3" stroke-width="2"/>
+<line x1="81.97" y1="643.32" x2="86.95" y2="639.98" stroke="#1876a3" stroke-width="2"/>
+<line x1="91.94" y1="636.64" x2="96.92" y2="633.30" stroke="#1876a3" stroke-width="2"/>
+<line x1="101.91" y1="629.96" x2="106.89" y2="626.62" stroke="#1876a3" stroke-width="2"/>
+<line x1="111.88" y1="623.28" x2="116.86" y2="619.95" stroke="#1876a3" stroke-width="2"/>
+<line x1="121.85" y1="616.61" x2="126.83" y2="613.27" stroke="#1876a3" stroke-width="2"/>
+<line x1="131.82" y1="609.93" x2="136.80" y2="606.59" stroke="#1876a3" stroke-width="2"/>
+<line x1="141.79" y1="603.25" x2="146.77" y2="599.91" stroke="#1876a3" stroke-width="2"/>
+<line x1="151.76" y1="596.57" x2="156.74" y2="593.23" stroke="#1876a3" stroke-width="2"/>
+<line x1="161.73" y1="589.89" x2="166.71" y2="586.55" stroke="#1876a3" stroke-width="2"/>
+<line x1="171.70" y1="583.21" x2="176.68" y2="579.87" stroke="#1876a3" stroke-width="2"/>
+<line x1="181.67" y1="576.53" x2="186.65" y2="573.19" stroke="#1876a3" stroke-width="2"/>
+<line x1="191.64" y1="569.85" x2="196.62" y2="566.51" stroke="#1876a3" stroke-width="2"/>
+<line x1="201.60" y1="563.17" x2="206.59" y2="559.84" stroke="#1876a3" stroke-width="2"/>
+<line x1="211.57" y1="556.50" x2="216.56" y2="553.16" stroke="#1876a3" stroke-width="2"/>
+<line x1="221.54" y1="549.82" x2="226.53" y2="546.48" stroke="#1876a3" stroke-width="2"/>
+<line x1="231.51" y1="543.14" x2="236.50" y2="539.80" stroke="#1876a3" stroke-width="2"/>
+<line x1="241.48" y1="536.46" x2="246.47" y2="533.12" stroke="#1876a3" stroke-width="2"/>
+<line x1="251.45" y1="529.78" x2="256.44" y2="526.44" stroke="#1876a3" stroke-width="2"/>
+<line x1="261.42" y1="523.10" x2="266.41" y2="519.76" stroke="#1876a3" stroke-width="2"/>
+<line x1="271.39" y1="516.42" x2="276.38" y2="513.08" stroke="#1876a3" stroke-width="2"/>
+<line x1="281.36" y1="509.74" x2="286.35" y2="506.40" stroke="#1876a3" stroke-width="2"/>
+<line x1="291.33" y1="503.07" x2="296.32" y2="499.73" stroke="#1876a3" stroke-width="2"/>
+<line x1="301.30" y1="496.39" x2="306.29" y2="493.05" stroke="#1876a3" stroke-width="2"/>
+<line x1="311.27" y1="489.71" x2="316.26" y2="486.37" stroke="#1876a3" stroke-width="2"/>
+<line x1="321.24" y1="483.03" x2="326.22" y2="479.69" stroke="#1876a3" stroke-width="2"/>
+<line x1="331.21" y1="476.35" x2="336.19" y2="473.01" stroke="#1876a3" stroke-width="2"/>
+<line x1="341.18" y1="469.67" x2="346.16" y2="466.33" stroke="#1876a3" stroke-width="2"/>
+<line x1="351.15" y1="462.99" x2="356.13" y2="459.65" stroke="#1876a3" stroke-width="2"/>
+<line x1="361.12" y1="456.31" x2="366.10" y2="452.97" stroke="#1876a3" stroke-width="2"/>
+<line x1="371.09" y1="449.63" x2="376.07" y2="446.30" stroke="#1876a3" stroke-width="2"/>
+<line x1="381.06" y1="442.96" x2="386.04" y2="439.62" stroke="#1876a3" stroke-width="2"/>
+<line x1="391.03" y1="436.28" x2="396.01" y2="432.94" stroke="#1876a3" stroke-width="2"/>
+<line x1="401.00" y1="429.60" x2="405.98" y2="426.26" stroke="#1876a3" stroke-width="2"/>
+<line x1="410.97" y1="422.92" x2="415.95" y2="419.58" stroke="#1876a3" stroke-width="2"/>
+<line x1="420.94" y1="416.24" x2="425.92" y2="412.90" stroke="#1876a3" stroke-width="2"/>
+<line x1="430.91" y1="409.56" x2="435.89" y2="406.22" stroke="#1876a3" stroke-width="2"/>
+<line x1="440.88" y1="402.88" x2="445.86" y2="399.54" stroke="#1876a3" stroke-width="2"/>
+<line x1="450.84" y1="396.20" x2="455.83" y2="392.86" stroke="#1876a3" stroke-width="2"/>
+<line x1="460.81" y1="389.52" x2="465.80" y2="386.19" stroke="#1876a3" stroke-width="2"/>
+<line x1="470.78" y1="382.85" x2="475.77" y2="379.51" stroke="#1876a3" stroke-width="2"/>
+<line x1="480.75" y1="376.17" x2="485.74" y2="372.83" stroke="#1876a3" stroke-width="2"/>
+<line x1="490.72" y1="369.49" x2="495.71" y2="366.15" stroke="#1876a3" stroke-width="2"/>
+<line x1="500.69" y1="362.81" x2="505.68" y2="359.47" stroke="#1876a3" stroke-width="2"/>
+<line x1="510.66" y1="356.13" x2="515.65" y2="352.79" stroke="#1876a3" stroke-width="2"/>
+<polygon points="366.56,452.67 355.19,455.47 359.65,462.11" fill="#1876a3"/>
+<line x1="517.50" y1="351.55" x2="512.52" y2="354.89" stroke="#1876a3" stroke-width="2"/>
+<line x1="507.53" y1="358.23" x2="502.55" y2="361.57" stroke="#1876a3" stroke-width="2"/>
+<line x1="497.56" y1="364.91" x2="492.58" y2="368.25" stroke="#1876a3" stroke-width="2"/>
+<line x1="487.59" y1="371.59" x2="482.61" y2="374.93" stroke="#1876a3" stroke-width="2"/>
+<line x1="477.62" y1="378.27" x2="472.64" y2="381.60" stroke="#1876a3" stroke-width="2"/>
+<line x1="467.65" y1="384.94" x2="462.67" y2="388.28" stroke="#1876a3" stroke-width="2"/>
+<line x1="457.68" y1="391.62" x2="452.70" y2="394.96" stroke="#1876a3" stroke-width="2"/>
+<line x1="447.71" y1="398.30" x2="442.73" y2="401.64" stroke="#1876a3" stroke-width="2"/>
+<line x1="437.74" y1="404.98" x2="432.76" y2="408.32" stroke="#1876a3" stroke-width="2"/>
+<line x1="427.77" y1="411.66" x2="422.79" y2="415.00" stroke="#1876a3" stroke-width="2"/>
+<line x1="417.80" y1="418.34" x2="412.82" y2="421.68" stroke="#1876a3" stroke-width="2"/>
+<line x1="407.83" y1="425.02" x2="402.85" y2="428.36" stroke="#1876a3" stroke-width="2"/>
+<line x1="397.86" y1="431.70" x2="392.88" y2="435.04" stroke="#1876a3" stroke-width="2"/>
+<line x1="387.90" y1="438.38" x2="382.91" y2="441.71" stroke="#1876a3" stroke-width="2"/>
+<line x1="377.93" y1="445.05" x2="372.94" y2="448.39" stroke="#1876a3" stroke-width="2"/>
+<line x1="367.96" y1="451.73" x2="362.97" y2="455.07" stroke="#1876a3" stroke-width="2"/>
+<line x1="357.99" y1="458.41" x2="353.00" y2="461.75" stroke="#1876a3" stroke-width="2"/>
+<line x1="348.02" y1="465.09" x2="343.03" y2="468.43" stroke="#1876a3" stroke-width="2"/>
+<line x1="338.05" y1="471.77" x2="333.06" y2="475.11" stroke="#1876a3" stroke-width="2"/>
+<line x1="328.08" y1="478.45" x2="323.09" y2="481.79" stroke="#1876a3" stroke-width="2"/>
+<line x1="318.11" y1="485.13" x2="313.12" y2="488.47" stroke="#1876a3" stroke-width="2"/>
+<line x1="308.14" y1="491.81" x2="303.15" y2="495.15" stroke="#1876a3" stroke-width="2"/>
+<line x1="298.17" y1="498.48" x2="293.18" y2="501.82" stroke="#1876a3" stroke-width="2"/>
+<line x1="288.20" y1="505.16" x2="283.21" y2="508.50" stroke="#1876a3" stroke-width="2"/>
+<line x1="278.23" y1="511.84" x2="273.24" y2="515.18" stroke="#1876a3" stroke-width="2"/>
+<line x1="268.26" y1="518.52" x2="263.28" y2="521.86" stroke="#1876a3" stroke-width="2"/>
+<line x1="258.29" y1="525.20" x2="253.31" y2="528.54" stroke="#1876a3" stroke-width="2"/>
+<line x1="248.32" y1="531.88" x2="243.34" y2="535.22" stroke="#1876a3" stroke-width="2"/>
+<line x1="238.35" y1="538.56" x2="233.37" y2="541.90" stroke="#1876a3" stroke-width="2"/>
+<line x1="228.38" y1="545.24" x2="223.40" y2="548.58" stroke="#1876a3" stroke-width="2"/>
+<line x1="218.41" y1="551.92" x2="213.43" y2="555.25" stroke="#1876a3" stroke-width="2"/>
+<line x1="208.44" y1="558.59" x2="203.46" y2="561.93" stroke="#1876a3" stroke-width="2"/>
+<line x1="198.47" y1="565.27" x2="193.49" y2="568.61" stroke="#1876a3" stroke-width="2"/>
+<line x1="188.50" y1="571.95" x2="183.52" y2="575.29" stroke="#1876a3" stroke-width="2"/>
+<line x1="178.53" y1="578.63" x2="173.55" y2="581.97" stroke="#1876a3" stroke-width="2"/>
+<line x1="168.56" y1="585.31" x2="163.58" y2="588.65" stroke="#1876a3" stroke-width="2"/>
+<line x1="158.59" y1="591.99" x2="153.61" y2="595.33" stroke="#1876a3" stroke-width="2"/>
+<line x1="148.62" y1="598.67" x2="143.64" y2="602.01" stroke="#1876a3" stroke-width="2"/>
+<line x1="138.66" y1="605.35" x2="133.67" y2="608.69" stroke="#1876a3" stroke-width="2"/>
+<line x1="128.69" y1="612.03" x2="123.70" y2="615.36" stroke="#1876a3" stroke-width="2"/>
+<line x1="118.72" y1="618.70" x2="113.73" y2="622.04" stroke="#1876a3" stroke-width="2"/>
+<line x1="108.75" y1="625.38" x2="103.76" y2="628.72" stroke="#1876a3" stroke-width="2"/>
+<line x1="98.78" y1="632.06" x2="93.79" y2="635.40" stroke="#1876a3" stroke-width="2"/>
+<line x1="88.81" y1="638.74" x2="83.82" y2="642.08" stroke="#1876a3" stroke-width="2"/>
+<line x1="78.84" y1="645.42" x2="73.85" y2="648.76" stroke="#1876a3" stroke-width="2"/>
+<polygon points="222.94,548.88 234.31,546.08 229.85,539.44" fill="#1876a3"/>
+<rect x="698.00" y="378.00" width="8.00" height="65.00" fill="#1876a3"/>
+<text x="721.00" y="389.00" font-family="Sarasa Mono SC" font-size="18" fill="#1876a3">UAV-01-trip-1</text>
+<text x="721.00" y="417.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">仓库 → S05 → 仓库</text>
+<text x="721.00" y="441.00" font-family="Source Han Sans CN" font-size="16" fill="#596b76">载荷 2.45/4 kg · 行驶 52 s</text>
+<line x1="72.00" y1="650.00" x2="75.44" y2="645.08" stroke="#1876a3" stroke-width="2"/>
+<line x1="78.88" y1="640.17" x2="82.31" y2="635.25" stroke="#1876a3" stroke-width="2"/>
+<line x1="85.75" y1="630.33" x2="89.19" y2="625.41" stroke="#1876a3" stroke-width="2"/>
+<line x1="92.63" y1="620.50" x2="96.06" y2="615.58" stroke="#1876a3" stroke-width="2"/>
+<line x1="99.50" y1="610.66" x2="102.94" y2="605.74" stroke="#1876a3" stroke-width="2"/>
+<line x1="106.38" y1="600.83" x2="109.82" y2="595.91" stroke="#1876a3" stroke-width="2"/>
+<line x1="113.25" y1="590.99" x2="116.69" y2="586.07" stroke="#1876a3" stroke-width="2"/>
+<line x1="120.13" y1="581.16" x2="123.57" y2="576.24" stroke="#1876a3" stroke-width="2"/>
+<line x1="127.00" y1="571.32" x2="130.44" y2="566.40" stroke="#1876a3" stroke-width="2"/>
+<line x1="133.88" y1="561.49" x2="137.32" y2="556.57" stroke="#1876a3" stroke-width="2"/>
+<line x1="140.76" y1="551.65" x2="144.19" y2="546.73" stroke="#1876a3" stroke-width="2"/>
+<line x1="147.63" y1="541.82" x2="151.07" y2="536.90" stroke="#1876a3" stroke-width="2"/>
+<line x1="154.51" y1="531.98" x2="157.94" y2="527.06" stroke="#1876a3" stroke-width="2"/>
+<line x1="161.38" y1="522.15" x2="164.82" y2="517.23" stroke="#1876a3" stroke-width="2"/>
+<line x1="168.26" y1="512.31" x2="171.70" y2="507.39" stroke="#1876a3" stroke-width="2"/>
+<line x1="175.13" y1="502.48" x2="178.57" y2="497.56" stroke="#1876a3" stroke-width="2"/>
+<line x1="182.01" y1="492.64" x2="185.45" y2="487.72" stroke="#1876a3" stroke-width="2"/>
+<line x1="188.88" y1="482.81" x2="192.32" y2="477.89" stroke="#1876a3" stroke-width="2"/>
+<line x1="195.76" y1="472.97" x2="198.50" y2="469.05" stroke="#1876a3" stroke-width="2"/>
+<polygon points="157.66,527.47 148.08,534.19 154.64,538.77" fill="#1876a3"/>
+<line x1="198.50" y1="469.05" x2="195.06" y2="473.97" stroke="#1876a3" stroke-width="2"/>
+<line x1="191.62" y1="478.88" x2="188.19" y2="483.80" stroke="#1876a3" stroke-width="2"/>
+<line x1="184.75" y1="488.72" x2="181.31" y2="493.64" stroke="#1876a3" stroke-width="2"/>
+<line x1="177.87" y1="498.55" x2="174.44" y2="503.47" stroke="#1876a3" stroke-width="2"/>
+<line x1="171.00" y1="508.39" x2="167.56" y2="513.31" stroke="#1876a3" stroke-width="2"/>
+<line x1="164.12" y1="518.22" x2="160.68" y2="523.14" stroke="#1876a3" stroke-width="2"/>
+<line x1="157.25" y1="528.06" x2="153.81" y2="532.98" stroke="#1876a3" stroke-width="2"/>
+<line x1="150.37" y1="537.89" x2="146.93" y2="542.81" stroke="#1876a3" stroke-width="2"/>
+<line x1="143.50" y1="547.73" x2="140.06" y2="552.65" stroke="#1876a3" stroke-width="2"/>
+<line x1="136.62" y1="557.56" x2="133.18" y2="562.48" stroke="#1876a3" stroke-width="2"/>
+<line x1="129.74" y1="567.40" x2="126.31" y2="572.32" stroke="#1876a3" stroke-width="2"/>
+<line x1="122.87" y1="577.23" x2="119.43" y2="582.15" stroke="#1876a3" stroke-width="2"/>
+<line x1="115.99" y1="587.07" x2="112.56" y2="591.99" stroke="#1876a3" stroke-width="2"/>
+<line x1="109.12" y1="596.90" x2="105.68" y2="601.82" stroke="#1876a3" stroke-width="2"/>
+<line x1="102.24" y1="606.74" x2="98.80" y2="611.66" stroke="#1876a3" stroke-width="2"/>
+<line x1="95.37" y1="616.57" x2="91.93" y2="621.49" stroke="#1876a3" stroke-width="2"/>
+<line x1="88.49" y1="626.41" x2="85.05" y2="631.33" stroke="#1876a3" stroke-width="2"/>
+<line x1="81.62" y1="636.24" x2="78.18" y2="641.16" stroke="#1876a3" stroke-width="2"/>
+<line x1="74.74" y1="646.08" x2="72.00" y2="650.00" stroke="#1876a3" stroke-width="2"/>
+<polygon points="112.84,591.58 122.42,584.86 115.86,580.28" fill="#1876a3"/>
+<rect x="698.00" y="467.00" width="8.00" height="65.00" fill="#1876a3"/>
+<text x="721.00" y="478.00" font-family="Sarasa Mono SC" font-size="18" fill="#1876a3">UAV-01-trip-2</text>
+<text x="721.00" y="506.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">仓库 → S03 → 仓库</text>
+<text x="721.00" y="530.00" font-family="Source Han Sans CN" font-size="16" fill="#596b76">载荷 1.63/4 kg · 行驶 24 s</text>
+<line x1="72.00" y1="650.00" x2="75.01" y2="644.81" stroke="#28a2b5" stroke-width="2"/>
+<line x1="78.02" y1="639.62" x2="81.02" y2="634.42" stroke="#28a2b5" stroke-width="2"/>
+<line x1="84.03" y1="629.23" x2="87.04" y2="624.04" stroke="#28a2b5" stroke-width="2"/>
+<line x1="90.05" y1="618.85" x2="93.05" y2="613.66" stroke="#28a2b5" stroke-width="2"/>
+<line x1="96.06" y1="608.47" x2="99.07" y2="603.27" stroke="#28a2b5" stroke-width="2"/>
+<line x1="102.08" y1="598.08" x2="105.08" y2="592.89" stroke="#28a2b5" stroke-width="2"/>
+<line x1="108.09" y1="587.70" x2="111.10" y2="582.51" stroke="#28a2b5" stroke-width="2"/>
+<line x1="114.11" y1="577.32" x2="117.11" y2="572.12" stroke="#28a2b5" stroke-width="2"/>
+<line x1="120.12" y1="566.93" x2="123.13" y2="561.74" stroke="#28a2b5" stroke-width="2"/>
+<line x1="126.14" y1="556.55" x2="129.15" y2="551.36" stroke="#28a2b5" stroke-width="2"/>
+<line x1="132.15" y1="546.17" x2="135.16" y2="540.97" stroke="#28a2b5" stroke-width="2"/>
+<line x1="138.17" y1="535.78" x2="141.18" y2="530.59" stroke="#28a2b5" stroke-width="2"/>
+<line x1="144.18" y1="525.40" x2="147.19" y2="520.21" stroke="#28a2b5" stroke-width="2"/>
+<line x1="150.20" y1="515.01" x2="153.21" y2="509.82" stroke="#28a2b5" stroke-width="2"/>
+<line x1="156.21" y1="504.63" x2="159.22" y2="499.44" stroke="#28a2b5" stroke-width="2"/>
+<line x1="162.23" y1="494.25" x2="165.24" y2="489.06" stroke="#28a2b5" stroke-width="2"/>
+<line x1="168.24" y1="483.86" x2="171.25" y2="478.67" stroke="#28a2b5" stroke-width="2"/>
+<line x1="174.26" y1="473.48" x2="177.27" y2="468.29" stroke="#28a2b5" stroke-width="2"/>
+<line x1="180.28" y1="463.10" x2="183.28" y2="457.91" stroke="#28a2b5" stroke-width="2"/>
+<line x1="186.29" y1="452.71" x2="189.30" y2="447.52" stroke="#28a2b5" stroke-width="2"/>
+<line x1="192.31" y1="442.33" x2="195.31" y2="437.14" stroke="#28a2b5" stroke-width="2"/>
+<line x1="198.32" y1="431.95" x2="201.33" y2="426.76" stroke="#28a2b5" stroke-width="2"/>
+<line x1="204.34" y1="421.56" x2="207.34" y2="416.37" stroke="#28a2b5" stroke-width="2"/>
+<polygon points="164.38,490.53 155.41,498.04 162.33,502.05" fill="#28a2b5"/>
+<line x1="209.50" y1="412.65" x2="214.60" y2="409.49" stroke="#28a2b5" stroke-width="2"/>
+<line x1="219.70" y1="406.32" x2="224.79" y2="403.16" stroke="#28a2b5" stroke-width="2"/>
+<line x1="229.89" y1="399.99" x2="234.99" y2="396.83" stroke="#28a2b5" stroke-width="2"/>
+<line x1="240.09" y1="393.67" x2="245.19" y2="390.50" stroke="#28a2b5" stroke-width="2"/>
+<line x1="250.28" y1="387.34" x2="255.38" y2="384.17" stroke="#28a2b5" stroke-width="2"/>
+<line x1="260.48" y1="381.01" x2="265.58" y2="377.84" stroke="#28a2b5" stroke-width="2"/>
+<line x1="270.67" y1="374.68" x2="275.77" y2="371.52" stroke="#28a2b5" stroke-width="2"/>
+<line x1="280.87" y1="368.35" x2="285.97" y2="365.19" stroke="#28a2b5" stroke-width="2"/>
+<line x1="291.07" y1="362.02" x2="296.16" y2="358.86" stroke="#28a2b5" stroke-width="2"/>
+<line x1="301.26" y1="355.70" x2="306.36" y2="352.53" stroke="#28a2b5" stroke-width="2"/>
+<line x1="311.46" y1="349.37" x2="316.56" y2="346.20" stroke="#28a2b5" stroke-width="2"/>
+<line x1="321.65" y1="343.04" x2="326.75" y2="339.88" stroke="#28a2b5" stroke-width="2"/>
+<line x1="331.85" y1="336.71" x2="336.95" y2="333.55" stroke="#28a2b5" stroke-width="2"/>
+<line x1="342.05" y1="330.38" x2="347.14" y2="327.22" stroke="#28a2b5" stroke-width="2"/>
+<line x1="352.24" y1="324.06" x2="357.34" y2="320.89" stroke="#28a2b5" stroke-width="2"/>
+<line x1="362.44" y1="317.73" x2="367.53" y2="314.56" stroke="#28a2b5" stroke-width="2"/>
+<line x1="372.63" y1="311.40" x2="377.73" y2="308.23" stroke="#28a2b5" stroke-width="2"/>
+<line x1="382.83" y1="305.07" x2="387.93" y2="301.91" stroke="#28a2b5" stroke-width="2"/>
+<line x1="393.02" y1="298.74" x2="398.12" y2="295.58" stroke="#28a2b5" stroke-width="2"/>
+<line x1="403.22" y1="292.41" x2="408.32" y2="289.25" stroke="#28a2b5" stroke-width="2"/>
+<line x1="413.42" y1="286.09" x2="418.51" y2="282.92" stroke="#28a2b5" stroke-width="2"/>
+<line x1="423.61" y1="279.76" x2="428.71" y2="276.59" stroke="#28a2b5" stroke-width="2"/>
+<line x1="433.81" y1="273.43" x2="438.90" y2="270.27" stroke="#28a2b5" stroke-width="2"/>
+<line x1="444.00" y1="267.10" x2="449.10" y2="263.94" stroke="#28a2b5" stroke-width="2"/>
+<line x1="454.20" y1="260.77" x2="459.30" y2="257.61" stroke="#28a2b5" stroke-width="2"/>
+<line x1="464.39" y1="254.44" x2="469.49" y2="251.28" stroke="#28a2b5" stroke-width="2"/>
+<polygon points="384.41,304.09 372.95,306.49 377.17,313.29" fill="#28a2b5"/>
+<line x1="470.75" y1="250.50" x2="466.51" y2="254.75" stroke="#28a2b5" stroke-width="2"/>
+<line x1="462.27" y1="258.99" x2="458.03" y2="263.24" stroke="#28a2b5" stroke-width="2"/>
+<line x1="453.80" y1="267.49" x2="449.56" y2="271.73" stroke="#28a2b5" stroke-width="2"/>
+<line x1="445.32" y1="275.98" x2="441.08" y2="280.23" stroke="#28a2b5" stroke-width="2"/>
+<line x1="436.84" y1="284.47" x2="432.60" y2="288.72" stroke="#28a2b5" stroke-width="2"/>
+<line x1="428.36" y1="292.97" x2="424.12" y2="297.21" stroke="#28a2b5" stroke-width="2"/>
+<line x1="419.89" y1="301.46" x2="415.65" y2="305.71" stroke="#28a2b5" stroke-width="2"/>
+<line x1="411.41" y1="309.95" x2="407.17" y2="314.20" stroke="#28a2b5" stroke-width="2"/>
+<line x1="402.93" y1="318.45" x2="398.69" y2="322.69" stroke="#28a2b5" stroke-width="2"/>
+<line x1="394.45" y1="326.94" x2="390.22" y2="331.19" stroke="#28a2b5" stroke-width="2"/>
+<line x1="385.98" y1="335.43" x2="381.74" y2="339.68" stroke="#28a2b5" stroke-width="2"/>
+<line x1="377.50" y1="343.93" x2="373.26" y2="348.17" stroke="#28a2b5" stroke-width="2"/>
+<line x1="369.02" y1="352.42" x2="364.78" y2="356.67" stroke="#28a2b5" stroke-width="2"/>
+<line x1="360.55" y1="360.91" x2="356.31" y2="365.16" stroke="#28a2b5" stroke-width="2"/>
+<line x1="352.07" y1="369.41" x2="347.83" y2="373.65" stroke="#28a2b5" stroke-width="2"/>
+<line x1="343.59" y1="377.90" x2="339.35" y2="382.15" stroke="#28a2b5" stroke-width="2"/>
+<line x1="335.11" y1="386.39" x2="330.87" y2="390.64" stroke="#28a2b5" stroke-width="2"/>
+<line x1="326.64" y1="394.89" x2="322.40" y2="399.13" stroke="#28a2b5" stroke-width="2"/>
+<line x1="318.16" y1="403.38" x2="313.92" y2="407.63" stroke="#28a2b5" stroke-width="2"/>
+<line x1="309.68" y1="411.87" x2="305.44" y2="416.12" stroke="#28a2b5" stroke-width="2"/>
+<line x1="301.20" y1="420.37" x2="296.97" y2="424.61" stroke="#28a2b5" stroke-width="2"/>
+<line x1="292.73" y1="428.86" x2="288.49" y2="433.10" stroke="#28a2b5" stroke-width="2"/>
+<line x1="284.25" y1="437.35" x2="280.01" y2="441.60" stroke="#28a2b5" stroke-width="2"/>
+<line x1="275.77" y1="445.84" x2="271.53" y2="450.09" stroke="#28a2b5" stroke-width="2"/>
+<line x1="267.29" y1="454.34" x2="263.06" y2="458.58" stroke="#28a2b5" stroke-width="2"/>
+<line x1="258.82" y1="462.83" x2="254.58" y2="467.08" stroke="#28a2b5" stroke-width="2"/>
+<line x1="250.34" y1="471.32" x2="246.10" y2="475.57" stroke="#28a2b5" stroke-width="2"/>
+<line x1="241.86" y1="479.82" x2="237.62" y2="484.06" stroke="#28a2b5" stroke-width="2"/>
+<line x1="233.39" y1="488.31" x2="229.15" y2="492.56" stroke="#28a2b5" stroke-width="2"/>
+<line x1="224.91" y1="496.80" x2="220.67" y2="501.05" stroke="#28a2b5" stroke-width="2"/>
+<line x1="216.43" y1="505.30" x2="212.19" y2="509.54" stroke="#28a2b5" stroke-width="2"/>
+<line x1="207.95" y1="513.79" x2="203.71" y2="518.04" stroke="#28a2b5" stroke-width="2"/>
+<line x1="199.48" y1="522.28" x2="195.24" y2="526.53" stroke="#28a2b5" stroke-width="2"/>
+<line x1="191.00" y1="530.78" x2="186.76" y2="535.02" stroke="#28a2b5" stroke-width="2"/>
+<line x1="182.52" y1="539.27" x2="178.28" y2="543.52" stroke="#28a2b5" stroke-width="2"/>
+<line x1="174.04" y1="547.76" x2="169.81" y2="552.01" stroke="#28a2b5" stroke-width="2"/>
+<line x1="165.57" y1="556.26" x2="161.33" y2="560.50" stroke="#28a2b5" stroke-width="2"/>
+<line x1="157.09" y1="564.75" x2="152.85" y2="569.00" stroke="#28a2b5" stroke-width="2"/>
+<line x1="148.61" y1="573.24" x2="144.37" y2="577.49" stroke="#28a2b5" stroke-width="2"/>
+<line x1="140.14" y1="581.74" x2="135.90" y2="585.98" stroke="#28a2b5" stroke-width="2"/>
+<line x1="131.66" y1="590.23" x2="127.42" y2="594.48" stroke="#28a2b5" stroke-width="2"/>
+<line x1="123.18" y1="598.72" x2="118.94" y2="602.97" stroke="#28a2b5" stroke-width="2"/>
+<line x1="114.70" y1="607.22" x2="110.46" y2="611.46" stroke="#28a2b5" stroke-width="2"/>
+<line x1="106.23" y1="615.71" x2="101.99" y2="619.96" stroke="#28a2b5" stroke-width="2"/>
+<line x1="97.75" y1="624.20" x2="93.51" y2="628.45" stroke="#28a2b5" stroke-width="2"/>
+<line x1="89.27" y1="632.70" x2="85.03" y2="636.94" stroke="#28a2b5" stroke-width="2"/>
+<line x1="80.79" y1="641.19" x2="76.56" y2="645.44" stroke="#28a2b5" stroke-width="2"/>
+<line x1="72.32" y1="649.68" x2="72.00" y2="650.00" stroke="#28a2b5" stroke-width="2"/>
+<polygon points="207.32,514.42 217.93,509.46 212.26,503.81" fill="#28a2b5"/>
+<rect x="698.00" y="556.00" width="8.00" height="65.00" fill="#28a2b5"/>
+<text x="721.00" y="567.00" font-family="Sarasa Mono SC" font-size="18" fill="#28a2b5">UAV-02-trip-1</text>
+<text x="721.00" y="595.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">仓库 → S01 → S07 → 仓库</text>
+<text x="721.00" y="619.00" font-family="Source Han Sans CN" font-size="16" fill="#596b76">载荷 3.44/6 kg · 行驶 58 s</text>
+<circle cx="72.00" cy="650.00" r="10" fill="#142c3c" stroke="#f7f6f2" stroke-width="2"/>
+<text x="84.00" y="635.00" font-family="Sarasa Mono SC" font-size="17" fill="#142c3c">warehouse</text>
+<circle cx="209.50" cy="412.65" r="7" fill="#142c3c" stroke="#f7f6f2" stroke-width="2"/>
+<text x="221.50" y="410.65" font-family="Sarasa Mono SC" font-size="17" fill="#142c3c">S01</text>
+<circle cx="479.00" cy="295.15" r="7" fill="#142c3c" stroke="#f7f6f2" stroke-width="2"/>
+<text x="385.00" y="282.15" font-family="Sarasa Mono SC" font-size="17" fill="#142c3c">S02</text>
+<circle cx="198.50" cy="469.05" r="7" fill="#142c3c" stroke="#f7f6f2" stroke-width="2"/>
+<text x="130.50" y="494.05" font-family="Sarasa Mono SC" font-size="17" fill="#142c3c">S03</text>
+<circle cx="547.75" cy="229.35" r="7" fill="#142c3c" stroke="#f7f6f2" stroke-width="2"/>
+<text x="562.75" y="219.35" font-family="Sarasa Mono SC" font-size="17" fill="#142c3c">S04</text>
+<circle cx="517.50" cy="351.55" r="7" fill="#142c3c" stroke="#f7f6f2" stroke-width="2"/>
+<text x="531.50" y="371.55" font-family="Sarasa Mono SC" font-size="17" fill="#142c3c">S05</text>
+<circle cx="528.50" cy="274.00" r="7" fill="#142c3c" stroke="#f7f6f2" stroke-width="2"/>
+<text x="546.50" y="290.00" font-family="Sarasa Mono SC" font-size="17" fill="#142c3c">S06</text>
+<circle cx="470.75" cy="250.50" r="7" fill="#142c3c" stroke="#f7f6f2" stroke-width="2"/>
+<text x="396.75" y="237.50" font-family="Sarasa Mono SC" font-size="17" fill="#142c3c">S07</text>
+<circle cx="435.00" cy="459.65" r="7" fill="#a93f48" stroke="#f7f6f2" stroke-width="2"/>
+<text x="450.00" y="478.65" font-family="Sarasa Mono SC" font-size="17" fill="#a93f48">S08</text>
+<text x="698.00" y="675.00" font-family="Source Han Sans CN" font-size="17" fill="#a93f48">未分配 T08：60 kg &gt; 可用最大容量 50 kg</text>
+<text x="698.00" y="702.00" font-family="Source Han Sans CN" font-size="16" fill="#596b76">UAV 虚线 · AGV 实线 · 每趟均含返仓</text>
+</svg>

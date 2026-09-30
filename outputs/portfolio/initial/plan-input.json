@@ -1,0 +1,278 @@
+{
+  "trips": [
+    {
+      "trip_id": "AGV-01-trip-1",
+      "vehicle_id": "AGV-01",
+      "task_ids": [
+        "T02"
+      ],
+      "load_start_s": 0
+    },
+    {
+      "trip_id": "AGV-02-trip-1",
+      "vehicle_id": "AGV-02",
+      "task_ids": [
+        "T06",
+        "T04"
+      ],
+      "load_start_s": 600
+    },
+    {
+      "trip_id": "UAV-01-trip-1",
+      "vehicle_id": "UAV-01",
+      "task_ids": [
+        "T03",
+        "T01"
+      ],
+      "load_start_s": 0
+    },
+    {
+      "trip_id": "UAV-01-trip-2",
+      "vehicle_id": "UAV-01",
+      "task_ids": [
+        "T05"
+      ],
+      "load_start_s": 176
+    },
+    {
+      "trip_id": "UAV-02-trip-1",
+      "vehicle_id": "UAV-02",
+      "task_ids": [
+        "T07"
+      ],
+      "load_start_s": 240
+    }
+  ],
+  "unassigned": [
+    {
+      "task_id": "T08",
+      "reason_code": "payload_exceeded",
+      "reason_codes": [
+        "payload"
+      ],
+      "explanation": "Task alone exceeds every available compatible device capacity. Search is not a global infeasibility proof.",
+      "attempts": [
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T08",
+            "T02"
+          ],
+          "insertion_position": 0,
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 84.0,
+              "capacity_kg": 35
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T02",
+            "T08"
+          ],
+          "insertion_position": 1,
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 84.0,
+              "capacity_kg": 35
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T08"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 60.0,
+              "capacity_kg": 35
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-02",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T08",
+            "T06",
+            "T04"
+          ],
+          "insertion_position": 0,
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 101.0,
+              "capacity_kg": 50
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-02",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T06",
+            "T08",
+            "T04"
+          ],
+          "insertion_position": 1,
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 101.0,
+              "capacity_kg": 50
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-02",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T06",
+            "T04",
+            "T08"
+          ],
+          "insertion_position": 2,
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 101.0,
+              "capacity_kg": 50
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-02",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T08"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 60.0,
+              "capacity_kg": 50
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-01",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T08",
+            "T05"
+          ],
+          "insertion_position": 0,
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 62.45,
+              "capacity_kg": 4
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-01",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T05",
+            "T08"
+          ],
+          "insertion_position": 1,
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 62.45,
+              "capacity_kg": 4
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T08"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 60.0,
+              "capacity_kg": 4
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-02",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T08",
+            "T07"
+          ],
+          "insertion_position": 0,
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 62.43,
+              "capacity_kg": 6
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-02",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T07",
+            "T08"
+          ],
+          "insertion_position": 1,
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 62.43,
+              "capacity_kg": 6
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-02",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T08"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "payload",
+              "passed": false,
+              "payload_kg": 60.0,
+              "capacity_kg": 6
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

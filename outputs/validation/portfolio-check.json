@@ -1,0 +1,17 @@
+{
+  "artifact_checks_passed": true,
+  "figures_verified": 6,
+  "input_sha256": "62c99a49c4505945319ea2e568b2211f0bb5fe7c9379947fbe4887a4380619c2",
+  "replan_temporal_gate_valid": true,
+  "manifest_sha256": "2e60a5cee0eed335d6f9912ef8f86059ade7f98cc6c3bb29c8182825cb459dcf",
+  "checks": [
+    "SVG XML and editable text",
+    "requested font family declarations",
+    "PNG readability and dimensions",
+    "normalized input SHA256",
+    "all recorded output and source SHA256",
+    "initial/GA independent physical validation",
+    "replanning independent historical/residual/temporal validation",
+    "replanning remains unapproved"
+  ]
+}

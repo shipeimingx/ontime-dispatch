@@ -1,0 +1,9 @@
+﻿task_id,changed,initial_status,initial_vehicle_id,initial_trip_id,initial_arrival_s,initial_waiting_s,initial_service_start_s,initial_completion_s,initial_lateness_s,initial_lateness_cost,initial_objective_lateness_penalty,initial_reason_code,ga_status,ga_vehicle_id,ga_trip_id,ga_arrival_s,ga_waiting_s,ga_service_start_s,ga_completion_s,ga_lateness_s,ga_lateness_cost,ga_objective_lateness_penalty,ga_reason_code
+T01,True,planned,UAV-01,UAV-01-trip-1,66,0,66,91,0,0,0.0,,planned,UAV-02,UAV-02-trip-1,35,0,35,60,0,0,0.0,
+T02,False,planned,AGV-01,AGV-01-trip-1,309,0,309,349,0,0,0.0,,planned,AGV-01,AGV-01-trip-1,309,0,309,349,0,0,0.0,
+T03,True,planned,UAV-01,UAV-01-trip-1,32,0,32,62,0,0,0.0,,planned,UAV-01,UAV-01-trip-1,32,0,32,62,0,0,0.0,
+T04,True,planned,AGV-02,AGV-02-trip-1,349,0,349,392,0,0,0.0,,planned,AGV-02,AGV-02-trip-1,312,0,312,355,0,0,0.0,
+T05,True,planned,UAV-02,UAV-02-trip-1,80,0,80,120,0,0,0.0,,planned,UAV-02,UAV-02-trip-1,107,0,107,147,0,0,0.0,
+T06,True,planned,AGV-02,AGV-02-trip-1,291,0,291,328,0,0,0.0,,planned,AGV-02,AGV-02-trip-1,376,0,376,413,0,0,0.0,
+T07,True,planned,UAV-02,UAV-02-trip-1,48,0,48,74,0,0,0.0,,planned,UAV-02,UAV-02-trip-1,75,0,75,101,0,0,0.0,
+T08,False,planned,AGV-01,AGV-01-trip-1,201,0,201,240,0,0,0.0,,planned,AGV-01,AGV-01-trip-1,201,0,201,240,0,0,0.0,

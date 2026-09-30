@@ -1,0 +1,2 @@
+﻿profile,mode,seed,valid,complete,coverage,assigned_count,unassigned_count,trip_count,travel_s,waiting_s,lateness_s,lateness_cost
+python-demo-2026-v2,soft,2026,True,True,Complete,8,0,4,1135,0,34,34

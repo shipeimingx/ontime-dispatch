@@ -1,0 +1,3 @@
+# Scheduling, GA, replanning and validation use the Python standard library.
+# Only portfolio PNG rendering requires this package; actual bundled version used:
+Pillow==12.3.0

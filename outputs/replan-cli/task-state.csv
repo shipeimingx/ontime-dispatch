@@ -1,0 +1,9 @@
+﻿task_id,station_id,state,baseline_vehicle_id,candidate_vehicle_id,trip_id,service_start_s,completion_s,lateness_s,reason_code,approval_status
+T01,S01,candidate_not_approved,UAV-02,UAV-01,replan-002,415,440,0,,not_approved
+T02,S02,locked_unfinished,AGV-01,AGV-01,AGV-01-trip-1,270,310,0,,not_approved
+T03,S03,locked_unfinished,UAV-01,UAV-01,UAV-01-trip-2,214,244,0,,not_approved
+T04,S04,candidate_not_approved,AGV-02,AGV-02,replan-001,949,992,0,,not_approved
+T05,S05,simulated_completed,UAV-01,UAV-01,UAV-01-trip-1,46,86,0,,not_approved
+T06,S06,candidate_not_approved,AGV-02,AGV-02,replan-001,891,928,0,,not_approved
+T07,S07,candidate_not_approved,UAV-02,UAV-01,replan-002,374,400,0,,not_approved
+T08,S08,unassigned,,,,,,,payload_exceeded,not_approved

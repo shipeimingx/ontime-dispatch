@@ -1,0 +1,41 @@
+{
+  "trips": [
+    {
+      "trip_id": "AGV-01-trip-1",
+      "vehicle_id": "AGV-01",
+      "task_ids": [
+        "T08",
+        "T02"
+      ],
+      "load_start_s": 0
+    },
+    {
+      "trip_id": "AGV-02-trip-1",
+      "vehicle_id": "AGV-02",
+      "task_ids": [
+        "T06",
+        "T04"
+      ],
+      "load_start_s": 0
+    },
+    {
+      "trip_id": "UAV-01-trip-1",
+      "vehicle_id": "UAV-01",
+      "task_ids": [
+        "T01",
+        "T03"
+      ],
+      "load_start_s": 0
+    },
+    {
+      "trip_id": "UAV-02-trip-1",
+      "vehicle_id": "UAV-02",
+      "task_ids": [
+        "T07",
+        "T05"
+      ],
+      "load_start_s": 0
+    }
+  ],
+  "unassigned": []
+}

@@ -1,0 +1,113 @@
+{
+  "date": "2026-09-30",
+  "timezone": "Asia/Shanghai",
+  "profile": "python-demo-2026-v2",
+  "illustrative": true,
+  "generation_seed": 2026,
+  "python_version": "3.12.14",
+  "test_suite": {
+    "command": "python -m unittest discover -s tests -p test_*.py -v",
+    "tests_run": 41,
+    "passed": true
+  },
+  "schedule_runs": [
+    {
+      "case": "normal",
+      "mode": "hard",
+      "exit_code": 0,
+      "output": "Saved JSON/CSV to D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\normal-hard\r\n{\"valid\": true, \"complete\": true, \"coverage\": \"Complete\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 8, \"unassigned_count\": 0, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    },
+    {
+      "case": "normal",
+      "mode": "soft",
+      "exit_code": 0,
+      "output": "Saved JSON/CSV to D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\normal-soft\r\n{\"valid\": true, \"complete\": true, \"coverage\": \"Complete\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 8, \"unassigned_count\": 0, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    },
+    {
+      "case": "overload",
+      "mode": "hard",
+      "exit_code": 0,
+      "output": "Saved JSON/CSV to D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\overload-hard\r\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 7, \"unassigned_count\": 1, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    },
+    {
+      "case": "overload",
+      "mode": "soft",
+      "exit_code": 0,
+      "output": "Saved JSON/CSV to D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\overload-soft\r\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 7, \"unassigned_count\": 1, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    },
+    {
+      "case": "window_conflict",
+      "mode": "hard",
+      "exit_code": 0,
+      "output": "Saved JSON/CSV to D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\window_conflict-hard\r\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 7, \"unassigned_count\": 1, \"trip_count\": 4, \"travel_s\": 1128, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    },
+    {
+      "case": "window_conflict",
+      "mode": "soft",
+      "exit_code": 0,
+      "output": "Saved JSON/CSV to D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\window_conflict-soft\r\n{\"valid\": true, \"complete\": true, \"coverage\": \"Complete\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 8, \"unassigned_count\": 0, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 34, \"lateness_cost\": 34}\r\n"
+    },
+    {
+      "case": "unavailable",
+      "mode": "hard",
+      "exit_code": 0,
+      "output": "Saved JSON/CSV to D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\unavailable-hard\r\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 4, \"unassigned_count\": 4, \"trip_count\": 2, \"travel_s\": 1044, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    },
+    {
+      "case": "unavailable",
+      "mode": "soft",
+      "exit_code": 0,
+      "output": "Saved JSON/CSV to D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\unavailable-soft\r\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 4, \"unassigned_count\": 4, \"trip_count\": 2, \"travel_s\": 1044, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    }
+  ],
+  "evaluation_runs": [
+    {
+      "case": "normal",
+      "mode": "hard",
+      "exit_code": 0,
+      "output": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\normal-hard\\checked.json\r\n{\"valid\": true, \"complete\": true, \"coverage\": \"Complete\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 8, \"unassigned_count\": 0, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    },
+    {
+      "case": "normal",
+      "mode": "soft",
+      "exit_code": 0,
+      "output": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\normal-soft\\checked.json\r\n{\"valid\": true, \"complete\": true, \"coverage\": \"Complete\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 8, \"unassigned_count\": 0, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    },
+    {
+      "case": "overload",
+      "mode": "hard",
+      "exit_code": 0,
+      "output": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\overload-hard\\checked.json\r\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 7, \"unassigned_count\": 1, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    },
+    {
+      "case": "overload",
+      "mode": "soft",
+      "exit_code": 0,
+      "output": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\overload-soft\\checked.json\r\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 7, \"unassigned_count\": 1, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    },
+    {
+      "case": "window_conflict",
+      "mode": "hard",
+      "exit_code": 0,
+      "output": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\window_conflict-hard\\checked.json\r\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 7, \"unassigned_count\": 1, \"trip_count\": 4, \"travel_s\": 1128, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    },
+    {
+      "case": "window_conflict",
+      "mode": "soft",
+      "exit_code": 0,
+      "output": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\window_conflict-soft\\checked.json\r\n{\"valid\": true, \"complete\": true, \"coverage\": \"Complete\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 8, \"unassigned_count\": 0, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 34, \"lateness_cost\": 34}\r\n"
+    },
+    {
+      "case": "unavailable",
+      "mode": "hard",
+      "exit_code": 0,
+      "output": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\unavailable-hard\\checked.json\r\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 4, \"unassigned_count\": 4, \"trip_count\": 2, \"travel_s\": 1044, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    },
+    {
+      "case": "unavailable",
+      "mode": "soft",
+      "exit_code": 0,
+      "output": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\cases\\unavailable-soft\\checked.json\r\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 4, \"unassigned_count\": 4, \"trip_count\": 2, \"travel_s\": 1044, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\r\n"
+    }
+  ]
+}

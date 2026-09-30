@@ -1,0 +1,27 @@
+{
+  "population_size": 24,
+  "max_generations": 40,
+  "elite_count": 2,
+  "tournament_size": 3,
+  "crossover_rate": 0.9,
+  "mutation_rate": 0.25,
+  "patience": 12,
+  "seed": 2026,
+  "decoder_seed": 2026,
+  "costs": {
+    "uav_transport_per_s": 0.02,
+    "agv_transport_per_s": 0.01,
+    "lateness_multiplier": 1.0,
+    "transport_coefficient_unit": "penalty_unit/s",
+    "task_lateness_coefficient_unit": "penalty_unit/s",
+    "lateness_multiplier_unit": "dimensionless",
+    "cost_unit": "penalty_unit",
+    "transport_basis": "travel seconds on all legs, including depot return",
+    "objective_priority": [
+      "unassigned_count",
+      "transport_cost + lateness_penalty"
+    ],
+    "illustrative_coefficients": true
+  },
+  "two_opt_implemented": false
+}

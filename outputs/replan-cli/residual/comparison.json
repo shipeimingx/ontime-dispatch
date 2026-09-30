@@ -1,0 +1,297 @@
+{
+  "metrics": [
+    {
+      "metric": "assigned_count",
+      "initial": 4,
+      "ga": 4,
+      "delta_ga_minus_initial": 0,
+      "unit": "count"
+    },
+    {
+      "metric": "unassigned_count",
+      "initial": 1,
+      "ga": 1,
+      "delta_ga_minus_initial": 0,
+      "unit": "count"
+    },
+    {
+      "metric": "trip_count",
+      "initial": 2,
+      "ga": 2,
+      "delta_ga_minus_initial": 0,
+      "unit": "count"
+    },
+    {
+      "metric": "travel_s",
+      "initial": 622,
+      "ga": 622,
+      "delta_ga_minus_initial": 0,
+      "unit": "s"
+    },
+    {
+      "metric": "waiting_s",
+      "initial": 0,
+      "ga": 0,
+      "delta_ga_minus_initial": 0,
+      "unit": "s"
+    },
+    {
+      "metric": "lateness_s",
+      "initial": 0,
+      "ga": 0,
+      "delta_ga_minus_initial": 0,
+      "unit": "s"
+    },
+    {
+      "metric": "lateness_cost",
+      "initial": 0,
+      "ga": 0,
+      "delta_ga_minus_initial": 0,
+      "unit": "penalty_unit"
+    },
+    {
+      "metric": "transport_cost",
+      "initial": 6.8,
+      "ga": 6.8,
+      "delta_ga_minus_initial": 0.0,
+      "unit": "penalty_unit"
+    },
+    {
+      "metric": "lateness_penalty",
+      "initial": 0.0,
+      "ga": 0.0,
+      "delta_ga_minus_initial": 0.0,
+      "unit": "penalty_unit"
+    },
+    {
+      "metric": "total_cost",
+      "initial": 6.8,
+      "ga": 6.8,
+      "delta_ga_minus_initial": 0.0,
+      "unit": "penalty_unit"
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "T01",
+      "initial": {
+        "status": "planned",
+        "vehicle_id": "UAV-01",
+        "trip_id": "UAV-01-trip-1",
+        "task_id": "T01",
+        "station_id": "S01",
+        "arrival_s": 415,
+        "earliest_s": 5,
+        "latest_s": 500,
+        "waiting_s": 0,
+        "service_start_s": 415,
+        "unload_s": 6,
+        "unload_end_s": 421,
+        "service_s": 19,
+        "completion_s": 440,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 1,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 0.0,
+        "demand_kg": 1.01,
+        "objective_lateness_penalty": 0.0
+      },
+      "ga": {
+        "status": "planned",
+        "vehicle_id": "UAV-01",
+        "trip_id": "UAV-01-trip-1",
+        "task_id": "T01",
+        "station_id": "S01",
+        "arrival_s": 415,
+        "earliest_s": 5,
+        "latest_s": 500,
+        "waiting_s": 0,
+        "service_start_s": 415,
+        "unload_s": 6,
+        "unload_end_s": 421,
+        "service_s": 19,
+        "completion_s": 440,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 1,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 0.0,
+        "demand_kg": 1.01,
+        "objective_lateness_penalty": 0.0
+      },
+      "changed": false
+    },
+    {
+      "task_id": "T04",
+      "initial": {
+        "status": "planned",
+        "vehicle_id": "AGV-02",
+        "trip_id": "AGV-02-trip-1",
+        "task_id": "T04",
+        "station_id": "S04",
+        "arrival_s": 949,
+        "earliest_s": 47,
+        "latest_s": 1040,
+        "waiting_s": 0,
+        "service_start_s": 949,
+        "unload_s": 13,
+        "unload_end_s": 962,
+        "service_s": 30,
+        "completion_s": 992,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 1,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 0.0,
+        "demand_kg": 22,
+        "objective_lateness_penalty": 0.0
+      },
+      "ga": {
+        "status": "planned",
+        "vehicle_id": "AGV-02",
+        "trip_id": "AGV-02-trip-1",
+        "task_id": "T04",
+        "station_id": "S04",
+        "arrival_s": 949,
+        "earliest_s": 47,
+        "latest_s": 1040,
+        "waiting_s": 0,
+        "service_start_s": 949,
+        "unload_s": 13,
+        "unload_end_s": 962,
+        "service_s": 30,
+        "completion_s": 992,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 1,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 0.0,
+        "demand_kg": 22,
+        "objective_lateness_penalty": 0.0
+      },
+      "changed": false
+    },
+    {
+      "task_id": "T06",
+      "initial": {
+        "status": "planned",
+        "vehicle_id": "AGV-02",
+        "trip_id": "AGV-02-trip-1",
+        "task_id": "T06",
+        "station_id": "S06",
+        "arrival_s": 891,
+        "earliest_s": 29,
+        "latest_s": 1400,
+        "waiting_s": 0,
+        "service_start_s": 891,
+        "unload_s": 7,
+        "unload_end_s": 898,
+        "service_s": 30,
+        "completion_s": 928,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 4,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 22.0,
+        "demand_kg": 19,
+        "objective_lateness_penalty": 0.0
+      },
+      "ga": {
+        "status": "planned",
+        "vehicle_id": "AGV-02",
+        "trip_id": "AGV-02-trip-1",
+        "task_id": "T06",
+        "station_id": "S06",
+        "arrival_s": 891,
+        "earliest_s": 29,
+        "latest_s": 1400,
+        "waiting_s": 0,
+        "service_start_s": 891,
+        "unload_s": 7,
+        "unload_end_s": 898,
+        "service_s": 30,
+        "completion_s": 928,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 4,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 22.0,
+        "demand_kg": 19,
+        "objective_lateness_penalty": 0.0
+      },
+      "changed": false
+    },
+    {
+      "task_id": "T07",
+      "initial": {
+        "status": "planned",
+        "vehicle_id": "UAV-01",
+        "trip_id": "UAV-01-trip-1",
+        "task_id": "T07",
+        "station_id": "S07",
+        "arrival_s": 374,
+        "earliest_s": 19,
+        "latest_s": 1580,
+        "waiting_s": 0,
+        "service_start_s": 374,
+        "unload_s": 5,
+        "unload_end_s": 379,
+        "service_s": 21,
+        "completion_s": 400,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 2,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 1.01,
+        "demand_kg": 2.43,
+        "objective_lateness_penalty": 0.0
+      },
+      "ga": {
+        "status": "planned",
+        "vehicle_id": "UAV-01",
+        "trip_id": "UAV-01-trip-1",
+        "task_id": "T07",
+        "station_id": "S07",
+        "arrival_s": 374,
+        "earliest_s": 19,
+        "latest_s": 1580,
+        "waiting_s": 0,
+        "service_start_s": 374,
+        "unload_s": 5,
+        "unload_end_s": 379,
+        "service_s": 21,
+        "completion_s": 400,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 2,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 1.01,
+        "demand_kg": 2.43,
+        "objective_lateness_penalty": 0.0
+      },
+      "changed": false
+    },
+    {
+      "task_id": "T08",
+      "initial": {
+        "status": "unassigned",
+        "reason_code": "payload_exceeded"
+      },
+      "ga": {
+        "status": "unassigned",
+        "reason_code": "payload_exceeded"
+      },
+      "changed": false
+    }
+  ],
+  "improved": false,
+  "comparison_scope": "this input, mode, parameters and fixed seed only",
+  "initial_objective": {
+    "unassigned_count": 1,
+    "total_cost": 6.8,
+    "transport_cost": 6.8,
+    "lateness_penalty": 0.0,
+    "cost_unit": "penalty_unit"
+  },
+  "ga_objective": {
+    "unassigned_count": 1,
+    "total_cost": 6.8,
+    "transport_cost": 6.8,
+    "lateness_penalty": 0.0,
+    "cost_unit": "penalty_unit"
+  },
+  "conclusion": "No strict objective improvement; the first-stage plan was retained."
+}

@@ -1,0 +1,614 @@
+{
+  "executed_at": "2026-09-30T19:34:31.732103+08:00",
+  "python": "3.12.14",
+  "functional_tests_only": true,
+  "counts": {
+    "已通过": 66,
+    "失败": 0,
+    "未执行": 0
+  },
+  "tests": [
+    {
+      "test": "test_core_v2.InsertionTests.test_insertion_must_protect_previously_assigned_window",
+      "status": "已通过"
+    },
+    {
+      "test": "test_core_v2.InsertionTests.test_lateness_cost_uses_explicit_weight",
+      "status": "已通过"
+    },
+    {
+      "test": "test_core_v2.InsertionTests.test_middle_insertion_feasible_when_appending_and_new_trip_are_not",
+      "status": "已通过"
+    },
+    {
+      "test": "test_core_v2.InsertionTests.test_seed_reproducible_and_used_only_for_ties",
+      "status": "已通过"
+    },
+    {
+      "test": "test_core_v2.ScenarioAndExportTests.test_abnormal_cases_keep_all_tasks_and_enforce_hard_rules",
+      "status": "已通过"
+    },
+    {
+      "test": "test_core_v2.ScenarioAndExportTests.test_cli_output_directory_and_seed",
+      "status": "已通过"
+    },
+    {
+      "test": "test_core_v2.ScenarioAndExportTests.test_json_csv_roundtrip_and_empty_table_headers",
+      "status": "已通过"
+    },
+    {
+      "test": "test_core_v2.ScenarioAndExportTests.test_seeded_cases_and_units",
+      "status": "已通过"
+    },
+    {
+      "test": "test_core_v2.ScenarioAndExportTests.test_speed_does_not_silently_replace_supplied_time_matrix",
+      "status": "已通过"
+    },
+    {
+      "test": "test_core_v2.TypedPlanTests.test_explicit_coverage_cannot_drop_or_double_classify_task",
+      "status": "已通过"
+    },
+    {
+      "test": "test_core_v2.TypedPlanTests.test_typed_invalid_vehicle_is_validated",
+      "status": "已通过"
+    },
+    {
+      "test": "test_core_v2.TypedPlanTests.test_typed_records_and_independent_recompute",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ga.EvolutionTests.test_archive_history_reproducible_and_all_constraint_modes",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ga.EvolutionTests.test_no_improvement_retains_initial_plan_and_stops",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ga.EvolutionTests.test_parameters_reject_invalid_probabilities_counts_and_costs",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ga.EvolutionTests.test_zero_generations_and_trivial_permutation_terminate",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ga.ExportTests.test_cli_optimize_and_evaluate_exported_ga_plan",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ga.ExportTests.test_outputs_include_two_plans_task_comparison_and_generation_zero",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ga.LinkageTests.test_bad_chromosomes_rejected",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ga.LinkageTests.test_decoder_uses_order_and_fixed_decoder_seed",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ga.LinkageTests.test_seed_is_actual_first_stage_and_roundtrips",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ga.OperatorsAndFitnessTests.test_coverage_precedes_arbitrarily_high_cost",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ga.OperatorsAndFitnessTests.test_explicit_transport_and_lateness_units_and_invalid_plan_gate",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ga.OperatorsAndFitnessTests.test_ox_swap_and_insertion_preserve_every_gene",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.InputTests.test_bad_units_unknown_fields_and_numeric_values",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.InputTests.test_cli_invalid_hard_plan_has_nonzero_exit",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.InputTests.test_cli_preserves_exported_hard_mode",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.InputTests.test_demo_cli_roundtrip",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.InputTests.test_json_duplicate_keys_and_nan_rejected",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.InputTests.test_matrix_window_and_duplicate_ids",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.InputTests.test_optional_distance_is_never_invented",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.PlanTests.test_duplicate_in_trip_is_not_split_delivery",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.PlanTests.test_duplicate_task_across_trips_rejected",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.PlanTests.test_empty_tasks_and_no_devices_terminate",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.PlanTests.test_overlap_rejected",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.PlanTests.test_oversized_task_preserved_with_evidence",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.PlanTests.test_partial_is_valid_but_not_complete",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.PlanTests.test_schedule_deterministic_and_does_not_mutate_input",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_availability_start_and_depot_wait",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_decimal_payload_exact_boundary",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_forbidden_return_does_not_invent_eta",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_full_multistop_ledger",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_id_eligibility_intersects_type",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_multitrip_turnaround_not_final_shift_requirement",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_parallel_heterogeneous_devices",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_return_is_required_by_endurance",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_soft_default_and_hard_lateness",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_type_specific_asymmetric_travel",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_unavailable_or_ineligible_is_hard_in_soft",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_waiting_counts_toward_endurance",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_warehouse_load_and_unload_in_shift",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_whole_trip_load_not_each_task",
+      "status": "已通过"
+    },
+    {
+      "test": "test_ontime.TimingTests.test_window_on_service_start_not_completion",
+      "status": "已通过"
+    },
+    {
+      "test": "test_replan.ExplicitBoundaryTests.test_all_tasks_unassignable_are_retained",
+      "status": "已通过"
+    },
+    {
+      "test": "test_replan.ExplicitBoundaryTests.test_dictionary_adapter_cannot_override_device_capacity",
+      "status": "已通过"
+    },
+    {
+      "test": "test_replan.ExplicitBoundaryTests.test_early_wait_is_feasible_and_counted",
+      "status": "已通过"
+    },
+    {
+      "test": "test_replan.ExplicitBoundaryTests.test_single_task_normal_delivery",
+      "status": "已通过"
+    },
+    {
+      "test": "test_replan.ReplanningTests.test_active_failed_device_is_explicitly_rejected",
+      "status": "已通过"
+    },
+    {
+      "test": "test_replan.ReplanningTests.test_checkpoint_after_all_shifts_closes_devices_without_invalid_interval",
+      "status": "已通过"
+    },
+    {
+      "test": "test_replan.ReplanningTests.test_completed_and_active_loaded_tasks_are_frozen",
+      "status": "已通过"
+    },
+    {
+      "test": "test_replan.ReplanningTests.test_exact_load_start_event_precedes_loading",
+      "status": "已通过"
+    },
+    {
+      "test": "test_replan.ReplanningTests.test_invalid_checkpoint_and_baseline_rejected",
+      "status": "已通过"
+    },
+    {
+      "test": "test_replan.ReplanningTests.test_tampered_frozen_or_new_failed_vehicle_is_rejected",
+      "status": "已通过"
+    },
+    {
+      "test": "test_replan.ReplanningTests.test_unapproved_and_fixed_seed_reproducible",
+      "status": "已通过"
+    },
+    {
+      "test": "test_replan_cli.CheckpointCLITests.test_cli_replan_exports_unapproved_candidate_and_rejects_active_failure",
+      "status": "已通过"
+    },
+    {
+      "test": "test_replan_cli.CheckpointCLITests.test_malformed_plan_json_has_clean_input_error_exit",
+      "status": "已通过"
+    }
+  ],
+  "case_runs": [
+    {
+      "case": "normal",
+      "mode": "hard",
+      "status": "已通过",
+      "initial": {
+        "unassigned_count": 0,
+        "total_cost": 12.26,
+        "transport_cost": 12.26,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "ga": {
+        "unassigned_count": 0,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "unassigned": [],
+      "checks": [
+        {
+          "phase": "initial",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\normal-hard\\initial\\checked.json\n{\"valid\": true, \"complete\": true, \"coverage\": \"Complete\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 8, \"unassigned_count\": 0, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        },
+        {
+          "phase": "ga",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\normal-hard\\ga\\checked.json\n{\"valid\": true, \"complete\": true, \"coverage\": \"Complete\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 8, \"unassigned_count\": 0, \"trip_count\": 4, \"travel_s\": 1130, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "case": "normal",
+      "mode": "soft",
+      "status": "已通过",
+      "initial": {
+        "unassigned_count": 0,
+        "total_cost": 12.26,
+        "transport_cost": 12.26,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "ga": {
+        "unassigned_count": 0,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "unassigned": [],
+      "checks": [
+        {
+          "phase": "initial",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\normal-soft\\initial\\checked.json\n{\"valid\": true, \"complete\": true, \"coverage\": \"Complete\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 8, \"unassigned_count\": 0, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        },
+        {
+          "phase": "ga",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\normal-soft\\ga\\checked.json\n{\"valid\": true, \"complete\": true, \"coverage\": \"Complete\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 8, \"unassigned_count\": 0, \"trip_count\": 4, \"travel_s\": 1130, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "case": "overload",
+      "mode": "hard",
+      "status": "已通过",
+      "initial": {
+        "unassigned_count": 1,
+        "total_cost": 12.26,
+        "transport_cost": 12.26,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "ga": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "unassigned": [
+        "T08"
+      ],
+      "checks": [
+        {
+          "phase": "initial",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\overload-hard\\initial\\checked.json\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 7, \"unassigned_count\": 1, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        },
+        {
+          "phase": "ga",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\overload-hard\\ga\\checked.json\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 7, \"unassigned_count\": 1, \"trip_count\": 4, \"travel_s\": 1130, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "case": "overload",
+      "mode": "soft",
+      "status": "已通过",
+      "initial": {
+        "unassigned_count": 1,
+        "total_cost": 12.26,
+        "transport_cost": 12.26,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "ga": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "unassigned": [
+        "T08"
+      ],
+      "checks": [
+        {
+          "phase": "initial",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\overload-soft\\initial\\checked.json\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 7, \"unassigned_count\": 1, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        },
+        {
+          "phase": "ga",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\overload-soft\\ga\\checked.json\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 7, \"unassigned_count\": 1, \"trip_count\": 4, \"travel_s\": 1130, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "case": "window_conflict",
+      "mode": "hard",
+      "status": "已通过",
+      "initial": {
+        "unassigned_count": 1,
+        "total_cost": 12.12,
+        "transport_cost": 12.12,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "ga": {
+        "unassigned_count": 1,
+        "total_cost": 12.12,
+        "transport_cost": 12.12,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "unassigned": [
+        "T01"
+      ],
+      "checks": [
+        {
+          "phase": "initial",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\window_conflict-hard\\initial\\checked.json\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 7, \"unassigned_count\": 1, \"trip_count\": 4, \"travel_s\": 1128, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        },
+        {
+          "phase": "ga",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\window_conflict-hard\\ga\\checked.json\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 7, \"unassigned_count\": 1, \"trip_count\": 4, \"travel_s\": 1128, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "case": "window_conflict",
+      "mode": "soft",
+      "status": "已通过",
+      "initial": {
+        "unassigned_count": 0,
+        "total_cost": 46.26,
+        "transport_cost": 12.26,
+        "lateness_penalty": 34.0,
+        "cost_unit": "penalty_unit"
+      },
+      "ga": {
+        "unassigned_count": 0,
+        "total_cost": 46.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 34.0,
+        "cost_unit": "penalty_unit"
+      },
+      "unassigned": [],
+      "checks": [
+        {
+          "phase": "initial",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\window_conflict-soft\\initial\\checked.json\n{\"valid\": true, \"complete\": true, \"coverage\": \"Complete\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 8, \"unassigned_count\": 0, \"trip_count\": 4, \"travel_s\": 1135, \"waiting_s\": 0, \"lateness_s\": 34, \"lateness_cost\": 34}\n",
+          "stderr": ""
+        },
+        {
+          "phase": "ga",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\window_conflict-soft\\ga\\checked.json\n{\"valid\": true, \"complete\": true, \"coverage\": \"Complete\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 8, \"unassigned_count\": 0, \"trip_count\": 4, \"travel_s\": 1130, \"waiting_s\": 0, \"lateness_s\": 34, \"lateness_cost\": 34}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "case": "unavailable",
+      "mode": "hard",
+      "status": "已通过",
+      "initial": {
+        "unassigned_count": 4,
+        "total_cost": 10.44,
+        "transport_cost": 10.44,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "ga": {
+        "unassigned_count": 4,
+        "total_cost": 10.44,
+        "transport_cost": 10.44,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "unassigned": [
+        "T01",
+        "T03",
+        "T05",
+        "T07"
+      ],
+      "checks": [
+        {
+          "phase": "initial",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\unavailable-hard\\initial\\checked.json\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 4, \"unassigned_count\": 4, \"trip_count\": 2, \"travel_s\": 1044, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        },
+        {
+          "phase": "ga",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\unavailable-hard\\ga\\checked.json\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"hard\", \"seed\": 2026, \"assigned_count\": 4, \"unassigned_count\": 4, \"trip_count\": 2, \"travel_s\": 1044, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "case": "unavailable",
+      "mode": "soft",
+      "status": "已通过",
+      "initial": {
+        "unassigned_count": 4,
+        "total_cost": 10.44,
+        "transport_cost": 10.44,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "ga": {
+        "unassigned_count": 4,
+        "total_cost": 10.44,
+        "transport_cost": 10.44,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "unassigned": [
+        "T01",
+        "T03",
+        "T05",
+        "T07"
+      ],
+      "checks": [
+        {
+          "phase": "initial",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\unavailable-soft\\initial\\checked.json\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 4, \"unassigned_count\": 4, \"trip_count\": 2, \"travel_s\": 1044, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        },
+        {
+          "phase": "ga",
+          "exit_code": 0,
+          "stdout": "Saved D:\\CxProjects\\cx-ontime-dispatch\\outputs\\validation\\cases\\unavailable-soft\\ga\\checked.json\n{\"valid\": true, \"complete\": false, \"coverage\": \"Partial\", \"mode\": \"soft\", \"seed\": 2026, \"assigned_count\": 4, \"unassigned_count\": 4, \"trip_count\": 2, \"travel_s\": 1044, \"waiting_s\": 0, \"lateness_s\": 0, \"lateness_cost\": 0}\n",
+          "stderr": ""
+        }
+      ]
+    }
+  ],
+  "not_executed": [
+    "真实 UAV/AGV 与硬件遥测",
+    "在途故障救援 / 改道 / 抛载",
+    "真实障碍物规避与充电曲线",
+    "真实工厂地图 / 经济成本测量",
+    "2025 源码复现 / 原研究指标验证",
+    "用户可用性测试 / 操作员批准流程 / 生产部署",
+    "2-opt（未实现）"
+  ],
+  "history": {
+    "scope": "Observed during this validation session, 2026-09-30",
+    "resolved": [
+      {
+        "kind": "execution-history metadata defect in new extension",
+        "test": "test_replan.ReplanningTests.test_completed_and_active_loaded_tasks_are_frozen",
+        "observed": "Future frozen segments had executed_s=0 but executed_until_s equal to their future start, after the checkpoint. A new assertion requiring executed_until_s <= checkpoint or null failed.",
+        "fix": "Set executed_until_s=null for segments that have not begun. Keep actual simulated prefix end <= checkpoint and executed_s=0 for future segments.",
+        "rerun": "Affected checkpoint tests and final complete suite rerun. Future commitments remain frozen without being represented as already executed."
+      },
+      {
+        "kind": "implementation defect in new extension",
+        "test": "test_replan_cli.CheckpointCLITests.test_malformed_plan_json_has_clean_input_error_exit",
+        "observed": "replan CLI given plan JSON [] raised AttributeError from raw.get, printed a traceback and exited 1 rather than clean input-error exit 2. New regression failed before the fix.",
+        "fix": "Check plan root is a JSON object before extracting exported plan fields; raise InputError otherwise.",
+        "rerun": "Both affected CLI tests and final complete suite rerun after the fix."
+      },
+      {
+        "kind": "implementation defect",
+        "test": "test_replan.ExplicitBoundaryTests.test_dictionary_adapter_cannot_override_device_capacity",
+        "observed": "Input capacity 3 kg, two tasks totalling 4 kg: evaluate_trip accepted a caller-supplied device capacity 4 kg rather than rejecting the conflicting device record. Expected InputError was not raised.",
+        "fix": "Require the dictionary adapter device to match the validated Problem device before evaluating. Forged capacity or availability cannot override input parameters.",
+        "rerun": "Affected regression then complete suite rerun successfully. Final status is read from validation-results.json."
+      },
+      {
+        "kind": "test expectation error",
+        "test": "test_replan.ReplanningTests.test_completed_and_active_loaded_tasks_are_frozen",
+        "observed": "New test initially expected U2 ready at 130 s; independently reconstructed arithmetic gives 30+10+20+5+25+10+20=120 s.",
+        "fix": "Correct expected ready time to 120 s. Production timeline calculation did not need changing.",
+        "rerun": "All 10 checkpoint/boundary tests then passed; subsequent complete suite also passed."
+      },
+      {
+        "kind": "command invocation correction",
+        "observed": "Run-OnTime-Python.cmd -m unittest invokes run_ontime.py and rejects unittest as a CLI subcommand (exit 1).",
+        "fix": "Use Python -m unittest, or the new Run-Validation.cmd. Scheduling wrapper remains a CLI wrapper.",
+        "rerun": "Python -m unittest executed the existing 53 tests successfully."
+      }
+    ]
+  }
+}

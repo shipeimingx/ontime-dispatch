@@ -1,0 +1,498 @@
+{
+  "trips": [
+    {
+      "trip_id": "AGV-01-trip-1",
+      "vehicle_id": "AGV-01",
+      "task_ids": [
+        "T08",
+        "T02"
+      ],
+      "load_start_s": 0
+    },
+    {
+      "trip_id": "AGV-02-trip-1",
+      "vehicle_id": "AGV-02",
+      "task_ids": [
+        "T06",
+        "T04"
+      ],
+      "load_start_s": 0
+    }
+  ],
+  "unassigned": [
+    {
+      "task_id": "T01",
+      "reason_code": "device_unavailable",
+      "reason_codes": [
+        "eligibility",
+        "vehicle_available"
+      ],
+      "explanation": "All compatible devices are unavailable. Search is not a global infeasibility proof.",
+      "attempts": [
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T01"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T01",
+              "vehicle_id": "AGV-01"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-02",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T01"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T01",
+              "vehicle_id": "AGV-02"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T01"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "vehicle_available",
+              "passed": false
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-02",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T01"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "vehicle_available",
+              "passed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "T03",
+      "reason_code": "device_unavailable",
+      "reason_codes": [
+        "eligibility",
+        "vehicle_available"
+      ],
+      "explanation": "All compatible devices are unavailable. Search is not a global infeasibility proof.",
+      "attempts": [
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T03",
+            "T02"
+          ],
+          "insertion_position": 0,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T03",
+              "vehicle_id": "AGV-01"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T02",
+            "T03"
+          ],
+          "insertion_position": 1,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T03",
+              "vehicle_id": "AGV-01"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T03"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T03",
+              "vehicle_id": "AGV-01"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-02",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T03"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T03",
+              "vehicle_id": "AGV-02"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T03"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "vehicle_available",
+              "passed": false
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-02",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T03"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "vehicle_available",
+              "passed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "T05",
+      "reason_code": "device_unavailable",
+      "reason_codes": [
+        "eligibility",
+        "vehicle_available"
+      ],
+      "explanation": "All compatible devices are unavailable. Search is not a global infeasibility proof.",
+      "attempts": [
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T05",
+            "T02"
+          ],
+          "insertion_position": 0,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T05",
+              "vehicle_id": "AGV-01"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T02",
+            "T05"
+          ],
+          "insertion_position": 1,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T05",
+              "vehicle_id": "AGV-01"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T05"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T05",
+              "vehicle_id": "AGV-01"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-02",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T05",
+            "T04"
+          ],
+          "insertion_position": 0,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T05",
+              "vehicle_id": "AGV-02"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-02",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T04",
+            "T05"
+          ],
+          "insertion_position": 1,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T05",
+              "vehicle_id": "AGV-02"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-02",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T05"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T05",
+              "vehicle_id": "AGV-02"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T05"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "vehicle_available",
+              "passed": false
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-02",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T05"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "vehicle_available",
+              "passed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "T07",
+      "reason_code": "device_unavailable",
+      "reason_codes": [
+        "eligibility",
+        "vehicle_available"
+      ],
+      "explanation": "All compatible devices are unavailable. Search is not a global infeasibility proof.",
+      "attempts": [
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T07",
+            "T02"
+          ],
+          "insertion_position": 0,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T07",
+              "vehicle_id": "AGV-01"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T02",
+            "T07"
+          ],
+          "insertion_position": 1,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T07",
+              "vehicle_id": "AGV-01"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T07"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T07",
+              "vehicle_id": "AGV-01"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-02",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T07",
+            "T06",
+            "T04"
+          ],
+          "insertion_position": 0,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T07",
+              "vehicle_id": "AGV-02"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-02",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T06",
+            "T07",
+            "T04"
+          ],
+          "insertion_position": 1,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T07",
+              "vehicle_id": "AGV-02"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-02",
+          "candidate_kind": "insert_current_trip",
+          "candidate_task_ids": [
+            "T06",
+            "T04",
+            "T07"
+          ],
+          "insertion_position": 2,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T07",
+              "vehicle_id": "AGV-02"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "AGV-02",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T07"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "eligibility",
+              "passed": false,
+              "task_id": "T07",
+              "vehicle_id": "AGV-02"
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-01",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T07"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "vehicle_available",
+              "passed": false
+            }
+          ]
+        },
+        {
+          "vehicle_id": "UAV-02",
+          "candidate_kind": "new_trip",
+          "candidate_task_ids": [
+            "T07"
+          ],
+          "insertion_position": null,
+          "failed_checks": [
+            {
+              "code": "vehicle_available",
+              "passed": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

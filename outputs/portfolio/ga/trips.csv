@@ -1,0 +1,6 @@
+﻿trip_id,vehicle_id,type,speed_m_s,task_ids,route,valid,payload_kg,capacity_kg,load_start_s,load_s,departure_s,depot_wait_s,travel_s,waiting_s,station_unload_s,service_s,return_s,mission_s,depot_unload_s,depot_unload_end_s,turnaround_s,turnaround_applied,next_ready_s,planned_end_s,lateness_s,lateness_cost,distance_m,transport_cost_per_s,transport_cost
+AGV-01-trip-1,AGV-01,AGV,1.5,"[""T02""]","[""DEPOT"", ""S02"", ""DEPOT""]",True,24.0,35,0,30,30,0,480,0,15,25,550,520,20,570,45,False,615,570,0,0,717.6,0.01,4.8
+AGV-02-trip-1,AGV-02,AGV,1.5,"[""T04"", ""T06""]","[""DEPOT"", ""S04"", ""S06"", ""DEPOT""]",True,41.0,50,600,30,630,0,564,0,20,60,1274,644,20,1294,45,False,1339,1294,0,0,844.8,0.01,5.64
+UAV-01-trip-1,UAV-01,UAV,8.0,"[""T05""]","[""DEPOT"", ""S05"", ""DEPOT""]",True,2.45,4,0,20,20,0,52,0,13,27,112,92,10,122,60,True,182,182,0,0,411.694,0.02,1.04
+UAV-01-trip-2,UAV-01,UAV,8.0,"[""T03""]","[""DEPOT"", ""S03"", ""DEPOT""]",True,1.63,4,182,20,202,0,24,0,9,21,256,54,10,266,60,False,326,266,0,0,179.388,0.02,0.48
+UAV-02-trip-1,UAV-02,UAV,8.0,"[""T01"", ""T07""]","[""DEPOT"", ""S01"", ""S07"", ""DEPOT""]",True,3.44,6,240,20,260,0,58,0,11,40,369,109,10,379,60,False,439,379,0,0,453.552,0.02,1.16

@@ -1,0 +1,11 @@
+﻿metric,initial,ga,delta_ga_minus_initial,unit
+assigned_count,7,7,0,count
+unassigned_count,1,1,0,count
+trip_count,5,5,0,count
+travel_s,1183,1178,-5,s
+waiting_s,0,0,0,s
+lateness_s,0,0,0,s
+lateness_cost,0,0,0,penalty_unit
+transport_cost,13.22,13.12,-0.1,penalty_unit
+lateness_penalty,0.0,0.0,0.0,penalty_unit
+total_cost,13.22,13.12,-0.1,penalty_unit

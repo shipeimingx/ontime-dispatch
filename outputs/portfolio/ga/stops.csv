@@ -1,0 +1,8 @@
+﻿trip_id,vehicle_id,type,task_id,station_id,demand_kg,arrival_s,earliest_s,latest_s,waiting_s,service_start_s,unload_s,unload_end_s,service_s,completion_s,lateness_s,lateness_cost_per_s,lateness_cost,objective_lateness_penalty,remaining_payload_kg,status
+AGV-01-trip-1,AGV-01,AGV,T02,S02,24,270,0,680,0,270,15,285,25,310,0,4,0,0.0,0.0,planned
+AGV-02-trip-1,AGV-02,AGV,T04,S04,22,912,47,1040,0,912,13,925,30,955,0,1,0,0.0,19.0,planned
+AGV-02-trip-1,AGV-02,AGV,T06,S06,19,976,29,1400,0,976,7,983,30,1013,0,4,0,0.0,0.0,planned
+UAV-01-trip-1,UAV-01,UAV,T05,S05,2.45,46,5,1220,0,46,13,59,27,86,0,2,0,0.0,0.0,planned
+UAV-01-trip-2,UAV-01,UAV,T03,S03,1.63,214,25,860,0,214,9,223,21,244,0,2,0,0.0,0.0,planned
+UAV-02-trip-1,UAV-02,UAV,T01,S01,1.01,275,5,500,0,275,6,281,19,300,0,1,0,0.0,2.43,planned
+UAV-02-trip-1,UAV-02,UAV,T07,S07,2.43,315,19,1580,0,315,5,320,21,341,0,2,0,0.0,0.0,planned

@@ -1,0 +1,405 @@
+[
+  {
+    "generation": 0,
+    "generation_best": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_known": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "population_unique": 24,
+    "decoded_unique_total": 24,
+    "cache_hits_total": 0,
+    "stagnant_generations": 0
+  },
+  {
+    "generation": 1,
+    "generation_best": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_known": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "population_unique": 23,
+    "decoded_unique_total": 42,
+    "cache_hits_total": 4,
+    "stagnant_generations": 1
+  },
+  {
+    "generation": 2,
+    "generation_best": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_known": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "population_unique": 19,
+    "decoded_unique_total": 58,
+    "cache_hits_total": 10,
+    "stagnant_generations": 2
+  },
+  {
+    "generation": 3,
+    "generation_best": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_known": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "population_unique": 19,
+    "decoded_unique_total": 72,
+    "cache_hits_total": 18,
+    "stagnant_generations": 3
+  },
+  {
+    "generation": 4,
+    "generation_best": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_known": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "population_unique": 22,
+    "decoded_unique_total": 86,
+    "cache_hits_total": 26,
+    "stagnant_generations": 4
+  },
+  {
+    "generation": 5,
+    "generation_best": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_known": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "population_unique": 22,
+    "decoded_unique_total": 101,
+    "cache_hits_total": 33,
+    "stagnant_generations": 5
+  },
+  {
+    "generation": 6,
+    "generation_best": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_known": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "population_unique": 19,
+    "decoded_unique_total": 116,
+    "cache_hits_total": 40,
+    "stagnant_generations": 6
+  },
+  {
+    "generation": 7,
+    "generation_best": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_known": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "population_unique": 20,
+    "decoded_unique_total": 129,
+    "cache_hits_total": 49,
+    "stagnant_generations": 7
+  },
+  {
+    "generation": 8,
+    "generation_best": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_known": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "population_unique": 17,
+    "decoded_unique_total": 140,
+    "cache_hits_total": 60,
+    "stagnant_generations": 8
+  },
+  {
+    "generation": 9,
+    "generation_best": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_known": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "population_unique": 16,
+    "decoded_unique_total": 151,
+    "cache_hits_total": 71,
+    "stagnant_generations": 9
+  },
+  {
+    "generation": 10,
+    "generation_best": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_known": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "population_unique": 18,
+    "decoded_unique_total": 163,
+    "cache_hits_total": 81,
+    "stagnant_generations": 10
+  },
+  {
+    "generation": 11,
+    "generation_best": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_known": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "population_unique": 15,
+    "decoded_unique_total": 172,
+    "cache_hits_total": 94,
+    "stagnant_generations": 11
+  },
+  {
+    "generation": 12,
+    "generation_best": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_known": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "best_chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "population_unique": 14,
+    "decoded_unique_total": 180,
+    "cache_hits_total": 108,
+    "stagnant_generations": 12
+  }
+]

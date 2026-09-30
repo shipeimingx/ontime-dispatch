@@ -1,0 +1,4860 @@
+{
+  "method_profile": "two-stage-permutation-ga-2026-v1",
+  "illustrative": true,
+  "mode": "hard",
+  "input_snapshot": {
+    "schema_version": 2,
+    "scenario_label": "Illustrative data — overload T08",
+    "depot_id": "DEPOT",
+    "stations": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08"
+    ],
+    "vehicles": [
+      {
+        "id": "UAV-01",
+        "type": "UAV",
+        "available": true,
+        "capacity_kg": 4,
+        "trip_limit_s": 800,
+        "available_from_s": 0,
+        "available_until_s": 3600,
+        "load_s": 20,
+        "depot_unload_s": 10,
+        "turnaround_s": 60,
+        "speed_m_s": 8.0
+      },
+      {
+        "id": "UAV-02",
+        "type": "UAV",
+        "available": true,
+        "capacity_kg": 6,
+        "trip_limit_s": 800,
+        "available_from_s": 0,
+        "available_until_s": 3600,
+        "load_s": 20,
+        "depot_unload_s": 10,
+        "turnaround_s": 60,
+        "speed_m_s": 8.0
+      },
+      {
+        "id": "AGV-01",
+        "type": "AGV",
+        "available": true,
+        "capacity_kg": 35,
+        "trip_limit_s": 2000,
+        "available_from_s": 0,
+        "available_until_s": 7200,
+        "load_s": 30,
+        "depot_unload_s": 20,
+        "turnaround_s": 45,
+        "speed_m_s": 1.5
+      },
+      {
+        "id": "AGV-02",
+        "type": "AGV",
+        "available": true,
+        "capacity_kg": 50,
+        "trip_limit_s": 2000,
+        "available_from_s": 0,
+        "available_until_s": 7200,
+        "load_s": 30,
+        "depot_unload_s": 20,
+        "turnaround_s": 45,
+        "speed_m_s": 1.5
+      }
+    ],
+    "tasks": [
+      {
+        "id": "T01",
+        "station_id": "S01",
+        "demand_kg": 1.01,
+        "earliest_s": 5,
+        "latest_s": 500,
+        "unload_s": 6,
+        "service_s": 19,
+        "eligible_types": [
+          "UAV"
+        ],
+        "lateness_cost_per_s": 1
+      },
+      {
+        "id": "T02",
+        "station_id": "S02",
+        "demand_kg": 24,
+        "earliest_s": 0,
+        "latest_s": 680,
+        "unload_s": 15,
+        "service_s": 25,
+        "eligible_types": [
+          "AGV"
+        ],
+        "lateness_cost_per_s": 4
+      },
+      {
+        "id": "T03",
+        "station_id": "S03",
+        "demand_kg": 1.63,
+        "earliest_s": 25,
+        "latest_s": 860,
+        "unload_s": 9,
+        "service_s": 21,
+        "eligible_types": [
+          "UAV"
+        ],
+        "lateness_cost_per_s": 2
+      },
+      {
+        "id": "T04",
+        "station_id": "S04",
+        "demand_kg": 22,
+        "earliest_s": 47,
+        "latest_s": 1040,
+        "unload_s": 13,
+        "service_s": 30,
+        "eligible_types": [
+          "AGV"
+        ],
+        "lateness_cost_per_s": 1
+      },
+      {
+        "id": "T05",
+        "station_id": "S05",
+        "demand_kg": 2.45,
+        "earliest_s": 5,
+        "latest_s": 1220,
+        "unload_s": 13,
+        "service_s": 27,
+        "eligible_types": [
+          "UAV"
+        ],
+        "lateness_cost_per_s": 2
+      },
+      {
+        "id": "T06",
+        "station_id": "S06",
+        "demand_kg": 19,
+        "earliest_s": 29,
+        "latest_s": 1400,
+        "unload_s": 7,
+        "service_s": 30,
+        "eligible_types": [
+          "AGV"
+        ],
+        "lateness_cost_per_s": 4
+      },
+      {
+        "id": "T07",
+        "station_id": "S07",
+        "demand_kg": 2.43,
+        "earliest_s": 19,
+        "latest_s": 1580,
+        "unload_s": 5,
+        "service_s": 21,
+        "eligible_types": [
+          "UAV"
+        ],
+        "lateness_cost_per_s": 2
+      },
+      {
+        "id": "T08",
+        "station_id": "S08",
+        "demand_kg": 60,
+        "earliest_s": 5,
+        "latest_s": 1760,
+        "unload_s": 11,
+        "service_s": 28,
+        "eligible_types": [
+          "UAV",
+          "AGV"
+        ],
+        "lateness_cost_per_s": 4
+      }
+    ],
+    "travel_time_s": {
+      "UAV": {
+        "DEPOT": {
+          "DEPOT": 0,
+          "S01": 15,
+          "S02": 27,
+          "S03": 12,
+          "S04": 32,
+          "S05": 26,
+          "S06": 29,
+          "S07": 28,
+          "S08": 20
+        },
+        "S01": {
+          "DEPOT": 15,
+          "S01": 0,
+          "S02": 14,
+          "S03": 4,
+          "S04": 19,
+          "S05": 15,
+          "S06": 17,
+          "S07": 15,
+          "S08": 11
+        },
+        "S02": {
+          "DEPOT": 27,
+          "S01": 14,
+          "S02": 0,
+          "S03": 16,
+          "S04": 5,
+          "S05": 4,
+          "S06": 3,
+          "S07": 3,
+          "S08": 9
+        },
+        "S03": {
+          "DEPOT": 12,
+          "S01": 4,
+          "S02": 16,
+          "S03": 0,
+          "S04": 21,
+          "S05": 16,
+          "S06": 19,
+          "S07": 17,
+          "S08": 11
+        },
+        "S04": {
+          "DEPOT": 32,
+          "S01": 19,
+          "S02": 5,
+          "S03": 21,
+          "S04": 0,
+          "S05": 7,
+          "S06": 3,
+          "S07": 4,
+          "S08": 14
+        },
+        "S05": {
+          "DEPOT": 26,
+          "S01": 15,
+          "S02": 4,
+          "S03": 16,
+          "S04": 7,
+          "S05": 0,
+          "S06": 5,
+          "S07": 6,
+          "S08": 7
+        },
+        "S06": {
+          "DEPOT": 29,
+          "S01": 17,
+          "S02": 3,
+          "S03": 19,
+          "S04": 3,
+          "S05": 5,
+          "S06": 0,
+          "S07": 3,
+          "S08": 11
+        },
+        "S07": {
+          "DEPOT": 28,
+          "S01": 15,
+          "S02": 3,
+          "S03": 17,
+          "S04": 4,
+          "S05": 6,
+          "S06": 3,
+          "S07": 0,
+          "S08": 12
+        },
+        "S08": {
+          "DEPOT": 20,
+          "S01": 11,
+          "S02": 9,
+          "S03": 11,
+          "S04": 14,
+          "S05": 7,
+          "S06": 11,
+          "S07": 12,
+          "S08": 0
+        }
+      },
+      "AGV": {
+        "DEPOT": {
+          "DEPOT": 0,
+          "S01": 121,
+          "S02": 240,
+          "S03": 99,
+          "S04": 282,
+          "S05": 232,
+          "S06": 261,
+          "S07": 252,
+          "S08": 171
+        },
+        "S01": {
+          "DEPOT": 121,
+          "S01": 0,
+          "S02": 119,
+          "S03": 23,
+          "S04": 161,
+          "S05": 111,
+          "S06": 140,
+          "S07": 132,
+          "S08": 82
+        },
+        "S02": {
+          "DEPOT": 240,
+          "S01": 119,
+          "S02": 0,
+          "S03": 141,
+          "S04": 43,
+          "S05": 31,
+          "S06": 22,
+          "S07": 18,
+          "S08": 69
+        },
+        "S03": {
+          "DEPOT": 99,
+          "S01": 23,
+          "S02": 141,
+          "S03": 0,
+          "S04": 184,
+          "S05": 133,
+          "S06": 163,
+          "S07": 154,
+          "S08": 72
+        },
+        "S04": {
+          "DEPOT": 282,
+          "S01": 161,
+          "S02": 43,
+          "S03": 184,
+          "S04": 0,
+          "S05": 51,
+          "S06": 21,
+          "S07": 30,
+          "S08": 112
+        },
+        "S05": {
+          "DEPOT": 232,
+          "S01": 111,
+          "S02": 31,
+          "S03": 133,
+          "S04": 51,
+          "S05": 0,
+          "S06": 30,
+          "S07": 48,
+          "S08": 61
+        },
+        "S06": {
+          "DEPOT": 261,
+          "S01": 140,
+          "S02": 22,
+          "S03": 163,
+          "S04": 21,
+          "S05": 30,
+          "S06": 0,
+          "S07": 25,
+          "S08": 91
+        },
+        "S07": {
+          "DEPOT": 252,
+          "S01": 132,
+          "S02": 18,
+          "S03": 154,
+          "S04": 30,
+          "S05": 48,
+          "S06": 25,
+          "S07": 0,
+          "S08": 82
+        },
+        "S08": {
+          "DEPOT": 171,
+          "S01": 82,
+          "S02": 69,
+          "S03": 72,
+          "S04": 112,
+          "S05": 61,
+          "S06": 91,
+          "S07": 82,
+          "S08": 0
+        }
+      }
+    },
+    "distance_m": {
+      "UAV": {
+        "DEPOT": {
+          "DEPOT": 0.0,
+          "S01": 112.699,
+          "S02": 211.436,
+          "S03": 89.694,
+          "S04": 248.938,
+          "S05": 205.847,
+          "S06": 230.556,
+          "S07": 223.439,
+          "S08": 154.871
+        },
+        "S01": {
+          "DEPOT": 112.699,
+          "S01": 0.0,
+          "S02": 110.018,
+          "S03": 24.331,
+          "S04": 145.647,
+          "S05": 114.978,
+          "S06": 130.142,
+          "S07": 117.414,
+          "S08": 84.404
+        },
+        "S02": {
+          "DEPOT": 211.436,
+          "S01": 110.018,
+          "S02": 0.0,
+          "S03": 126.016,
+          "S04": 37.537,
+          "S05": 27.785,
+          "S06": 20.125,
+          "S07": 19.235,
+          "S08": 71.805
+        },
+        "S03": {
+          "DEPOT": 89.694,
+          "S01": 24.331,
+          "S02": 126.016,
+          "S03": 0.0,
+          "S04": 162.89,
+          "S05": 126.317,
+          "S06": 145.908,
+          "S07": 135.831,
+          "S08": 86.093
+        },
+        "S04": {
+          "DEPOT": 248.938,
+          "S01": 145.647,
+          "S02": 37.537,
+          "S03": 162.89,
+          "S04": 0.0,
+          "S05": 53.151,
+          "S06": 20.248,
+          "S07": 29.411,
+          "S08": 106.231
+        },
+        "S05": {
+          "DEPOT": 205.847,
+          "S01": 114.978,
+          "S02": 27.785,
+          "S03": 126.317,
+          "S04": 53.151,
+          "S05": 0.0,
+          "S06": 33.242,
+          "S07": 46.239,
+          "S08": 54.918
+        },
+        "S06": {
+          "DEPOT": 230.556,
+          "S01": 130.142,
+          "S02": 20.125,
+          "S03": 145.908,
+          "S04": 20.248,
+          "S05": 33.242,
+          "S06": 0.0,
+          "S07": 23.259,
+          "S08": 86.006
+        },
+        "S07": {
+          "DEPOT": 223.439,
+          "S01": 117.414,
+          "S02": 19.235,
+          "S03": 135.831,
+          "S04": 29.411,
+          "S05": 46.239,
+          "S06": 23.259,
+          "S07": 0.0,
+          "S08": 89.944
+        },
+        "S08": {
+          "DEPOT": 154.871,
+          "S01": 84.404,
+          "S02": 71.805,
+          "S03": 86.093,
+          "S04": 106.231,
+          "S05": 54.918,
+          "S06": 86.006,
+          "S07": 89.944,
+          "S08": 0.0
+        }
+      },
+      "AGV": {
+        "DEPOT": {
+          "DEPOT": 0.0,
+          "S01": 181.2,
+          "S02": 358.8,
+          "S03": 147.6,
+          "S04": 422.4,
+          "S05": 346.8,
+          "S06": 391.2,
+          "S07": 378.0,
+          "S08": 255.6
+        },
+        "S01": {
+          "DEPOT": 181.2,
+          "S01": 0.0,
+          "S02": 177.6,
+          "S03": 33.6,
+          "S04": 241.2,
+          "S05": 165.6,
+          "S06": 210.0,
+          "S07": 196.8,
+          "S08": 122.4
+        },
+        "S02": {
+          "DEPOT": 358.8,
+          "S01": 177.6,
+          "S02": 0.0,
+          "S03": 211.2,
+          "S04": 63.6,
+          "S05": 45.6,
+          "S06": 32.4,
+          "S07": 26.4,
+          "S08": 103.2
+        },
+        "S03": {
+          "DEPOT": 147.6,
+          "S01": 33.6,
+          "S02": 211.2,
+          "S03": 0.0,
+          "S04": 274.8,
+          "S05": 199.2,
+          "S06": 243.6,
+          "S07": 230.4,
+          "S08": 108.0
+        },
+        "S04": {
+          "DEPOT": 422.4,
+          "S01": 241.2,
+          "S02": 63.6,
+          "S03": 274.8,
+          "S04": 0.0,
+          "S05": 75.6,
+          "S06": 31.2,
+          "S07": 44.4,
+          "S08": 166.8
+        },
+        "S05": {
+          "DEPOT": 346.8,
+          "S01": 165.6,
+          "S02": 45.6,
+          "S03": 199.2,
+          "S04": 75.6,
+          "S05": 0.0,
+          "S06": 44.4,
+          "S07": 72.0,
+          "S08": 91.2
+        },
+        "S06": {
+          "DEPOT": 391.2,
+          "S01": 210.0,
+          "S02": 32.4,
+          "S03": 243.6,
+          "S04": 31.2,
+          "S05": 44.4,
+          "S06": 0.0,
+          "S07": 37.2,
+          "S08": 135.6
+        },
+        "S07": {
+          "DEPOT": 378.0,
+          "S01": 196.8,
+          "S02": 26.4,
+          "S03": 230.4,
+          "S04": 44.4,
+          "S05": 72.0,
+          "S06": 37.2,
+          "S07": 0.0,
+          "S08": 122.4
+        },
+        "S08": {
+          "DEPOT": 255.6,
+          "S01": 122.4,
+          "S02": 103.2,
+          "S03": 108.0,
+          "S04": 166.8,
+          "S05": 91.2,
+          "S06": 135.6,
+          "S07": 122.4,
+          "S08": 0.0
+        }
+      }
+    },
+    "window_mode": "soft",
+    "units": {
+      "mass": "kg",
+      "distance": "m",
+      "time": "s",
+      "speed": "m/s",
+      "cost": "penalty_unit"
+    },
+    "metadata": {
+      "generation_seed": 2026,
+      "generator_version": "synthetic_v1",
+      "coordinates_m": {
+        "DEPOT": [
+          0,
+          0
+        ],
+        "S01": [
+          50,
+          101
+        ],
+        "S02": [
+          148,
+          151
+        ],
+        "S03": [
+          46,
+          77
+        ],
+        "S04": [
+          173,
+          179
+        ],
+        "S05": [
+          162,
+          127
+        ],
+        "S06": [
+          166,
+          160
+        ],
+        "S07": [
+          145,
+          170
+        ],
+        "S08": [
+          132,
+          81
+        ]
+      },
+      "assumptions_document": "docs/scenarios.md",
+      "travel_source": "UAV Euclidean; AGV 1.2 * Manhattan; ceil(m / representative m/s). No obstacle planner.",
+      "change": "T08 60 kg exceeds maximum available capacity 50 kg."
+    }
+  },
+  "input_snapshot_sha256": "64143790c9c413b674c5dc24768dc3d3aa92ce86ff30d06e026ae39749a6fd4e",
+  "parameters": {
+    "population_size": 24,
+    "max_generations": 40,
+    "elite_count": 2,
+    "tournament_size": 3,
+    "crossover_rate": 0.9,
+    "mutation_rate": 0.25,
+    "patience": 12,
+    "seed": 2026,
+    "decoder_seed": 2026,
+    "costs": {
+      "uav_transport_per_s": 0.02,
+      "agv_transport_per_s": 0.01,
+      "lateness_multiplier": 1.0,
+      "transport_coefficient_unit": "penalty_unit/s",
+      "task_lateness_coefficient_unit": "penalty_unit/s",
+      "lateness_multiplier_unit": "dimensionless",
+      "cost_unit": "penalty_unit",
+      "transport_basis": "travel seconds on all legs, including depot return",
+      "objective_priority": [
+        "unassigned_count",
+        "transport_cost + lateness_penalty"
+      ],
+      "illustrative_coefficients": true
+    },
+    "two_opt_implemented": false
+  },
+  "heuristic_seed": {
+    "chromosome": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08"
+    ],
+    "population_index": 0,
+    "decoded_plan_matches_initial": true,
+    "objective": {
+      "unassigned_count": 1,
+      "total_cost": 12.26,
+      "transport_cost": 12.26,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    }
+  },
+  "initial_population": [
+    {
+      "index": 0,
+      "source": "heuristic_seed",
+      "chromosome": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "T08"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.26,
+        "transport_cost": 12.26,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 1,
+      "source": "perturbed_heuristic",
+      "chromosome": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T06",
+        "T05",
+        "T07",
+        "T08"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.26,
+        "transport_cost": 12.26,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 2,
+      "source": "perturbed_heuristic",
+      "chromosome": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06",
+        "T08",
+        "T07"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.26,
+        "transport_cost": 12.26,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 3,
+      "source": "perturbed_heuristic",
+      "chromosome": [
+        "T08",
+        "T04",
+        "T03",
+        "T01",
+        "T05",
+        "T06",
+        "T07",
+        "T02"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.69,
+        "transport_cost": 12.69,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 4,
+      "source": "perturbed_heuristic",
+      "chromosome": [
+        "T01",
+        "T02",
+        "T06",
+        "T03",
+        "T05",
+        "T08",
+        "T07",
+        "T04"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.26,
+        "transport_cost": 12.26,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 5,
+      "source": "perturbed_heuristic",
+      "chromosome": [
+        "T01",
+        "T04",
+        "T05",
+        "T03",
+        "T06",
+        "T02",
+        "T07",
+        "T08"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 13.13,
+        "transport_cost": 13.13,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 6,
+      "source": "perturbed_heuristic",
+      "chromosome": [
+        "T05",
+        "T02",
+        "T06",
+        "T01",
+        "T03",
+        "T04",
+        "T07",
+        "T08"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.7,
+        "transport_cost": 12.7,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 7,
+      "source": "perturbed_heuristic",
+      "chromosome": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T07",
+        "T05",
+        "T06",
+        "T08"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.26,
+        "transport_cost": 12.26,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 8,
+      "source": "perturbed_heuristic",
+      "chromosome": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T08",
+        "T07",
+        "T05",
+        "T06"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.26,
+        "transport_cost": 12.26,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 9,
+      "source": "perturbed_heuristic",
+      "chromosome": [
+        "T06",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T01",
+        "T07",
+        "T08"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 13.13,
+        "transport_cost": 13.13,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 10,
+      "source": "perturbed_heuristic",
+      "chromosome": [
+        "T01",
+        "T02",
+        "T03",
+        "T07",
+        "T05",
+        "T08",
+        "T06",
+        "T04"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.26,
+        "transport_cost": 12.26,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 11,
+      "source": "perturbed_heuristic",
+      "chromosome": [
+        "T01",
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T08",
+        "T04",
+        "T06"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.26,
+        "transport_cost": 12.26,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 12,
+      "source": "random_permutation",
+      "chromosome": [
+        "T06",
+        "T02",
+        "T04",
+        "T08",
+        "T01",
+        "T03",
+        "T07",
+        "T05"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.69,
+        "transport_cost": 12.69,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 13,
+      "source": "random_permutation",
+      "chromosome": [
+        "T01",
+        "T05",
+        "T06",
+        "T04",
+        "T07",
+        "T02",
+        "T03",
+        "T08"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.7,
+        "transport_cost": 12.7,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 14,
+      "source": "random_permutation",
+      "chromosome": [
+        "T08",
+        "T04",
+        "T02",
+        "T03",
+        "T01",
+        "T06",
+        "T05",
+        "T07"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 13.13,
+        "transport_cost": 13.13,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 15,
+      "source": "random_permutation",
+      "chromosome": [
+        "T07",
+        "T01",
+        "T08",
+        "T03",
+        "T05",
+        "T06",
+        "T04",
+        "T02"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.68,
+        "transport_cost": 12.68,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 16,
+      "source": "random_permutation",
+      "chromosome": [
+        "T05",
+        "T02",
+        "T03",
+        "T01",
+        "T04",
+        "T06",
+        "T08",
+        "T07"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.7,
+        "transport_cost": 12.7,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 17,
+      "source": "random_permutation",
+      "chromosome": [
+        "T07",
+        "T05",
+        "T06",
+        "T04",
+        "T02",
+        "T01",
+        "T03",
+        "T08"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 13.11,
+        "transport_cost": 13.11,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 18,
+      "source": "random_permutation",
+      "chromosome": [
+        "T02",
+        "T05",
+        "T03",
+        "T06",
+        "T04",
+        "T07",
+        "T08",
+        "T01"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.66,
+        "transport_cost": 12.66,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 19,
+      "source": "random_permutation",
+      "chromosome": [
+        "T06",
+        "T02",
+        "T08",
+        "T03",
+        "T07",
+        "T05",
+        "T01",
+        "T04"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 13.09,
+        "transport_cost": 13.09,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 20,
+      "source": "random_permutation",
+      "chromosome": [
+        "T02",
+        "T07",
+        "T06",
+        "T04",
+        "T05",
+        "T08",
+        "T01",
+        "T03"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.68,
+        "transport_cost": 12.68,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 21,
+      "source": "random_permutation",
+      "chromosome": [
+        "T07",
+        "T06",
+        "T01",
+        "T03",
+        "T02",
+        "T05",
+        "T08",
+        "T04"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 13.11,
+        "transport_cost": 13.11,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 22,
+      "source": "random_permutation",
+      "chromosome": [
+        "T06",
+        "T01",
+        "T07",
+        "T04",
+        "T08",
+        "T05",
+        "T02",
+        "T03"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 13.11,
+        "transport_cost": 13.11,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    },
+    {
+      "index": 23,
+      "source": "random_permutation",
+      "chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "objective": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "independently_validated": true
+    }
+  ],
+  "iterations": [
+    {
+      "generation": 0,
+      "generation_best": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_known": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "population_unique": 24,
+      "decoded_unique_total": 24,
+      "cache_hits_total": 0,
+      "stagnant_generations": 0
+    },
+    {
+      "generation": 1,
+      "generation_best": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_known": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "population_unique": 23,
+      "decoded_unique_total": 42,
+      "cache_hits_total": 4,
+      "stagnant_generations": 1
+    },
+    {
+      "generation": 2,
+      "generation_best": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_known": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "population_unique": 19,
+      "decoded_unique_total": 58,
+      "cache_hits_total": 10,
+      "stagnant_generations": 2
+    },
+    {
+      "generation": 3,
+      "generation_best": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_known": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "population_unique": 19,
+      "decoded_unique_total": 72,
+      "cache_hits_total": 18,
+      "stagnant_generations": 3
+    },
+    {
+      "generation": 4,
+      "generation_best": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_known": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "population_unique": 22,
+      "decoded_unique_total": 86,
+      "cache_hits_total": 26,
+      "stagnant_generations": 4
+    },
+    {
+      "generation": 5,
+      "generation_best": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_known": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "population_unique": 22,
+      "decoded_unique_total": 101,
+      "cache_hits_total": 33,
+      "stagnant_generations": 5
+    },
+    {
+      "generation": 6,
+      "generation_best": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_known": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "population_unique": 19,
+      "decoded_unique_total": 116,
+      "cache_hits_total": 40,
+      "stagnant_generations": 6
+    },
+    {
+      "generation": 7,
+      "generation_best": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_known": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "population_unique": 20,
+      "decoded_unique_total": 129,
+      "cache_hits_total": 49,
+      "stagnant_generations": 7
+    },
+    {
+      "generation": 8,
+      "generation_best": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_known": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "population_unique": 17,
+      "decoded_unique_total": 140,
+      "cache_hits_total": 60,
+      "stagnant_generations": 8
+    },
+    {
+      "generation": 9,
+      "generation_best": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_known": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "population_unique": 16,
+      "decoded_unique_total": 151,
+      "cache_hits_total": 71,
+      "stagnant_generations": 9
+    },
+    {
+      "generation": 10,
+      "generation_best": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_known": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "population_unique": 18,
+      "decoded_unique_total": 163,
+      "cache_hits_total": 81,
+      "stagnant_generations": 10
+    },
+    {
+      "generation": 11,
+      "generation_best": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_known": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "population_unique": 15,
+      "decoded_unique_total": 172,
+      "cache_hits_total": 94,
+      "stagnant_generations": 11
+    },
+    {
+      "generation": 12,
+      "generation_best": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_known": {
+        "unassigned_count": 1,
+        "total_cost": 12.16,
+        "transport_cost": 12.16,
+        "lateness_penalty": 0.0,
+        "cost_unit": "penalty_unit"
+      },
+      "best_chromosome": [
+        "T02",
+        "T03",
+        "T05",
+        "T07",
+        "T06",
+        "T01",
+        "T08",
+        "T04"
+      ],
+      "population_unique": 14,
+      "decoded_unique_total": 180,
+      "cache_hits_total": 108,
+      "stagnant_generations": 12
+    }
+  ],
+  "generations_completed": 12,
+  "best_found_generation": 0,
+  "stop_reason": "stagnation_patience",
+  "initial": {
+    "profile": "python-demo-2026-v2",
+    "window_event": "service_start",
+    "mode": "hard",
+    "seed": 2026,
+    "units": {
+      "mass": "kg",
+      "distance": "m",
+      "time": "s",
+      "speed": "m/s",
+      "cost": "penalty_unit"
+    },
+    "valid": true,
+    "complete": false,
+    "coverage": "Partial",
+    "assigned_task_ids": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07"
+    ],
+    "unassigned_task_ids": [
+      "T08"
+    ],
+    "unassigned": [
+      {
+        "task_id": "T08",
+        "reason_code": "payload_exceeded",
+        "reason_codes": [
+          "payload"
+        ],
+        "explanation": "Task alone exceeds every available compatible device capacity. Search is not a global infeasibility proof.",
+        "attempts": [
+          {
+            "vehicle_id": "AGV-01",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T08",
+              "T02"
+            ],
+            "insertion_position": 0,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 84.0,
+                "capacity_kg": 35
+              }
+            ]
+          },
+          {
+            "vehicle_id": "AGV-01",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T02",
+              "T08"
+            ],
+            "insertion_position": 1,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 84.0,
+                "capacity_kg": 35
+              }
+            ]
+          },
+          {
+            "vehicle_id": "AGV-01",
+            "candidate_kind": "new_trip",
+            "candidate_task_ids": [
+              "T08"
+            ],
+            "insertion_position": null,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 60.0,
+                "capacity_kg": 35
+              }
+            ]
+          },
+          {
+            "vehicle_id": "AGV-02",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T08",
+              "T06",
+              "T04"
+            ],
+            "insertion_position": 0,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 101.0,
+                "capacity_kg": 50
+              }
+            ]
+          },
+          {
+            "vehicle_id": "AGV-02",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T06",
+              "T08",
+              "T04"
+            ],
+            "insertion_position": 1,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 101.0,
+                "capacity_kg": 50
+              }
+            ]
+          },
+          {
+            "vehicle_id": "AGV-02",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T06",
+              "T04",
+              "T08"
+            ],
+            "insertion_position": 2,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 101.0,
+                "capacity_kg": 50
+              }
+            ]
+          },
+          {
+            "vehicle_id": "AGV-02",
+            "candidate_kind": "new_trip",
+            "candidate_task_ids": [
+              "T08"
+            ],
+            "insertion_position": null,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 60.0,
+                "capacity_kg": 50
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-01",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T08",
+              "T03",
+              "T01"
+            ],
+            "insertion_position": 0,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 62.64,
+                "capacity_kg": 4
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-01",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T03",
+              "T08",
+              "T01"
+            ],
+            "insertion_position": 1,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 62.64,
+                "capacity_kg": 4
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-01",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T03",
+              "T01",
+              "T08"
+            ],
+            "insertion_position": 2,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 62.64,
+                "capacity_kg": 4
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-01",
+            "candidate_kind": "new_trip",
+            "candidate_task_ids": [
+              "T08"
+            ],
+            "insertion_position": null,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 60.0,
+                "capacity_kg": 4
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-02",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T08",
+              "T07",
+              "T05"
+            ],
+            "insertion_position": 0,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 64.88,
+                "capacity_kg": 6
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-02",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T07",
+              "T08",
+              "T05"
+            ],
+            "insertion_position": 1,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 64.88,
+                "capacity_kg": 6
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-02",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T07",
+              "T05",
+              "T08"
+            ],
+            "insertion_position": 2,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 64.88,
+                "capacity_kg": 6
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-02",
+            "candidate_kind": "new_trip",
+            "candidate_task_ids": [
+              "T08"
+            ],
+            "insertion_position": null,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 60.0,
+                "capacity_kg": 6
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "trips": [
+      {
+        "trip_id": "AGV-01-trip-1",
+        "vehicle_id": "AGV-01",
+        "task_ids": [
+          "T02"
+        ],
+        "load_start_s": 0,
+        "type": "AGV",
+        "speed_m_s": 1.5,
+        "route": [
+          "DEPOT",
+          "S02",
+          "DEPOT"
+        ],
+        "payload_kg": 24.0,
+        "capacity_kg": 35,
+        "departure_s": 30,
+        "depot_wait_s": 0,
+        "load_s": 30,
+        "depot_unload_s": 20,
+        "turnaround_s": 45,
+        "return_s": 550,
+        "mission_s": 520,
+        "depot_unload_end_s": 570,
+        "next_ready_s": 615,
+        "turnaround_applied": false,
+        "planned_end_s": 570,
+        "valid": true,
+        "stops": [
+          {
+            "task_id": "T02",
+            "station_id": "S02",
+            "arrival_s": 270,
+            "earliest_s": 0,
+            "latest_s": 680,
+            "waiting_s": 0,
+            "service_start_s": 270,
+            "unload_s": 15,
+            "unload_end_s": 285,
+            "service_s": 25,
+            "completion_s": 310,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 4,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 0.0,
+            "demand_kg": 24,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          }
+        ],
+        "legs": [
+          {
+            "start_s": 30,
+            "end_s": 270,
+            "travel_s": 240,
+            "distance_m": 358.8,
+            "from": "DEPOT",
+            "to": "S02"
+          },
+          {
+            "start_s": 310,
+            "end_s": 550,
+            "travel_s": 240,
+            "distance_m": 358.8,
+            "from": "S02",
+            "to": "DEPOT"
+          }
+        ],
+        "checks": [
+          {
+            "code": "nonempty_trip",
+            "passed": true
+          },
+          {
+            "code": "vehicle_available",
+            "passed": true
+          },
+          {
+            "code": "unique_tasks_in_trip",
+            "passed": true
+          },
+          {
+            "code": "payload",
+            "passed": true,
+            "payload_kg": 24.0,
+            "capacity_kg": 35
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T02",
+            "vehicle_id": "AGV-01"
+          },
+          {
+            "code": "load_start",
+            "passed": true,
+            "load_start_s": 0,
+            "required_ready_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "DEPOT",
+            "to_node": "S02"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T02",
+            "mode": "hard",
+            "service_start_s": 270,
+            "latest_s": 680,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S02",
+            "to_node": "DEPOT"
+          },
+          {
+            "code": "trip_limit",
+            "passed": true,
+            "mission_s": 520,
+            "trip_limit_s": 2000
+          },
+          {
+            "code": "availability_end",
+            "passed": true,
+            "depot_unload_end_s": 570,
+            "available_until_s": 7200
+          }
+        ],
+        "travel_s": 480,
+        "waiting_s": 0,
+        "station_unload_s": 15,
+        "service_s": 25,
+        "lateness_s": 0,
+        "lateness_cost": 0,
+        "distance_m": 717.6,
+        "transport_cost_per_s": 0.01,
+        "transport_cost": 4.8
+      },
+      {
+        "trip_id": "AGV-02-trip-1",
+        "vehicle_id": "AGV-02",
+        "task_ids": [
+          "T06",
+          "T04"
+        ],
+        "load_start_s": 0,
+        "type": "AGV",
+        "speed_m_s": 1.5,
+        "route": [
+          "DEPOT",
+          "S06",
+          "S04",
+          "DEPOT"
+        ],
+        "payload_kg": 41.0,
+        "capacity_kg": 50,
+        "departure_s": 30,
+        "depot_wait_s": 0,
+        "load_s": 30,
+        "depot_unload_s": 20,
+        "turnaround_s": 45,
+        "return_s": 674,
+        "mission_s": 644,
+        "depot_unload_end_s": 694,
+        "next_ready_s": 739,
+        "turnaround_applied": false,
+        "planned_end_s": 694,
+        "valid": true,
+        "stops": [
+          {
+            "task_id": "T06",
+            "station_id": "S06",
+            "arrival_s": 291,
+            "earliest_s": 29,
+            "latest_s": 1400,
+            "waiting_s": 0,
+            "service_start_s": 291,
+            "unload_s": 7,
+            "unload_end_s": 298,
+            "service_s": 30,
+            "completion_s": 328,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 4,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 22.0,
+            "demand_kg": 19,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          },
+          {
+            "task_id": "T04",
+            "station_id": "S04",
+            "arrival_s": 349,
+            "earliest_s": 47,
+            "latest_s": 1040,
+            "waiting_s": 0,
+            "service_start_s": 349,
+            "unload_s": 13,
+            "unload_end_s": 362,
+            "service_s": 30,
+            "completion_s": 392,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 1,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 0.0,
+            "demand_kg": 22,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          }
+        ],
+        "legs": [
+          {
+            "start_s": 30,
+            "end_s": 291,
+            "travel_s": 261,
+            "distance_m": 391.2,
+            "from": "DEPOT",
+            "to": "S06"
+          },
+          {
+            "start_s": 328,
+            "end_s": 349,
+            "travel_s": 21,
+            "distance_m": 31.2,
+            "from": "S06",
+            "to": "S04"
+          },
+          {
+            "start_s": 392,
+            "end_s": 674,
+            "travel_s": 282,
+            "distance_m": 422.4,
+            "from": "S04",
+            "to": "DEPOT"
+          }
+        ],
+        "checks": [
+          {
+            "code": "nonempty_trip",
+            "passed": true
+          },
+          {
+            "code": "vehicle_available",
+            "passed": true
+          },
+          {
+            "code": "unique_tasks_in_trip",
+            "passed": true
+          },
+          {
+            "code": "payload",
+            "passed": true,
+            "payload_kg": 41.0,
+            "capacity_kg": 50
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T06",
+            "vehicle_id": "AGV-02"
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T04",
+            "vehicle_id": "AGV-02"
+          },
+          {
+            "code": "load_start",
+            "passed": true,
+            "load_start_s": 0,
+            "required_ready_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "DEPOT",
+            "to_node": "S06"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T06",
+            "mode": "hard",
+            "service_start_s": 291,
+            "latest_s": 1400,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S06",
+            "to_node": "S04"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T04",
+            "mode": "hard",
+            "service_start_s": 349,
+            "latest_s": 1040,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S04",
+            "to_node": "DEPOT"
+          },
+          {
+            "code": "trip_limit",
+            "passed": true,
+            "mission_s": 644,
+            "trip_limit_s": 2000
+          },
+          {
+            "code": "availability_end",
+            "passed": true,
+            "depot_unload_end_s": 694,
+            "available_until_s": 7200
+          }
+        ],
+        "travel_s": 564,
+        "waiting_s": 0,
+        "station_unload_s": 20,
+        "service_s": 60,
+        "lateness_s": 0,
+        "lateness_cost": 0,
+        "distance_m": 844.8,
+        "transport_cost_per_s": 0.01,
+        "transport_cost": 5.64
+      },
+      {
+        "trip_id": "UAV-01-trip-1",
+        "vehicle_id": "UAV-01",
+        "task_ids": [
+          "T03",
+          "T01"
+        ],
+        "load_start_s": 0,
+        "type": "UAV",
+        "speed_m_s": 8.0,
+        "route": [
+          "DEPOT",
+          "S03",
+          "S01",
+          "DEPOT"
+        ],
+        "payload_kg": 2.64,
+        "capacity_kg": 4,
+        "departure_s": 20,
+        "depot_wait_s": 0,
+        "load_s": 20,
+        "depot_unload_s": 10,
+        "turnaround_s": 60,
+        "return_s": 106,
+        "mission_s": 86,
+        "depot_unload_end_s": 116,
+        "next_ready_s": 176,
+        "turnaround_applied": false,
+        "planned_end_s": 116,
+        "valid": true,
+        "stops": [
+          {
+            "task_id": "T03",
+            "station_id": "S03",
+            "arrival_s": 32,
+            "earliest_s": 25,
+            "latest_s": 860,
+            "waiting_s": 0,
+            "service_start_s": 32,
+            "unload_s": 9,
+            "unload_end_s": 41,
+            "service_s": 21,
+            "completion_s": 62,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 2,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 1.01,
+            "demand_kg": 1.63,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          },
+          {
+            "task_id": "T01",
+            "station_id": "S01",
+            "arrival_s": 66,
+            "earliest_s": 5,
+            "latest_s": 500,
+            "waiting_s": 0,
+            "service_start_s": 66,
+            "unload_s": 6,
+            "unload_end_s": 72,
+            "service_s": 19,
+            "completion_s": 91,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 1,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 0.0,
+            "demand_kg": 1.01,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          }
+        ],
+        "legs": [
+          {
+            "start_s": 20,
+            "end_s": 32,
+            "travel_s": 12,
+            "distance_m": 89.694,
+            "from": "DEPOT",
+            "to": "S03"
+          },
+          {
+            "start_s": 62,
+            "end_s": 66,
+            "travel_s": 4,
+            "distance_m": 24.331,
+            "from": "S03",
+            "to": "S01"
+          },
+          {
+            "start_s": 91,
+            "end_s": 106,
+            "travel_s": 15,
+            "distance_m": 112.699,
+            "from": "S01",
+            "to": "DEPOT"
+          }
+        ],
+        "checks": [
+          {
+            "code": "nonempty_trip",
+            "passed": true
+          },
+          {
+            "code": "vehicle_available",
+            "passed": true
+          },
+          {
+            "code": "unique_tasks_in_trip",
+            "passed": true
+          },
+          {
+            "code": "payload",
+            "passed": true,
+            "payload_kg": 2.64,
+            "capacity_kg": 4
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T03",
+            "vehicle_id": "UAV-01"
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T01",
+            "vehicle_id": "UAV-01"
+          },
+          {
+            "code": "load_start",
+            "passed": true,
+            "load_start_s": 0,
+            "required_ready_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "DEPOT",
+            "to_node": "S03"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T03",
+            "mode": "hard",
+            "service_start_s": 32,
+            "latest_s": 860,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S03",
+            "to_node": "S01"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T01",
+            "mode": "hard",
+            "service_start_s": 66,
+            "latest_s": 500,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S01",
+            "to_node": "DEPOT"
+          },
+          {
+            "code": "trip_limit",
+            "passed": true,
+            "mission_s": 86,
+            "trip_limit_s": 800
+          },
+          {
+            "code": "availability_end",
+            "passed": true,
+            "depot_unload_end_s": 116,
+            "available_until_s": 3600
+          }
+        ],
+        "travel_s": 31,
+        "waiting_s": 0,
+        "station_unload_s": 15,
+        "service_s": 40,
+        "lateness_s": 0,
+        "lateness_cost": 0,
+        "distance_m": 226.724,
+        "transport_cost_per_s": 0.02,
+        "transport_cost": 0.62
+      },
+      {
+        "trip_id": "UAV-02-trip-1",
+        "vehicle_id": "UAV-02",
+        "task_ids": [
+          "T07",
+          "T05"
+        ],
+        "load_start_s": 0,
+        "type": "UAV",
+        "speed_m_s": 8.0,
+        "route": [
+          "DEPOT",
+          "S07",
+          "S05",
+          "DEPOT"
+        ],
+        "payload_kg": 4.88,
+        "capacity_kg": 6,
+        "departure_s": 20,
+        "depot_wait_s": 0,
+        "load_s": 20,
+        "depot_unload_s": 10,
+        "turnaround_s": 60,
+        "return_s": 146,
+        "mission_s": 126,
+        "depot_unload_end_s": 156,
+        "next_ready_s": 216,
+        "turnaround_applied": false,
+        "planned_end_s": 156,
+        "valid": true,
+        "stops": [
+          {
+            "task_id": "T07",
+            "station_id": "S07",
+            "arrival_s": 48,
+            "earliest_s": 19,
+            "latest_s": 1580,
+            "waiting_s": 0,
+            "service_start_s": 48,
+            "unload_s": 5,
+            "unload_end_s": 53,
+            "service_s": 21,
+            "completion_s": 74,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 2,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 2.45,
+            "demand_kg": 2.43,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          },
+          {
+            "task_id": "T05",
+            "station_id": "S05",
+            "arrival_s": 80,
+            "earliest_s": 5,
+            "latest_s": 1220,
+            "waiting_s": 0,
+            "service_start_s": 80,
+            "unload_s": 13,
+            "unload_end_s": 93,
+            "service_s": 27,
+            "completion_s": 120,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 2,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 0.0,
+            "demand_kg": 2.45,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          }
+        ],
+        "legs": [
+          {
+            "start_s": 20,
+            "end_s": 48,
+            "travel_s": 28,
+            "distance_m": 223.439,
+            "from": "DEPOT",
+            "to": "S07"
+          },
+          {
+            "start_s": 74,
+            "end_s": 80,
+            "travel_s": 6,
+            "distance_m": 46.239,
+            "from": "S07",
+            "to": "S05"
+          },
+          {
+            "start_s": 120,
+            "end_s": 146,
+            "travel_s": 26,
+            "distance_m": 205.847,
+            "from": "S05",
+            "to": "DEPOT"
+          }
+        ],
+        "checks": [
+          {
+            "code": "nonempty_trip",
+            "passed": true
+          },
+          {
+            "code": "vehicle_available",
+            "passed": true
+          },
+          {
+            "code": "unique_tasks_in_trip",
+            "passed": true
+          },
+          {
+            "code": "payload",
+            "passed": true,
+            "payload_kg": 4.88,
+            "capacity_kg": 6
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T07",
+            "vehicle_id": "UAV-02"
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T05",
+            "vehicle_id": "UAV-02"
+          },
+          {
+            "code": "load_start",
+            "passed": true,
+            "load_start_s": 0,
+            "required_ready_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "DEPOT",
+            "to_node": "S07"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T07",
+            "mode": "hard",
+            "service_start_s": 48,
+            "latest_s": 1580,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S07",
+            "to_node": "S05"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T05",
+            "mode": "hard",
+            "service_start_s": 80,
+            "latest_s": 1220,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S05",
+            "to_node": "DEPOT"
+          },
+          {
+            "code": "trip_limit",
+            "passed": true,
+            "mission_s": 126,
+            "trip_limit_s": 800
+          },
+          {
+            "code": "availability_end",
+            "passed": true,
+            "depot_unload_end_s": 156,
+            "available_until_s": 3600
+          }
+        ],
+        "travel_s": 60,
+        "waiting_s": 0,
+        "station_unload_s": 18,
+        "service_s": 48,
+        "lateness_s": 0,
+        "lateness_cost": 0,
+        "distance_m": 475.525,
+        "transport_cost_per_s": 0.02,
+        "transport_cost": 1.2
+      }
+    ],
+    "checks": [
+      {
+        "code": "unique_trip_ids",
+        "passed": true
+      },
+      {
+        "code": "unique_tasks_across_trips",
+        "passed": true,
+        "duplicate_task_ids": []
+      },
+      {
+        "code": "unique_unassigned_tasks",
+        "passed": true,
+        "duplicate_task_ids": []
+      },
+      {
+        "code": "assigned_unassigned_disjoint",
+        "passed": true,
+        "task_ids": []
+      },
+      {
+        "code": "all_tasks_accounted_for",
+        "passed": true,
+        "missing_task_ids": []
+      }
+    ],
+    "summary": {
+      "assigned_count": 7,
+      "unassigned_count": 1,
+      "trip_count": 4,
+      "travel_s": 1135,
+      "waiting_s": 0,
+      "lateness_s": 0,
+      "lateness_cost": 0,
+      "transport_cost": 12.26,
+      "lateness_penalty": 0.0,
+      "total_cost": 12.26
+    },
+    "plan_input": {
+      "trips": [
+        {
+          "trip_id": "AGV-01-trip-1",
+          "vehicle_id": "AGV-01",
+          "task_ids": [
+            "T02"
+          ],
+          "load_start_s": 0
+        },
+        {
+          "trip_id": "AGV-02-trip-1",
+          "vehicle_id": "AGV-02",
+          "task_ids": [
+            "T06",
+            "T04"
+          ],
+          "load_start_s": 0
+        },
+        {
+          "trip_id": "UAV-01-trip-1",
+          "vehicle_id": "UAV-01",
+          "task_ids": [
+            "T03",
+            "T01"
+          ],
+          "load_start_s": 0
+        },
+        {
+          "trip_id": "UAV-02-trip-1",
+          "vehicle_id": "UAV-02",
+          "task_ids": [
+            "T07",
+            "T05"
+          ],
+          "load_start_s": 0
+        }
+      ],
+      "unassigned": [
+        {
+          "task_id": "T08",
+          "reason_code": "payload_exceeded",
+          "reason_codes": [
+            "payload"
+          ],
+          "explanation": "Task alone exceeds every available compatible device capacity. Search is not a global infeasibility proof.",
+          "attempts": [
+            {
+              "vehicle_id": "AGV-01",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T08",
+                "T02"
+              ],
+              "insertion_position": 0,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 84.0,
+                  "capacity_kg": 35
+                }
+              ]
+            },
+            {
+              "vehicle_id": "AGV-01",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T02",
+                "T08"
+              ],
+              "insertion_position": 1,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 84.0,
+                  "capacity_kg": 35
+                }
+              ]
+            },
+            {
+              "vehicle_id": "AGV-01",
+              "candidate_kind": "new_trip",
+              "candidate_task_ids": [
+                "T08"
+              ],
+              "insertion_position": null,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 60.0,
+                  "capacity_kg": 35
+                }
+              ]
+            },
+            {
+              "vehicle_id": "AGV-02",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T08",
+                "T06",
+                "T04"
+              ],
+              "insertion_position": 0,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 101.0,
+                  "capacity_kg": 50
+                }
+              ]
+            },
+            {
+              "vehicle_id": "AGV-02",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T06",
+                "T08",
+                "T04"
+              ],
+              "insertion_position": 1,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 101.0,
+                  "capacity_kg": 50
+                }
+              ]
+            },
+            {
+              "vehicle_id": "AGV-02",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T06",
+                "T04",
+                "T08"
+              ],
+              "insertion_position": 2,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 101.0,
+                  "capacity_kg": 50
+                }
+              ]
+            },
+            {
+              "vehicle_id": "AGV-02",
+              "candidate_kind": "new_trip",
+              "candidate_task_ids": [
+                "T08"
+              ],
+              "insertion_position": null,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 60.0,
+                  "capacity_kg": 50
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-01",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T08",
+                "T03",
+                "T01"
+              ],
+              "insertion_position": 0,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 62.64,
+                  "capacity_kg": 4
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-01",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T03",
+                "T08",
+                "T01"
+              ],
+              "insertion_position": 1,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 62.64,
+                  "capacity_kg": 4
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-01",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T03",
+                "T01",
+                "T08"
+              ],
+              "insertion_position": 2,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 62.64,
+                  "capacity_kg": 4
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-01",
+              "candidate_kind": "new_trip",
+              "candidate_task_ids": [
+                "T08"
+              ],
+              "insertion_position": null,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 60.0,
+                  "capacity_kg": 4
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-02",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T08",
+                "T07",
+                "T05"
+              ],
+              "insertion_position": 0,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 64.88,
+                  "capacity_kg": 6
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-02",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T07",
+                "T08",
+                "T05"
+              ],
+              "insertion_position": 1,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 64.88,
+                  "capacity_kg": 6
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-02",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T07",
+                "T05",
+                "T08"
+              ],
+              "insertion_position": 2,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 64.88,
+                  "capacity_kg": 6
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-02",
+              "candidate_kind": "new_trip",
+              "candidate_task_ids": [
+                "T08"
+              ],
+              "insertion_position": null,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 60.0,
+                  "capacity_kg": 6
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "execution_status": "candidate_only",
+    "scenario_label": "Illustrative data — overload T08",
+    "method_profile": "two-stage-permutation-ga-2026-v1",
+    "algorithm": "urgency_insertion_v2",
+    "chromosome": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08"
+    ],
+    "objective": {
+      "unassigned_count": 1,
+      "total_cost": 12.26,
+      "transport_cost": 12.26,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "objective_parameters": {
+      "uav_transport_per_s": 0.02,
+      "agv_transport_per_s": 0.01,
+      "lateness_multiplier": 1.0,
+      "transport_coefficient_unit": "penalty_unit/s",
+      "task_lateness_coefficient_unit": "penalty_unit/s",
+      "lateness_multiplier_unit": "dimensionless",
+      "cost_unit": "penalty_unit",
+      "transport_basis": "travel seconds on all legs, including depot return",
+      "objective_priority": [
+        "unassigned_count",
+        "transport_cost + lateness_penalty"
+      ],
+      "illustrative_coefficients": true
+    },
+    "search_exhaustive": false
+  },
+  "ga": {
+    "profile": "python-demo-2026-v2",
+    "window_event": "service_start",
+    "mode": "hard",
+    "seed": 2026,
+    "units": {
+      "mass": "kg",
+      "distance": "m",
+      "time": "s",
+      "speed": "m/s",
+      "cost": "penalty_unit"
+    },
+    "valid": true,
+    "complete": false,
+    "coverage": "Partial",
+    "assigned_task_ids": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07"
+    ],
+    "unassigned_task_ids": [
+      "T08"
+    ],
+    "unassigned": [
+      {
+        "task_id": "T08",
+        "reason_code": "payload_exceeded",
+        "reason_codes": [
+          "payload"
+        ],
+        "explanation": "Task alone exceeds every available compatible device capacity. Search is not a global infeasibility proof.",
+        "attempts": [
+          {
+            "vehicle_id": "AGV-01",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T08",
+              "T02"
+            ],
+            "insertion_position": 0,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 84.0,
+                "capacity_kg": 35
+              }
+            ]
+          },
+          {
+            "vehicle_id": "AGV-01",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T02",
+              "T08"
+            ],
+            "insertion_position": 1,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 84.0,
+                "capacity_kg": 35
+              }
+            ]
+          },
+          {
+            "vehicle_id": "AGV-01",
+            "candidate_kind": "new_trip",
+            "candidate_task_ids": [
+              "T08"
+            ],
+            "insertion_position": null,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 60.0,
+                "capacity_kg": 35
+              }
+            ]
+          },
+          {
+            "vehicle_id": "AGV-02",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T08",
+              "T06"
+            ],
+            "insertion_position": 0,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 79.0,
+                "capacity_kg": 50
+              }
+            ]
+          },
+          {
+            "vehicle_id": "AGV-02",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T06",
+              "T08"
+            ],
+            "insertion_position": 1,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 79.0,
+                "capacity_kg": 50
+              }
+            ]
+          },
+          {
+            "vehicle_id": "AGV-02",
+            "candidate_kind": "new_trip",
+            "candidate_task_ids": [
+              "T08"
+            ],
+            "insertion_position": null,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 60.0,
+                "capacity_kg": 50
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-01",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T08",
+              "T03"
+            ],
+            "insertion_position": 0,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 61.63,
+                "capacity_kg": 4
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-01",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T03",
+              "T08"
+            ],
+            "insertion_position": 1,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 61.63,
+                "capacity_kg": 4
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-01",
+            "candidate_kind": "new_trip",
+            "candidate_task_ids": [
+              "T08"
+            ],
+            "insertion_position": null,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 60.0,
+                "capacity_kg": 4
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-02",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T08",
+              "T01",
+              "T07",
+              "T05"
+            ],
+            "insertion_position": 0,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 65.89,
+                "capacity_kg": 6
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-02",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T01",
+              "T08",
+              "T07",
+              "T05"
+            ],
+            "insertion_position": 1,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 65.89,
+                "capacity_kg": 6
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-02",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T01",
+              "T07",
+              "T08",
+              "T05"
+            ],
+            "insertion_position": 2,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 65.89,
+                "capacity_kg": 6
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-02",
+            "candidate_kind": "insert_current_trip",
+            "candidate_task_ids": [
+              "T01",
+              "T07",
+              "T05",
+              "T08"
+            ],
+            "insertion_position": 3,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 65.89,
+                "capacity_kg": 6
+              }
+            ]
+          },
+          {
+            "vehicle_id": "UAV-02",
+            "candidate_kind": "new_trip",
+            "candidate_task_ids": [
+              "T08"
+            ],
+            "insertion_position": null,
+            "failed_checks": [
+              {
+                "code": "payload",
+                "passed": false,
+                "payload_kg": 60.0,
+                "capacity_kg": 6
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "trips": [
+      {
+        "trip_id": "AGV-01-trip-1",
+        "vehicle_id": "AGV-01",
+        "task_ids": [
+          "T02"
+        ],
+        "load_start_s": 0,
+        "type": "AGV",
+        "speed_m_s": 1.5,
+        "route": [
+          "DEPOT",
+          "S02",
+          "DEPOT"
+        ],
+        "payload_kg": 24.0,
+        "capacity_kg": 35,
+        "departure_s": 30,
+        "depot_wait_s": 0,
+        "load_s": 30,
+        "depot_unload_s": 20,
+        "turnaround_s": 45,
+        "return_s": 550,
+        "mission_s": 520,
+        "depot_unload_end_s": 570,
+        "next_ready_s": 615,
+        "turnaround_applied": false,
+        "planned_end_s": 570,
+        "valid": true,
+        "stops": [
+          {
+            "task_id": "T02",
+            "station_id": "S02",
+            "arrival_s": 270,
+            "earliest_s": 0,
+            "latest_s": 680,
+            "waiting_s": 0,
+            "service_start_s": 270,
+            "unload_s": 15,
+            "unload_end_s": 285,
+            "service_s": 25,
+            "completion_s": 310,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 4,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 0.0,
+            "demand_kg": 24,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          }
+        ],
+        "legs": [
+          {
+            "start_s": 30,
+            "end_s": 270,
+            "travel_s": 240,
+            "distance_m": 358.8,
+            "from": "DEPOT",
+            "to": "S02"
+          },
+          {
+            "start_s": 310,
+            "end_s": 550,
+            "travel_s": 240,
+            "distance_m": 358.8,
+            "from": "S02",
+            "to": "DEPOT"
+          }
+        ],
+        "checks": [
+          {
+            "code": "nonempty_trip",
+            "passed": true
+          },
+          {
+            "code": "vehicle_available",
+            "passed": true
+          },
+          {
+            "code": "unique_tasks_in_trip",
+            "passed": true
+          },
+          {
+            "code": "payload",
+            "passed": true,
+            "payload_kg": 24.0,
+            "capacity_kg": 35
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T02",
+            "vehicle_id": "AGV-01"
+          },
+          {
+            "code": "load_start",
+            "passed": true,
+            "load_start_s": 0,
+            "required_ready_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "DEPOT",
+            "to_node": "S02"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T02",
+            "mode": "hard",
+            "service_start_s": 270,
+            "latest_s": 680,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S02",
+            "to_node": "DEPOT"
+          },
+          {
+            "code": "trip_limit",
+            "passed": true,
+            "mission_s": 520,
+            "trip_limit_s": 2000
+          },
+          {
+            "code": "availability_end",
+            "passed": true,
+            "depot_unload_end_s": 570,
+            "available_until_s": 7200
+          }
+        ],
+        "travel_s": 480,
+        "waiting_s": 0,
+        "station_unload_s": 15,
+        "service_s": 25,
+        "lateness_s": 0,
+        "lateness_cost": 0,
+        "distance_m": 717.6,
+        "transport_cost_per_s": 0.01,
+        "transport_cost": 4.8
+      },
+      {
+        "trip_id": "AGV-02-trip-1",
+        "vehicle_id": "AGV-02",
+        "task_ids": [
+          "T04",
+          "T06"
+        ],
+        "load_start_s": 0,
+        "type": "AGV",
+        "speed_m_s": 1.5,
+        "route": [
+          "DEPOT",
+          "S04",
+          "S06",
+          "DEPOT"
+        ],
+        "payload_kg": 41.0,
+        "capacity_kg": 50,
+        "departure_s": 30,
+        "depot_wait_s": 0,
+        "load_s": 30,
+        "depot_unload_s": 20,
+        "turnaround_s": 45,
+        "return_s": 674,
+        "mission_s": 644,
+        "depot_unload_end_s": 694,
+        "next_ready_s": 739,
+        "turnaround_applied": false,
+        "planned_end_s": 694,
+        "valid": true,
+        "stops": [
+          {
+            "task_id": "T04",
+            "station_id": "S04",
+            "arrival_s": 312,
+            "earliest_s": 47,
+            "latest_s": 1040,
+            "waiting_s": 0,
+            "service_start_s": 312,
+            "unload_s": 13,
+            "unload_end_s": 325,
+            "service_s": 30,
+            "completion_s": 355,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 1,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 19.0,
+            "demand_kg": 22,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          },
+          {
+            "task_id": "T06",
+            "station_id": "S06",
+            "arrival_s": 376,
+            "earliest_s": 29,
+            "latest_s": 1400,
+            "waiting_s": 0,
+            "service_start_s": 376,
+            "unload_s": 7,
+            "unload_end_s": 383,
+            "service_s": 30,
+            "completion_s": 413,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 4,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 0.0,
+            "demand_kg": 19,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          }
+        ],
+        "legs": [
+          {
+            "start_s": 30,
+            "end_s": 312,
+            "travel_s": 282,
+            "distance_m": 422.4,
+            "from": "DEPOT",
+            "to": "S04"
+          },
+          {
+            "start_s": 355,
+            "end_s": 376,
+            "travel_s": 21,
+            "distance_m": 31.2,
+            "from": "S04",
+            "to": "S06"
+          },
+          {
+            "start_s": 413,
+            "end_s": 674,
+            "travel_s": 261,
+            "distance_m": 391.2,
+            "from": "S06",
+            "to": "DEPOT"
+          }
+        ],
+        "checks": [
+          {
+            "code": "nonempty_trip",
+            "passed": true
+          },
+          {
+            "code": "vehicle_available",
+            "passed": true
+          },
+          {
+            "code": "unique_tasks_in_trip",
+            "passed": true
+          },
+          {
+            "code": "payload",
+            "passed": true,
+            "payload_kg": 41.0,
+            "capacity_kg": 50
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T04",
+            "vehicle_id": "AGV-02"
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T06",
+            "vehicle_id": "AGV-02"
+          },
+          {
+            "code": "load_start",
+            "passed": true,
+            "load_start_s": 0,
+            "required_ready_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "DEPOT",
+            "to_node": "S04"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T04",
+            "mode": "hard",
+            "service_start_s": 312,
+            "latest_s": 1040,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S04",
+            "to_node": "S06"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T06",
+            "mode": "hard",
+            "service_start_s": 376,
+            "latest_s": 1400,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S06",
+            "to_node": "DEPOT"
+          },
+          {
+            "code": "trip_limit",
+            "passed": true,
+            "mission_s": 644,
+            "trip_limit_s": 2000
+          },
+          {
+            "code": "availability_end",
+            "passed": true,
+            "depot_unload_end_s": 694,
+            "available_until_s": 7200
+          }
+        ],
+        "travel_s": 564,
+        "waiting_s": 0,
+        "station_unload_s": 20,
+        "service_s": 60,
+        "lateness_s": 0,
+        "lateness_cost": 0,
+        "distance_m": 844.8,
+        "transport_cost_per_s": 0.01,
+        "transport_cost": 5.64
+      },
+      {
+        "trip_id": "UAV-01-trip-1",
+        "vehicle_id": "UAV-01",
+        "task_ids": [
+          "T03"
+        ],
+        "load_start_s": 0,
+        "type": "UAV",
+        "speed_m_s": 8.0,
+        "route": [
+          "DEPOT",
+          "S03",
+          "DEPOT"
+        ],
+        "payload_kg": 1.63,
+        "capacity_kg": 4,
+        "departure_s": 20,
+        "depot_wait_s": 0,
+        "load_s": 20,
+        "depot_unload_s": 10,
+        "turnaround_s": 60,
+        "return_s": 74,
+        "mission_s": 54,
+        "depot_unload_end_s": 84,
+        "next_ready_s": 144,
+        "turnaround_applied": false,
+        "planned_end_s": 84,
+        "valid": true,
+        "stops": [
+          {
+            "task_id": "T03",
+            "station_id": "S03",
+            "arrival_s": 32,
+            "earliest_s": 25,
+            "latest_s": 860,
+            "waiting_s": 0,
+            "service_start_s": 32,
+            "unload_s": 9,
+            "unload_end_s": 41,
+            "service_s": 21,
+            "completion_s": 62,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 2,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 0.0,
+            "demand_kg": 1.63,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          }
+        ],
+        "legs": [
+          {
+            "start_s": 20,
+            "end_s": 32,
+            "travel_s": 12,
+            "distance_m": 89.694,
+            "from": "DEPOT",
+            "to": "S03"
+          },
+          {
+            "start_s": 62,
+            "end_s": 74,
+            "travel_s": 12,
+            "distance_m": 89.694,
+            "from": "S03",
+            "to": "DEPOT"
+          }
+        ],
+        "checks": [
+          {
+            "code": "nonempty_trip",
+            "passed": true
+          },
+          {
+            "code": "vehicle_available",
+            "passed": true
+          },
+          {
+            "code": "unique_tasks_in_trip",
+            "passed": true
+          },
+          {
+            "code": "payload",
+            "passed": true,
+            "payload_kg": 1.63,
+            "capacity_kg": 4
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T03",
+            "vehicle_id": "UAV-01"
+          },
+          {
+            "code": "load_start",
+            "passed": true,
+            "load_start_s": 0,
+            "required_ready_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "DEPOT",
+            "to_node": "S03"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T03",
+            "mode": "hard",
+            "service_start_s": 32,
+            "latest_s": 860,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S03",
+            "to_node": "DEPOT"
+          },
+          {
+            "code": "trip_limit",
+            "passed": true,
+            "mission_s": 54,
+            "trip_limit_s": 800
+          },
+          {
+            "code": "availability_end",
+            "passed": true,
+            "depot_unload_end_s": 84,
+            "available_until_s": 3600
+          }
+        ],
+        "travel_s": 24,
+        "waiting_s": 0,
+        "station_unload_s": 9,
+        "service_s": 21,
+        "lateness_s": 0,
+        "lateness_cost": 0,
+        "distance_m": 179.388,
+        "transport_cost_per_s": 0.02,
+        "transport_cost": 0.48
+      },
+      {
+        "trip_id": "UAV-02-trip-1",
+        "vehicle_id": "UAV-02",
+        "task_ids": [
+          "T01",
+          "T07",
+          "T05"
+        ],
+        "load_start_s": 0,
+        "type": "UAV",
+        "speed_m_s": 8.0,
+        "route": [
+          "DEPOT",
+          "S01",
+          "S07",
+          "S05",
+          "DEPOT"
+        ],
+        "payload_kg": 5.89,
+        "capacity_kg": 6,
+        "departure_s": 20,
+        "depot_wait_s": 0,
+        "load_s": 20,
+        "depot_unload_s": 10,
+        "turnaround_s": 60,
+        "return_s": 173,
+        "mission_s": 153,
+        "depot_unload_end_s": 183,
+        "next_ready_s": 243,
+        "turnaround_applied": false,
+        "planned_end_s": 183,
+        "valid": true,
+        "stops": [
+          {
+            "task_id": "T01",
+            "station_id": "S01",
+            "arrival_s": 35,
+            "earliest_s": 5,
+            "latest_s": 500,
+            "waiting_s": 0,
+            "service_start_s": 35,
+            "unload_s": 6,
+            "unload_end_s": 41,
+            "service_s": 19,
+            "completion_s": 60,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 1,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 4.88,
+            "demand_kg": 1.01,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          },
+          {
+            "task_id": "T07",
+            "station_id": "S07",
+            "arrival_s": 75,
+            "earliest_s": 19,
+            "latest_s": 1580,
+            "waiting_s": 0,
+            "service_start_s": 75,
+            "unload_s": 5,
+            "unload_end_s": 80,
+            "service_s": 21,
+            "completion_s": 101,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 2,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 2.45,
+            "demand_kg": 2.43,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          },
+          {
+            "task_id": "T05",
+            "station_id": "S05",
+            "arrival_s": 107,
+            "earliest_s": 5,
+            "latest_s": 1220,
+            "waiting_s": 0,
+            "service_start_s": 107,
+            "unload_s": 13,
+            "unload_end_s": 120,
+            "service_s": 27,
+            "completion_s": 147,
+            "lateness_s": 0,
+            "lateness_cost_per_s": 2,
+            "lateness_cost": 0,
+            "remaining_payload_kg": 0.0,
+            "demand_kg": 2.45,
+            "status": "planned",
+            "objective_lateness_penalty": 0.0
+          }
+        ],
+        "legs": [
+          {
+            "start_s": 20,
+            "end_s": 35,
+            "travel_s": 15,
+            "distance_m": 112.699,
+            "from": "DEPOT",
+            "to": "S01"
+          },
+          {
+            "start_s": 60,
+            "end_s": 75,
+            "travel_s": 15,
+            "distance_m": 117.414,
+            "from": "S01",
+            "to": "S07"
+          },
+          {
+            "start_s": 101,
+            "end_s": 107,
+            "travel_s": 6,
+            "distance_m": 46.239,
+            "from": "S07",
+            "to": "S05"
+          },
+          {
+            "start_s": 147,
+            "end_s": 173,
+            "travel_s": 26,
+            "distance_m": 205.847,
+            "from": "S05",
+            "to": "DEPOT"
+          }
+        ],
+        "checks": [
+          {
+            "code": "nonempty_trip",
+            "passed": true
+          },
+          {
+            "code": "vehicle_available",
+            "passed": true
+          },
+          {
+            "code": "unique_tasks_in_trip",
+            "passed": true
+          },
+          {
+            "code": "payload",
+            "passed": true,
+            "payload_kg": 5.89,
+            "capacity_kg": 6
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T01",
+            "vehicle_id": "UAV-02"
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T07",
+            "vehicle_id": "UAV-02"
+          },
+          {
+            "code": "eligibility",
+            "passed": true,
+            "task_id": "T05",
+            "vehicle_id": "UAV-02"
+          },
+          {
+            "code": "load_start",
+            "passed": true,
+            "load_start_s": 0,
+            "required_ready_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "DEPOT",
+            "to_node": "S01"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T01",
+            "mode": "hard",
+            "service_start_s": 35,
+            "latest_s": 500,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S01",
+            "to_node": "S07"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T07",
+            "mode": "hard",
+            "service_start_s": 75,
+            "latest_s": 1580,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S07",
+            "to_node": "S05"
+          },
+          {
+            "code": "time_window",
+            "passed": true,
+            "task_id": "T05",
+            "mode": "hard",
+            "service_start_s": 107,
+            "latest_s": 1220,
+            "lateness_s": 0
+          },
+          {
+            "code": "route_edge",
+            "passed": true,
+            "from_node": "S05",
+            "to_node": "DEPOT"
+          },
+          {
+            "code": "trip_limit",
+            "passed": true,
+            "mission_s": 153,
+            "trip_limit_s": 800
+          },
+          {
+            "code": "availability_end",
+            "passed": true,
+            "depot_unload_end_s": 183,
+            "available_until_s": 3600
+          }
+        ],
+        "travel_s": 62,
+        "waiting_s": 0,
+        "station_unload_s": 24,
+        "service_s": 67,
+        "lateness_s": 0,
+        "lateness_cost": 0,
+        "distance_m": 482.199,
+        "transport_cost_per_s": 0.02,
+        "transport_cost": 1.24
+      }
+    ],
+    "checks": [
+      {
+        "code": "unique_trip_ids",
+        "passed": true
+      },
+      {
+        "code": "unique_tasks_across_trips",
+        "passed": true,
+        "duplicate_task_ids": []
+      },
+      {
+        "code": "unique_unassigned_tasks",
+        "passed": true,
+        "duplicate_task_ids": []
+      },
+      {
+        "code": "assigned_unassigned_disjoint",
+        "passed": true,
+        "task_ids": []
+      },
+      {
+        "code": "all_tasks_accounted_for",
+        "passed": true,
+        "missing_task_ids": []
+      }
+    ],
+    "summary": {
+      "assigned_count": 7,
+      "unassigned_count": 1,
+      "trip_count": 4,
+      "travel_s": 1130,
+      "waiting_s": 0,
+      "lateness_s": 0,
+      "lateness_cost": 0,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "total_cost": 12.16
+    },
+    "plan_input": {
+      "trips": [
+        {
+          "trip_id": "AGV-01-trip-1",
+          "vehicle_id": "AGV-01",
+          "task_ids": [
+            "T02"
+          ],
+          "load_start_s": 0
+        },
+        {
+          "trip_id": "AGV-02-trip-1",
+          "vehicle_id": "AGV-02",
+          "task_ids": [
+            "T04",
+            "T06"
+          ],
+          "load_start_s": 0
+        },
+        {
+          "trip_id": "UAV-01-trip-1",
+          "vehicle_id": "UAV-01",
+          "task_ids": [
+            "T03"
+          ],
+          "load_start_s": 0
+        },
+        {
+          "trip_id": "UAV-02-trip-1",
+          "vehicle_id": "UAV-02",
+          "task_ids": [
+            "T01",
+            "T07",
+            "T05"
+          ],
+          "load_start_s": 0
+        }
+      ],
+      "unassigned": [
+        {
+          "task_id": "T08",
+          "reason_code": "payload_exceeded",
+          "reason_codes": [
+            "payload"
+          ],
+          "explanation": "Task alone exceeds every available compatible device capacity. Search is not a global infeasibility proof.",
+          "attempts": [
+            {
+              "vehicle_id": "AGV-01",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T08",
+                "T02"
+              ],
+              "insertion_position": 0,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 84.0,
+                  "capacity_kg": 35
+                }
+              ]
+            },
+            {
+              "vehicle_id": "AGV-01",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T02",
+                "T08"
+              ],
+              "insertion_position": 1,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 84.0,
+                  "capacity_kg": 35
+                }
+              ]
+            },
+            {
+              "vehicle_id": "AGV-01",
+              "candidate_kind": "new_trip",
+              "candidate_task_ids": [
+                "T08"
+              ],
+              "insertion_position": null,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 60.0,
+                  "capacity_kg": 35
+                }
+              ]
+            },
+            {
+              "vehicle_id": "AGV-02",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T08",
+                "T06"
+              ],
+              "insertion_position": 0,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 79.0,
+                  "capacity_kg": 50
+                }
+              ]
+            },
+            {
+              "vehicle_id": "AGV-02",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T06",
+                "T08"
+              ],
+              "insertion_position": 1,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 79.0,
+                  "capacity_kg": 50
+                }
+              ]
+            },
+            {
+              "vehicle_id": "AGV-02",
+              "candidate_kind": "new_trip",
+              "candidate_task_ids": [
+                "T08"
+              ],
+              "insertion_position": null,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 60.0,
+                  "capacity_kg": 50
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-01",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T08",
+                "T03"
+              ],
+              "insertion_position": 0,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 61.63,
+                  "capacity_kg": 4
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-01",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T03",
+                "T08"
+              ],
+              "insertion_position": 1,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 61.63,
+                  "capacity_kg": 4
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-01",
+              "candidate_kind": "new_trip",
+              "candidate_task_ids": [
+                "T08"
+              ],
+              "insertion_position": null,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 60.0,
+                  "capacity_kg": 4
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-02",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T08",
+                "T01",
+                "T07",
+                "T05"
+              ],
+              "insertion_position": 0,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 65.89,
+                  "capacity_kg": 6
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-02",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T01",
+                "T08",
+                "T07",
+                "T05"
+              ],
+              "insertion_position": 1,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 65.89,
+                  "capacity_kg": 6
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-02",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T01",
+                "T07",
+                "T08",
+                "T05"
+              ],
+              "insertion_position": 2,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 65.89,
+                  "capacity_kg": 6
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-02",
+              "candidate_kind": "insert_current_trip",
+              "candidate_task_ids": [
+                "T01",
+                "T07",
+                "T05",
+                "T08"
+              ],
+              "insertion_position": 3,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 65.89,
+                  "capacity_kg": 6
+                }
+              ]
+            },
+            {
+              "vehicle_id": "UAV-02",
+              "candidate_kind": "new_trip",
+              "candidate_task_ids": [
+                "T08"
+              ],
+              "insertion_position": null,
+              "failed_checks": [
+                {
+                  "code": "payload",
+                  "passed": false,
+                  "payload_kg": 60.0,
+                  "capacity_kg": 6
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "execution_status": "candidate_only",
+    "scenario_label": "Illustrative data — overload T08",
+    "method_profile": "two-stage-permutation-ga-2026-v1",
+    "algorithm": "permutation_ga_2026_v1",
+    "chromosome": [
+      "T02",
+      "T03",
+      "T05",
+      "T07",
+      "T06",
+      "T01",
+      "T08",
+      "T04"
+    ],
+    "objective": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "objective_parameters": {
+      "uav_transport_per_s": 0.02,
+      "agv_transport_per_s": 0.01,
+      "lateness_multiplier": 1.0,
+      "transport_coefficient_unit": "penalty_unit/s",
+      "task_lateness_coefficient_unit": "penalty_unit/s",
+      "lateness_multiplier_unit": "dimensionless",
+      "cost_unit": "penalty_unit",
+      "transport_basis": "travel seconds on all legs, including depot return",
+      "objective_priority": [
+        "unassigned_count",
+        "transport_cost + lateness_penalty"
+      ],
+      "illustrative_coefficients": true
+    },
+    "search_exhaustive": false
+  },
+  "comparison": {
+    "metrics": [
+      {
+        "metric": "assigned_count",
+        "initial": 7,
+        "ga": 7,
+        "delta_ga_minus_initial": 0,
+        "unit": "count"
+      },
+      {
+        "metric": "unassigned_count",
+        "initial": 1,
+        "ga": 1,
+        "delta_ga_minus_initial": 0,
+        "unit": "count"
+      },
+      {
+        "metric": "trip_count",
+        "initial": 4,
+        "ga": 4,
+        "delta_ga_minus_initial": 0,
+        "unit": "count"
+      },
+      {
+        "metric": "travel_s",
+        "initial": 1135,
+        "ga": 1130,
+        "delta_ga_minus_initial": -5,
+        "unit": "s"
+      },
+      {
+        "metric": "waiting_s",
+        "initial": 0,
+        "ga": 0,
+        "delta_ga_minus_initial": 0,
+        "unit": "s"
+      },
+      {
+        "metric": "lateness_s",
+        "initial": 0,
+        "ga": 0,
+        "delta_ga_minus_initial": 0,
+        "unit": "s"
+      },
+      {
+        "metric": "lateness_cost",
+        "initial": 0,
+        "ga": 0,
+        "delta_ga_minus_initial": 0,
+        "unit": "penalty_unit"
+      },
+      {
+        "metric": "transport_cost",
+        "initial": 12.26,
+        "ga": 12.16,
+        "delta_ga_minus_initial": -0.1,
+        "unit": "penalty_unit"
+      },
+      {
+        "metric": "lateness_penalty",
+        "initial": 0.0,
+        "ga": 0.0,
+        "delta_ga_minus_initial": 0.0,
+        "unit": "penalty_unit"
+      },
+      {
+        "metric": "total_cost",
+        "initial": 12.26,
+        "ga": 12.16,
+        "delta_ga_minus_initial": -0.1,
+        "unit": "penalty_unit"
+      }
+    ],
+    "tasks": [
+      {
+        "task_id": "T01",
+        "initial": {
+          "status": "planned",
+          "vehicle_id": "UAV-01",
+          "trip_id": "UAV-01-trip-1",
+          "task_id": "T01",
+          "station_id": "S01",
+          "arrival_s": 66,
+          "earliest_s": 5,
+          "latest_s": 500,
+          "waiting_s": 0,
+          "service_start_s": 66,
+          "unload_s": 6,
+          "unload_end_s": 72,
+          "service_s": 19,
+          "completion_s": 91,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 1,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 0.0,
+          "demand_kg": 1.01,
+          "objective_lateness_penalty": 0.0
+        },
+        "ga": {
+          "status": "planned",
+          "vehicle_id": "UAV-02",
+          "trip_id": "UAV-02-trip-1",
+          "task_id": "T01",
+          "station_id": "S01",
+          "arrival_s": 35,
+          "earliest_s": 5,
+          "latest_s": 500,
+          "waiting_s": 0,
+          "service_start_s": 35,
+          "unload_s": 6,
+          "unload_end_s": 41,
+          "service_s": 19,
+          "completion_s": 60,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 1,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 4.88,
+          "demand_kg": 1.01,
+          "objective_lateness_penalty": 0.0
+        },
+        "changed": true
+      },
+      {
+        "task_id": "T02",
+        "initial": {
+          "status": "planned",
+          "vehicle_id": "AGV-01",
+          "trip_id": "AGV-01-trip-1",
+          "task_id": "T02",
+          "station_id": "S02",
+          "arrival_s": 270,
+          "earliest_s": 0,
+          "latest_s": 680,
+          "waiting_s": 0,
+          "service_start_s": 270,
+          "unload_s": 15,
+          "unload_end_s": 285,
+          "service_s": 25,
+          "completion_s": 310,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 4,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 0.0,
+          "demand_kg": 24,
+          "objective_lateness_penalty": 0.0
+        },
+        "ga": {
+          "status": "planned",
+          "vehicle_id": "AGV-01",
+          "trip_id": "AGV-01-trip-1",
+          "task_id": "T02",
+          "station_id": "S02",
+          "arrival_s": 270,
+          "earliest_s": 0,
+          "latest_s": 680,
+          "waiting_s": 0,
+          "service_start_s": 270,
+          "unload_s": 15,
+          "unload_end_s": 285,
+          "service_s": 25,
+          "completion_s": 310,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 4,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 0.0,
+          "demand_kg": 24,
+          "objective_lateness_penalty": 0.0
+        },
+        "changed": false
+      },
+      {
+        "task_id": "T03",
+        "initial": {
+          "status": "planned",
+          "vehicle_id": "UAV-01",
+          "trip_id": "UAV-01-trip-1",
+          "task_id": "T03",
+          "station_id": "S03",
+          "arrival_s": 32,
+          "earliest_s": 25,
+          "latest_s": 860,
+          "waiting_s": 0,
+          "service_start_s": 32,
+          "unload_s": 9,
+          "unload_end_s": 41,
+          "service_s": 21,
+          "completion_s": 62,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 2,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 1.01,
+          "demand_kg": 1.63,
+          "objective_lateness_penalty": 0.0
+        },
+        "ga": {
+          "status": "planned",
+          "vehicle_id": "UAV-01",
+          "trip_id": "UAV-01-trip-1",
+          "task_id": "T03",
+          "station_id": "S03",
+          "arrival_s": 32,
+          "earliest_s": 25,
+          "latest_s": 860,
+          "waiting_s": 0,
+          "service_start_s": 32,
+          "unload_s": 9,
+          "unload_end_s": 41,
+          "service_s": 21,
+          "completion_s": 62,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 2,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 0.0,
+          "demand_kg": 1.63,
+          "objective_lateness_penalty": 0.0
+        },
+        "changed": true
+      },
+      {
+        "task_id": "T04",
+        "initial": {
+          "status": "planned",
+          "vehicle_id": "AGV-02",
+          "trip_id": "AGV-02-trip-1",
+          "task_id": "T04",
+          "station_id": "S04",
+          "arrival_s": 349,
+          "earliest_s": 47,
+          "latest_s": 1040,
+          "waiting_s": 0,
+          "service_start_s": 349,
+          "unload_s": 13,
+          "unload_end_s": 362,
+          "service_s": 30,
+          "completion_s": 392,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 1,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 0.0,
+          "demand_kg": 22,
+          "objective_lateness_penalty": 0.0
+        },
+        "ga": {
+          "status": "planned",
+          "vehicle_id": "AGV-02",
+          "trip_id": "AGV-02-trip-1",
+          "task_id": "T04",
+          "station_id": "S04",
+          "arrival_s": 312,
+          "earliest_s": 47,
+          "latest_s": 1040,
+          "waiting_s": 0,
+          "service_start_s": 312,
+          "unload_s": 13,
+          "unload_end_s": 325,
+          "service_s": 30,
+          "completion_s": 355,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 1,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 19.0,
+          "demand_kg": 22,
+          "objective_lateness_penalty": 0.0
+        },
+        "changed": true
+      },
+      {
+        "task_id": "T05",
+        "initial": {
+          "status": "planned",
+          "vehicle_id": "UAV-02",
+          "trip_id": "UAV-02-trip-1",
+          "task_id": "T05",
+          "station_id": "S05",
+          "arrival_s": 80,
+          "earliest_s": 5,
+          "latest_s": 1220,
+          "waiting_s": 0,
+          "service_start_s": 80,
+          "unload_s": 13,
+          "unload_end_s": 93,
+          "service_s": 27,
+          "completion_s": 120,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 2,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 0.0,
+          "demand_kg": 2.45,
+          "objective_lateness_penalty": 0.0
+        },
+        "ga": {
+          "status": "planned",
+          "vehicle_id": "UAV-02",
+          "trip_id": "UAV-02-trip-1",
+          "task_id": "T05",
+          "station_id": "S05",
+          "arrival_s": 107,
+          "earliest_s": 5,
+          "latest_s": 1220,
+          "waiting_s": 0,
+          "service_start_s": 107,
+          "unload_s": 13,
+          "unload_end_s": 120,
+          "service_s": 27,
+          "completion_s": 147,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 2,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 0.0,
+          "demand_kg": 2.45,
+          "objective_lateness_penalty": 0.0
+        },
+        "changed": true
+      },
+      {
+        "task_id": "T06",
+        "initial": {
+          "status": "planned",
+          "vehicle_id": "AGV-02",
+          "trip_id": "AGV-02-trip-1",
+          "task_id": "T06",
+          "station_id": "S06",
+          "arrival_s": 291,
+          "earliest_s": 29,
+          "latest_s": 1400,
+          "waiting_s": 0,
+          "service_start_s": 291,
+          "unload_s": 7,
+          "unload_end_s": 298,
+          "service_s": 30,
+          "completion_s": 328,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 4,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 22.0,
+          "demand_kg": 19,
+          "objective_lateness_penalty": 0.0
+        },
+        "ga": {
+          "status": "planned",
+          "vehicle_id": "AGV-02",
+          "trip_id": "AGV-02-trip-1",
+          "task_id": "T06",
+          "station_id": "S06",
+          "arrival_s": 376,
+          "earliest_s": 29,
+          "latest_s": 1400,
+          "waiting_s": 0,
+          "service_start_s": 376,
+          "unload_s": 7,
+          "unload_end_s": 383,
+          "service_s": 30,
+          "completion_s": 413,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 4,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 0.0,
+          "demand_kg": 19,
+          "objective_lateness_penalty": 0.0
+        },
+        "changed": true
+      },
+      {
+        "task_id": "T07",
+        "initial": {
+          "status": "planned",
+          "vehicle_id": "UAV-02",
+          "trip_id": "UAV-02-trip-1",
+          "task_id": "T07",
+          "station_id": "S07",
+          "arrival_s": 48,
+          "earliest_s": 19,
+          "latest_s": 1580,
+          "waiting_s": 0,
+          "service_start_s": 48,
+          "unload_s": 5,
+          "unload_end_s": 53,
+          "service_s": 21,
+          "completion_s": 74,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 2,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 2.45,
+          "demand_kg": 2.43,
+          "objective_lateness_penalty": 0.0
+        },
+        "ga": {
+          "status": "planned",
+          "vehicle_id": "UAV-02",
+          "trip_id": "UAV-02-trip-1",
+          "task_id": "T07",
+          "station_id": "S07",
+          "arrival_s": 75,
+          "earliest_s": 19,
+          "latest_s": 1580,
+          "waiting_s": 0,
+          "service_start_s": 75,
+          "unload_s": 5,
+          "unload_end_s": 80,
+          "service_s": 21,
+          "completion_s": 101,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 2,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 2.45,
+          "demand_kg": 2.43,
+          "objective_lateness_penalty": 0.0
+        },
+        "changed": true
+      },
+      {
+        "task_id": "T08",
+        "initial": {
+          "status": "unassigned",
+          "reason_code": "payload_exceeded"
+        },
+        "ga": {
+          "status": "unassigned",
+          "reason_code": "payload_exceeded"
+        },
+        "changed": false
+      }
+    ],
+    "improved": true,
+    "comparison_scope": "this input, mode, parameters and fixed seed only",
+    "initial_objective": {
+      "unassigned_count": 1,
+      "total_cost": 12.26,
+      "transport_cost": 12.26,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "ga_objective": {
+      "unassigned_count": 1,
+      "total_cost": 12.16,
+      "transport_cost": 12.16,
+      "lateness_penalty": 0.0,
+      "cost_unit": "penalty_unit"
+    },
+    "conclusion": "Strict lexicographic improvement in this run."
+  }
+}

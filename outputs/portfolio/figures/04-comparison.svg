@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="845" viewBox="0 0 1240 845">
+<title>启发式与 GA：同算例的实际比较</title>
+<metadata>{&quot;input_sha256&quot;: &quot;62c99a49c4505945319ea2e568b2211f0bb5fe7c9379947fbe4887a4380619c2&quot;, &quot;parameters&quot;: {&quot;population_size&quot;: 24, &quot;max_generations&quot;: 40, &quot;elite_count&quot;: 2, &quot;tournament_size&quot;: 3, &quot;crossover_rate&quot;: 0.9, &quot;mutation_rate&quot;: 0.25, &quot;patience&quot;: 12, &quot;seed&quot;: 2026, &quot;decoder_seed&quot;: 2026, &quot;costs&quot;: {&quot;uav_transport_per_s&quot;: 0.02, &quot;agv_transport_per_s&quot;: 0.01, &quot;lateness_multiplier&quot;: 1.0, &quot;transport_coefficient_unit&quot;: &quot;penalty_unit/s&quot;, &quot;task_lateness_coefficient_unit&quot;: &quot;penalty_unit/s&quot;, &quot;lateness_multiplier_unit&quot;: &quot;dimensionless&quot;, &quot;cost_unit&quot;: &quot;penalty_unit&quot;, &quot;transport_basis&quot;: &quot;travel seconds on all legs, including depot return&quot;, &quot;objective_priority&quot;: [&quot;unassigned_count&quot;, &quot;transport_cost + lateness_penalty&quot;], &quot;illustrative_coefficients&quot;: true}, &quot;two_opt_implemented&quot;: false}, &quot;data_label&quot;: &quot;Illustrative data&quot;, &quot;source&quot;: &quot;../run.json&quot;, &quot;map_kind&quot;: &quot;schematic only&quot;}</metadata>
+<defs><style>@font-face{font-family:"Source Han Sans CN";src:url("fonts/SourceHanSansCN-Regular.otf")} @font-face{font-family:"Sarasa Mono SC";src:url("fonts/SarasaMonoSC-Regular.ttf")}</style></defs>
+<rect x="0.00" y="0.00" width="1240.00" height="845.00" fill="#f7f6f2"/>
+<text x="42.00" y="44.00" font-family="Sarasa Mono SC" font-size="18" fill="#596b76">OnTime Dispatch</text>
+<text x="42.00" y="89.00" font-family="Source Han Sans CN" font-size="31" fill="#142c3c">启发式与 GA：同算例的实际比较</text>
+<text x="42.00" y="121.00" font-family="Sarasa Mono SC" font-size="15" fill="#596b76">Illustrative data | mode=soft | seed=2026 | population=24 | generations=12/40</text>
+<text x="42.00" y="803.00" font-family="Source Han Sans CN" font-size="15" fill="#596b76">2026 新实现 · 功能演示 · 候选计划未经人工批准 · 非真实工厂 / 非部署结果</text>
+<text x="42.00" y="827.00" font-family="Sarasa Mono SC" font-size="12" fill="#596b76">input SHA256: 62c99a49c4505945319ea2e568b2211f0bb5fe7c9379947fbe4887a4380619c2</text>
+<text x="42.00" y="165.00" font-family="Source Han Sans CN" font-size="17" fill="#596b76">先比较未分配数，再比较运输 + 迟到罚值。演示罚值不代表实测经济成本。</text>
+<rect x="42.00" y="194.00" width="1156.00" height="45.00" fill="#142c3c"/>
+<text x="63.00" y="222.00" font-family="Source Han Sans CN" font-size="18" fill="#ffffff">指标 / 单位</text>
+<text x="512.00" y="222.00" font-family="Source Han Sans CN" font-size="18" fill="#ffffff">启发式</text>
+<text x="731.00" y="222.00" font-family="Source Han Sans CN" font-size="18" fill="#ffffff">GA</text>
+<text x="940.00" y="222.00" font-family="Source Han Sans CN" font-size="18" fill="#ffffff">GA − 启发式</text>
+<rect x="42.00" y="239.00" width="1156.00" height="43.00" fill="#ffffff"/>
+<text x="63.00" y="266.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">已分配任务 / count</text>
+<text x="512.00" y="267.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">7</text>
+<text x="731.00" y="267.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">7</text>
+<text x="940.00" y="267.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">0</text>
+<rect x="42.00" y="282.00" width="1156.00" height="43.00" fill="#edf1ef"/>
+<text x="63.00" y="309.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">未分配任务 / count</text>
+<text x="512.00" y="310.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">1</text>
+<text x="731.00" y="310.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">1</text>
+<text x="940.00" y="310.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">0</text>
+<rect x="42.00" y="325.00" width="1156.00" height="43.00" fill="#ffffff"/>
+<text x="63.00" y="352.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">行程 / count</text>
+<text x="512.00" y="353.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">5</text>
+<text x="731.00" y="353.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">5</text>
+<text x="940.00" y="353.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">0</text>
+<rect x="42.00" y="368.00" width="1156.00" height="43.00" fill="#edf1ef"/>
+<text x="63.00" y="395.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">行驶（含返仓）/ s</text>
+<text x="512.00" y="396.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">1183</text>
+<text x="731.00" y="396.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">1178</text>
+<text x="940.00" y="396.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">-5</text>
+<rect x="42.00" y="411.00" width="1156.00" height="43.00" fill="#ffffff"/>
+<text x="63.00" y="438.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">工位等待 / s</text>
+<text x="512.00" y="439.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">0</text>
+<text x="731.00" y="439.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">0</text>
+<text x="940.00" y="439.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">0</text>
+<rect x="42.00" y="454.00" width="1156.00" height="43.00" fill="#edf1ef"/>
+<text x="63.00" y="481.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">迟到 / s</text>
+<text x="512.00" y="482.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">0</text>
+<text x="731.00" y="482.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">0</text>
+<text x="940.00" y="482.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">0</text>
+<rect x="42.00" y="497.00" width="1156.00" height="43.00" fill="#ffffff"/>
+<text x="63.00" y="524.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">运输罚值 / penalty_unit</text>
+<text x="512.00" y="525.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">13.22</text>
+<text x="731.00" y="525.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">13.12</text>
+<text x="940.00" y="525.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">-0.1</text>
+<rect x="42.00" y="540.00" width="1156.00" height="43.00" fill="#edf1ef"/>
+<text x="63.00" y="567.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">迟到罚值 / penalty_unit</text>
+<text x="512.00" y="568.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">0</text>
+<text x="731.00" y="568.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">0</text>
+<text x="940.00" y="568.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">0</text>
+<rect x="42.00" y="583.00" width="1156.00" height="43.00" fill="#ffffff"/>
+<text x="63.00" y="610.00" font-family="Source Han Sans CN" font-size="17" fill="#142c3c">总罚值 / penalty_unit</text>
+<text x="512.00" y="611.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">13.22</text>
+<text x="731.00" y="611.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">13.12</text>
+<text x="940.00" y="611.00" font-family="Sarasa Mono SC" font-size="18" fill="#142c3c">-0.1</text>
+<text x="42.00" y="667.00" font-family="Source Han Sans CN" font-size="20" fill="#142c3c">本次严格改善：是；最优首次记录在代 0。</text>
+<text x="42.00" y="700.00" font-family="Source Han Sans CN" font-size="17" fill="#596b76">停止：stagnation_patience；已执行繁殖代数 12；2-opt 未实现。</text>
+<text x="42.00" y="736.00" font-family="Source Han Sans CN" font-size="16" fill="#596b76">这些数字只描述本次输入、模式、参数与种子；不构成普遍提升或近似最优结论。</text>
+</svg>

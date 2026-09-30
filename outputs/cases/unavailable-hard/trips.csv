@@ -1,0 +1,3 @@
+﻿trip_id,vehicle_id,type,speed_m_s,task_ids,route,valid,payload_kg,capacity_kg,load_start_s,load_s,departure_s,depot_wait_s,travel_s,waiting_s,station_unload_s,service_s,return_s,mission_s,depot_unload_s,depot_unload_end_s,turnaround_s,turnaround_applied,next_ready_s,planned_end_s,lateness_s,lateness_cost,distance_m
+AGV-01-trip-1,AGV-01,AGV,1.5,"[""T08"", ""T02""]","[""DEPOT"", ""S08"", ""S02"", ""DEPOT""]",True,25.92,35,0,30,30,0,480,0,26,53,589,559,20,609,45,False,654,609,0,0,717.6
+AGV-02-trip-1,AGV-02,AGV,1.5,"[""T06"", ""T04""]","[""DEPOT"", ""S06"", ""S04"", ""DEPOT""]",True,41.0,50,0,30,30,0,564,0,20,60,674,644,20,694,45,False,739,694,0,0,844.8

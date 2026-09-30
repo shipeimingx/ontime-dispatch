@@ -1,0 +1,333 @@
+{
+  "metrics": [
+    {
+      "metric": "assigned_count",
+      "initial": 4,
+      "ga": 4,
+      "delta_ga_minus_initial": 0,
+      "unit": "count"
+    },
+    {
+      "metric": "unassigned_count",
+      "initial": 4,
+      "ga": 4,
+      "delta_ga_minus_initial": 0,
+      "unit": "count"
+    },
+    {
+      "metric": "trip_count",
+      "initial": 2,
+      "ga": 2,
+      "delta_ga_minus_initial": 0,
+      "unit": "count"
+    },
+    {
+      "metric": "travel_s",
+      "initial": 1044,
+      "ga": 1044,
+      "delta_ga_minus_initial": 0,
+      "unit": "s"
+    },
+    {
+      "metric": "waiting_s",
+      "initial": 0,
+      "ga": 0,
+      "delta_ga_minus_initial": 0,
+      "unit": "s"
+    },
+    {
+      "metric": "lateness_s",
+      "initial": 0,
+      "ga": 0,
+      "delta_ga_minus_initial": 0,
+      "unit": "s"
+    },
+    {
+      "metric": "lateness_cost",
+      "initial": 0,
+      "ga": 0,
+      "delta_ga_minus_initial": 0,
+      "unit": "penalty_unit"
+    },
+    {
+      "metric": "transport_cost",
+      "initial": 10.44,
+      "ga": 10.44,
+      "delta_ga_minus_initial": 0.0,
+      "unit": "penalty_unit"
+    },
+    {
+      "metric": "lateness_penalty",
+      "initial": 0.0,
+      "ga": 0.0,
+      "delta_ga_minus_initial": 0.0,
+      "unit": "penalty_unit"
+    },
+    {
+      "metric": "total_cost",
+      "initial": 10.44,
+      "ga": 10.44,
+      "delta_ga_minus_initial": 0.0,
+      "unit": "penalty_unit"
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "T01",
+      "initial": {
+        "status": "unassigned",
+        "reason_code": "device_unavailable"
+      },
+      "ga": {
+        "status": "unassigned",
+        "reason_code": "device_unavailable"
+      },
+      "changed": false
+    },
+    {
+      "task_id": "T02",
+      "initial": {
+        "status": "planned",
+        "vehicle_id": "AGV-01",
+        "trip_id": "AGV-01-trip-1",
+        "task_id": "T02",
+        "station_id": "S02",
+        "arrival_s": 309,
+        "earliest_s": 0,
+        "latest_s": 680,
+        "waiting_s": 0,
+        "service_start_s": 309,
+        "unload_s": 15,
+        "unload_end_s": 324,
+        "service_s": 25,
+        "completion_s": 349,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 4,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 0.0,
+        "demand_kg": 24,
+        "objective_lateness_penalty": 0.0
+      },
+      "ga": {
+        "status": "planned",
+        "vehicle_id": "AGV-01",
+        "trip_id": "AGV-01-trip-1",
+        "task_id": "T02",
+        "station_id": "S02",
+        "arrival_s": 309,
+        "earliest_s": 0,
+        "latest_s": 680,
+        "waiting_s": 0,
+        "service_start_s": 309,
+        "unload_s": 15,
+        "unload_end_s": 324,
+        "service_s": 25,
+        "completion_s": 349,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 4,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 0.0,
+        "demand_kg": 24,
+        "objective_lateness_penalty": 0.0
+      },
+      "changed": false
+    },
+    {
+      "task_id": "T03",
+      "initial": {
+        "status": "unassigned",
+        "reason_code": "device_unavailable"
+      },
+      "ga": {
+        "status": "unassigned",
+        "reason_code": "device_unavailable"
+      },
+      "changed": false
+    },
+    {
+      "task_id": "T04",
+      "initial": {
+        "status": "planned",
+        "vehicle_id": "AGV-02",
+        "trip_id": "AGV-02-trip-1",
+        "task_id": "T04",
+        "station_id": "S04",
+        "arrival_s": 349,
+        "earliest_s": 47,
+        "latest_s": 1040,
+        "waiting_s": 0,
+        "service_start_s": 349,
+        "unload_s": 13,
+        "unload_end_s": 362,
+        "service_s": 30,
+        "completion_s": 392,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 1,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 0.0,
+        "demand_kg": 22,
+        "objective_lateness_penalty": 0.0
+      },
+      "ga": {
+        "status": "planned",
+        "vehicle_id": "AGV-02",
+        "trip_id": "AGV-02-trip-1",
+        "task_id": "T04",
+        "station_id": "S04",
+        "arrival_s": 349,
+        "earliest_s": 47,
+        "latest_s": 1040,
+        "waiting_s": 0,
+        "service_start_s": 349,
+        "unload_s": 13,
+        "unload_end_s": 362,
+        "service_s": 30,
+        "completion_s": 392,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 1,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 0.0,
+        "demand_kg": 22,
+        "objective_lateness_penalty": 0.0
+      },
+      "changed": false
+    },
+    {
+      "task_id": "T05",
+      "initial": {
+        "status": "unassigned",
+        "reason_code": "device_unavailable"
+      },
+      "ga": {
+        "status": "unassigned",
+        "reason_code": "device_unavailable"
+      },
+      "changed": false
+    },
+    {
+      "task_id": "T06",
+      "initial": {
+        "status": "planned",
+        "vehicle_id": "AGV-02",
+        "trip_id": "AGV-02-trip-1",
+        "task_id": "T06",
+        "station_id": "S06",
+        "arrival_s": 291,
+        "earliest_s": 29,
+        "latest_s": 1400,
+        "waiting_s": 0,
+        "service_start_s": 291,
+        "unload_s": 7,
+        "unload_end_s": 298,
+        "service_s": 30,
+        "completion_s": 328,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 4,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 22.0,
+        "demand_kg": 19,
+        "objective_lateness_penalty": 0.0
+      },
+      "ga": {
+        "status": "planned",
+        "vehicle_id": "AGV-02",
+        "trip_id": "AGV-02-trip-1",
+        "task_id": "T06",
+        "station_id": "S06",
+        "arrival_s": 291,
+        "earliest_s": 29,
+        "latest_s": 1400,
+        "waiting_s": 0,
+        "service_start_s": 291,
+        "unload_s": 7,
+        "unload_end_s": 298,
+        "service_s": 30,
+        "completion_s": 328,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 4,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 22.0,
+        "demand_kg": 19,
+        "objective_lateness_penalty": 0.0
+      },
+      "changed": false
+    },
+    {
+      "task_id": "T07",
+      "initial": {
+        "status": "unassigned",
+        "reason_code": "device_unavailable"
+      },
+      "ga": {
+        "status": "unassigned",
+        "reason_code": "device_unavailable"
+      },
+      "changed": false
+    },
+    {
+      "task_id": "T08",
+      "initial": {
+        "status": "planned",
+        "vehicle_id": "AGV-01",
+        "trip_id": "AGV-01-trip-1",
+        "task_id": "T08",
+        "station_id": "S08",
+        "arrival_s": 201,
+        "earliest_s": 5,
+        "latest_s": 1760,
+        "waiting_s": 0,
+        "service_start_s": 201,
+        "unload_s": 11,
+        "unload_end_s": 212,
+        "service_s": 28,
+        "completion_s": 240,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 4,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 24.0,
+        "demand_kg": 1.92,
+        "objective_lateness_penalty": 0.0
+      },
+      "ga": {
+        "status": "planned",
+        "vehicle_id": "AGV-01",
+        "trip_id": "AGV-01-trip-1",
+        "task_id": "T08",
+        "station_id": "S08",
+        "arrival_s": 201,
+        "earliest_s": 5,
+        "latest_s": 1760,
+        "waiting_s": 0,
+        "service_start_s": 201,
+        "unload_s": 11,
+        "unload_end_s": 212,
+        "service_s": 28,
+        "completion_s": 240,
+        "lateness_s": 0,
+        "lateness_cost_per_s": 4,
+        "lateness_cost": 0,
+        "remaining_payload_kg": 24.0,
+        "demand_kg": 1.92,
+        "objective_lateness_penalty": 0.0
+      },
+      "changed": false
+    }
+  ],
+  "improved": false,
+  "comparison_scope": "this input, mode, parameters and fixed seed only",
+  "initial_objective": {
+    "unassigned_count": 4,
+    "total_cost": 10.44,
+    "transport_cost": 10.44,
+    "lateness_penalty": 0.0,
+    "cost_unit": "penalty_unit"
+  },
+  "ga_objective": {
+    "unassigned_count": 4,
+    "total_cost": 10.44,
+    "transport_cost": 10.44,
+    "lateness_penalty": 0.0,
+    "cost_unit": "penalty_unit"
+  },
+  "conclusion": "No strict objective improvement; the first-stage plan was retained."
+}

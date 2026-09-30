@@ -1,0 +1,922 @@
+{
+  "profile": "python-demo-2026-v2",
+  "window_event": "service_start",
+  "mode": "soft",
+  "seed": 2026,
+  "units": {
+    "mass": "kg",
+    "distance": "m",
+    "time": "s",
+    "speed": "m/s",
+    "cost": "penalty_unit"
+  },
+  "valid": true,
+  "complete": true,
+  "coverage": "Complete",
+  "assigned_task_ids": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "T06",
+    "T07",
+    "T08"
+  ],
+  "unassigned_task_ids": [],
+  "unassigned": [],
+  "trips": [
+    {
+      "trip_id": "AGV-01-trip-1",
+      "vehicle_id": "AGV-01",
+      "task_ids": [
+        "T08",
+        "T02"
+      ],
+      "load_start_s": 0,
+      "type": "AGV",
+      "speed_m_s": 1.5,
+      "route": [
+        "DEPOT",
+        "S08",
+        "S02",
+        "DEPOT"
+      ],
+      "payload_kg": 25.92,
+      "capacity_kg": 35,
+      "departure_s": 30,
+      "depot_wait_s": 0,
+      "load_s": 30,
+      "depot_unload_s": 20,
+      "turnaround_s": 45,
+      "return_s": 589,
+      "mission_s": 559,
+      "depot_unload_end_s": 609,
+      "next_ready_s": 654,
+      "turnaround_applied": false,
+      "planned_end_s": 609,
+      "valid": true,
+      "stops": [
+        {
+          "task_id": "T08",
+          "station_id": "S08",
+          "arrival_s": 201,
+          "earliest_s": 5,
+          "latest_s": 1760,
+          "waiting_s": 0,
+          "service_start_s": 201,
+          "unload_s": 11,
+          "unload_end_s": 212,
+          "service_s": 28,
+          "completion_s": 240,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 4,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 24.0,
+          "demand_kg": 1.92,
+          "status": "planned",
+          "objective_lateness_penalty": 0.0
+        },
+        {
+          "task_id": "T02",
+          "station_id": "S02",
+          "arrival_s": 309,
+          "earliest_s": 0,
+          "latest_s": 680,
+          "waiting_s": 0,
+          "service_start_s": 309,
+          "unload_s": 15,
+          "unload_end_s": 324,
+          "service_s": 25,
+          "completion_s": 349,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 4,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 0.0,
+          "demand_kg": 24,
+          "status": "planned",
+          "objective_lateness_penalty": 0.0
+        }
+      ],
+      "legs": [
+        {
+          "start_s": 30,
+          "end_s": 201,
+          "travel_s": 171,
+          "distance_m": 255.6,
+          "from": "DEPOT",
+          "to": "S08"
+        },
+        {
+          "start_s": 240,
+          "end_s": 309,
+          "travel_s": 69,
+          "distance_m": 103.2,
+          "from": "S08",
+          "to": "S02"
+        },
+        {
+          "start_s": 349,
+          "end_s": 589,
+          "travel_s": 240,
+          "distance_m": 358.8,
+          "from": "S02",
+          "to": "DEPOT"
+        }
+      ],
+      "checks": [
+        {
+          "code": "nonempty_trip",
+          "passed": true
+        },
+        {
+          "code": "vehicle_available",
+          "passed": true
+        },
+        {
+          "code": "unique_tasks_in_trip",
+          "passed": true
+        },
+        {
+          "code": "payload",
+          "passed": true,
+          "payload_kg": 25.92,
+          "capacity_kg": 35
+        },
+        {
+          "code": "eligibility",
+          "passed": true,
+          "task_id": "T08",
+          "vehicle_id": "AGV-01"
+        },
+        {
+          "code": "eligibility",
+          "passed": true,
+          "task_id": "T02",
+          "vehicle_id": "AGV-01"
+        },
+        {
+          "code": "load_start",
+          "passed": true,
+          "load_start_s": 0,
+          "required_ready_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "DEPOT",
+          "to_node": "S08"
+        },
+        {
+          "code": "time_window",
+          "passed": true,
+          "task_id": "T08",
+          "mode": "soft",
+          "service_start_s": 201,
+          "latest_s": 1760,
+          "lateness_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "S08",
+          "to_node": "S02"
+        },
+        {
+          "code": "time_window",
+          "passed": true,
+          "task_id": "T02",
+          "mode": "soft",
+          "service_start_s": 309,
+          "latest_s": 680,
+          "lateness_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "S02",
+          "to_node": "DEPOT"
+        },
+        {
+          "code": "trip_limit",
+          "passed": true,
+          "mission_s": 559,
+          "trip_limit_s": 2000
+        },
+        {
+          "code": "availability_end",
+          "passed": true,
+          "depot_unload_end_s": 609,
+          "available_until_s": 7200
+        }
+      ],
+      "travel_s": 480,
+      "waiting_s": 0,
+      "station_unload_s": 26,
+      "service_s": 53,
+      "lateness_s": 0,
+      "lateness_cost": 0,
+      "distance_m": 717.6,
+      "transport_cost_per_s": 0.01,
+      "transport_cost": 4.8
+    },
+    {
+      "trip_id": "AGV-02-trip-1",
+      "vehicle_id": "AGV-02",
+      "task_ids": [
+        "T06",
+        "T04"
+      ],
+      "load_start_s": 0,
+      "type": "AGV",
+      "speed_m_s": 1.5,
+      "route": [
+        "DEPOT",
+        "S06",
+        "S04",
+        "DEPOT"
+      ],
+      "payload_kg": 41.0,
+      "capacity_kg": 50,
+      "departure_s": 30,
+      "depot_wait_s": 0,
+      "load_s": 30,
+      "depot_unload_s": 20,
+      "turnaround_s": 45,
+      "return_s": 674,
+      "mission_s": 644,
+      "depot_unload_end_s": 694,
+      "next_ready_s": 739,
+      "turnaround_applied": false,
+      "planned_end_s": 694,
+      "valid": true,
+      "stops": [
+        {
+          "task_id": "T06",
+          "station_id": "S06",
+          "arrival_s": 291,
+          "earliest_s": 29,
+          "latest_s": 1400,
+          "waiting_s": 0,
+          "service_start_s": 291,
+          "unload_s": 7,
+          "unload_end_s": 298,
+          "service_s": 30,
+          "completion_s": 328,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 4,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 22.0,
+          "demand_kg": 19,
+          "status": "planned",
+          "objective_lateness_penalty": 0.0
+        },
+        {
+          "task_id": "T04",
+          "station_id": "S04",
+          "arrival_s": 349,
+          "earliest_s": 47,
+          "latest_s": 1040,
+          "waiting_s": 0,
+          "service_start_s": 349,
+          "unload_s": 13,
+          "unload_end_s": 362,
+          "service_s": 30,
+          "completion_s": 392,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 1,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 0.0,
+          "demand_kg": 22,
+          "status": "planned",
+          "objective_lateness_penalty": 0.0
+        }
+      ],
+      "legs": [
+        {
+          "start_s": 30,
+          "end_s": 291,
+          "travel_s": 261,
+          "distance_m": 391.2,
+          "from": "DEPOT",
+          "to": "S06"
+        },
+        {
+          "start_s": 328,
+          "end_s": 349,
+          "travel_s": 21,
+          "distance_m": 31.2,
+          "from": "S06",
+          "to": "S04"
+        },
+        {
+          "start_s": 392,
+          "end_s": 674,
+          "travel_s": 282,
+          "distance_m": 422.4,
+          "from": "S04",
+          "to": "DEPOT"
+        }
+      ],
+      "checks": [
+        {
+          "code": "nonempty_trip",
+          "passed": true
+        },
+        {
+          "code": "vehicle_available",
+          "passed": true
+        },
+        {
+          "code": "unique_tasks_in_trip",
+          "passed": true
+        },
+        {
+          "code": "payload",
+          "passed": true,
+          "payload_kg": 41.0,
+          "capacity_kg": 50
+        },
+        {
+          "code": "eligibility",
+          "passed": true,
+          "task_id": "T06",
+          "vehicle_id": "AGV-02"
+        },
+        {
+          "code": "eligibility",
+          "passed": true,
+          "task_id": "T04",
+          "vehicle_id": "AGV-02"
+        },
+        {
+          "code": "load_start",
+          "passed": true,
+          "load_start_s": 0,
+          "required_ready_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "DEPOT",
+          "to_node": "S06"
+        },
+        {
+          "code": "time_window",
+          "passed": true,
+          "task_id": "T06",
+          "mode": "soft",
+          "service_start_s": 291,
+          "latest_s": 1400,
+          "lateness_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "S06",
+          "to_node": "S04"
+        },
+        {
+          "code": "time_window",
+          "passed": true,
+          "task_id": "T04",
+          "mode": "soft",
+          "service_start_s": 349,
+          "latest_s": 1040,
+          "lateness_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "S04",
+          "to_node": "DEPOT"
+        },
+        {
+          "code": "trip_limit",
+          "passed": true,
+          "mission_s": 644,
+          "trip_limit_s": 2000
+        },
+        {
+          "code": "availability_end",
+          "passed": true,
+          "depot_unload_end_s": 694,
+          "available_until_s": 7200
+        }
+      ],
+      "travel_s": 564,
+      "waiting_s": 0,
+      "station_unload_s": 20,
+      "service_s": 60,
+      "lateness_s": 0,
+      "lateness_cost": 0,
+      "distance_m": 844.8,
+      "transport_cost_per_s": 0.01,
+      "transport_cost": 5.64
+    },
+    {
+      "trip_id": "UAV-01-trip-1",
+      "vehicle_id": "UAV-01",
+      "task_ids": [
+        "T03",
+        "T01"
+      ],
+      "load_start_s": 0,
+      "type": "UAV",
+      "speed_m_s": 8.0,
+      "route": [
+        "DEPOT",
+        "S03",
+        "S01",
+        "DEPOT"
+      ],
+      "payload_kg": 2.64,
+      "capacity_kg": 4,
+      "departure_s": 20,
+      "depot_wait_s": 0,
+      "load_s": 20,
+      "depot_unload_s": 10,
+      "turnaround_s": 60,
+      "return_s": 106,
+      "mission_s": 86,
+      "depot_unload_end_s": 116,
+      "next_ready_s": 176,
+      "turnaround_applied": false,
+      "planned_end_s": 116,
+      "valid": true,
+      "stops": [
+        {
+          "task_id": "T03",
+          "station_id": "S03",
+          "arrival_s": 32,
+          "earliest_s": 25,
+          "latest_s": 860,
+          "waiting_s": 0,
+          "service_start_s": 32,
+          "unload_s": 9,
+          "unload_end_s": 41,
+          "service_s": 21,
+          "completion_s": 62,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 2,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 1.01,
+          "demand_kg": 1.63,
+          "status": "planned",
+          "objective_lateness_penalty": 0.0
+        },
+        {
+          "task_id": "T01",
+          "station_id": "S01",
+          "arrival_s": 66,
+          "earliest_s": 5,
+          "latest_s": 500,
+          "waiting_s": 0,
+          "service_start_s": 66,
+          "unload_s": 6,
+          "unload_end_s": 72,
+          "service_s": 19,
+          "completion_s": 91,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 1,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 0.0,
+          "demand_kg": 1.01,
+          "status": "planned",
+          "objective_lateness_penalty": 0.0
+        }
+      ],
+      "legs": [
+        {
+          "start_s": 20,
+          "end_s": 32,
+          "travel_s": 12,
+          "distance_m": 89.694,
+          "from": "DEPOT",
+          "to": "S03"
+        },
+        {
+          "start_s": 62,
+          "end_s": 66,
+          "travel_s": 4,
+          "distance_m": 24.331,
+          "from": "S03",
+          "to": "S01"
+        },
+        {
+          "start_s": 91,
+          "end_s": 106,
+          "travel_s": 15,
+          "distance_m": 112.699,
+          "from": "S01",
+          "to": "DEPOT"
+        }
+      ],
+      "checks": [
+        {
+          "code": "nonempty_trip",
+          "passed": true
+        },
+        {
+          "code": "vehicle_available",
+          "passed": true
+        },
+        {
+          "code": "unique_tasks_in_trip",
+          "passed": true
+        },
+        {
+          "code": "payload",
+          "passed": true,
+          "payload_kg": 2.64,
+          "capacity_kg": 4
+        },
+        {
+          "code": "eligibility",
+          "passed": true,
+          "task_id": "T03",
+          "vehicle_id": "UAV-01"
+        },
+        {
+          "code": "eligibility",
+          "passed": true,
+          "task_id": "T01",
+          "vehicle_id": "UAV-01"
+        },
+        {
+          "code": "load_start",
+          "passed": true,
+          "load_start_s": 0,
+          "required_ready_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "DEPOT",
+          "to_node": "S03"
+        },
+        {
+          "code": "time_window",
+          "passed": true,
+          "task_id": "T03",
+          "mode": "soft",
+          "service_start_s": 32,
+          "latest_s": 860,
+          "lateness_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "S03",
+          "to_node": "S01"
+        },
+        {
+          "code": "time_window",
+          "passed": true,
+          "task_id": "T01",
+          "mode": "soft",
+          "service_start_s": 66,
+          "latest_s": 500,
+          "lateness_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "S01",
+          "to_node": "DEPOT"
+        },
+        {
+          "code": "trip_limit",
+          "passed": true,
+          "mission_s": 86,
+          "trip_limit_s": 800
+        },
+        {
+          "code": "availability_end",
+          "passed": true,
+          "depot_unload_end_s": 116,
+          "available_until_s": 3600
+        }
+      ],
+      "travel_s": 31,
+      "waiting_s": 0,
+      "station_unload_s": 15,
+      "service_s": 40,
+      "lateness_s": 0,
+      "lateness_cost": 0,
+      "distance_m": 226.724,
+      "transport_cost_per_s": 0.02,
+      "transport_cost": 0.62
+    },
+    {
+      "trip_id": "UAV-02-trip-1",
+      "vehicle_id": "UAV-02",
+      "task_ids": [
+        "T07",
+        "T05"
+      ],
+      "load_start_s": 0,
+      "type": "UAV",
+      "speed_m_s": 8.0,
+      "route": [
+        "DEPOT",
+        "S07",
+        "S05",
+        "DEPOT"
+      ],
+      "payload_kg": 4.88,
+      "capacity_kg": 6,
+      "departure_s": 20,
+      "depot_wait_s": 0,
+      "load_s": 20,
+      "depot_unload_s": 10,
+      "turnaround_s": 60,
+      "return_s": 146,
+      "mission_s": 126,
+      "depot_unload_end_s": 156,
+      "next_ready_s": 216,
+      "turnaround_applied": false,
+      "planned_end_s": 156,
+      "valid": true,
+      "stops": [
+        {
+          "task_id": "T07",
+          "station_id": "S07",
+          "arrival_s": 48,
+          "earliest_s": 19,
+          "latest_s": 1580,
+          "waiting_s": 0,
+          "service_start_s": 48,
+          "unload_s": 5,
+          "unload_end_s": 53,
+          "service_s": 21,
+          "completion_s": 74,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 2,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 2.45,
+          "demand_kg": 2.43,
+          "status": "planned",
+          "objective_lateness_penalty": 0.0
+        },
+        {
+          "task_id": "T05",
+          "station_id": "S05",
+          "arrival_s": 80,
+          "earliest_s": 5,
+          "latest_s": 1220,
+          "waiting_s": 0,
+          "service_start_s": 80,
+          "unload_s": 13,
+          "unload_end_s": 93,
+          "service_s": 27,
+          "completion_s": 120,
+          "lateness_s": 0,
+          "lateness_cost_per_s": 2,
+          "lateness_cost": 0,
+          "remaining_payload_kg": 0.0,
+          "demand_kg": 2.45,
+          "status": "planned",
+          "objective_lateness_penalty": 0.0
+        }
+      ],
+      "legs": [
+        {
+          "start_s": 20,
+          "end_s": 48,
+          "travel_s": 28,
+          "distance_m": 223.439,
+          "from": "DEPOT",
+          "to": "S07"
+        },
+        {
+          "start_s": 74,
+          "end_s": 80,
+          "travel_s": 6,
+          "distance_m": 46.239,
+          "from": "S07",
+          "to": "S05"
+        },
+        {
+          "start_s": 120,
+          "end_s": 146,
+          "travel_s": 26,
+          "distance_m": 205.847,
+          "from": "S05",
+          "to": "DEPOT"
+        }
+      ],
+      "checks": [
+        {
+          "code": "nonempty_trip",
+          "passed": true
+        },
+        {
+          "code": "vehicle_available",
+          "passed": true
+        },
+        {
+          "code": "unique_tasks_in_trip",
+          "passed": true
+        },
+        {
+          "code": "payload",
+          "passed": true,
+          "payload_kg": 4.88,
+          "capacity_kg": 6
+        },
+        {
+          "code": "eligibility",
+          "passed": true,
+          "task_id": "T07",
+          "vehicle_id": "UAV-02"
+        },
+        {
+          "code": "eligibility",
+          "passed": true,
+          "task_id": "T05",
+          "vehicle_id": "UAV-02"
+        },
+        {
+          "code": "load_start",
+          "passed": true,
+          "load_start_s": 0,
+          "required_ready_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "DEPOT",
+          "to_node": "S07"
+        },
+        {
+          "code": "time_window",
+          "passed": true,
+          "task_id": "T07",
+          "mode": "soft",
+          "service_start_s": 48,
+          "latest_s": 1580,
+          "lateness_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "S07",
+          "to_node": "S05"
+        },
+        {
+          "code": "time_window",
+          "passed": true,
+          "task_id": "T05",
+          "mode": "soft",
+          "service_start_s": 80,
+          "latest_s": 1220,
+          "lateness_s": 0
+        },
+        {
+          "code": "route_edge",
+          "passed": true,
+          "from_node": "S05",
+          "to_node": "DEPOT"
+        },
+        {
+          "code": "trip_limit",
+          "passed": true,
+          "mission_s": 126,
+          "trip_limit_s": 800
+        },
+        {
+          "code": "availability_end",
+          "passed": true,
+          "depot_unload_end_s": 156,
+          "available_until_s": 3600
+        }
+      ],
+      "travel_s": 60,
+      "waiting_s": 0,
+      "station_unload_s": 18,
+      "service_s": 48,
+      "lateness_s": 0,
+      "lateness_cost": 0,
+      "distance_m": 475.525,
+      "transport_cost_per_s": 0.02,
+      "transport_cost": 1.2
+    }
+  ],
+  "checks": [
+    {
+      "code": "unique_trip_ids",
+      "passed": true
+    },
+    {
+      "code": "unique_tasks_across_trips",
+      "passed": true,
+      "duplicate_task_ids": []
+    },
+    {
+      "code": "unique_unassigned_tasks",
+      "passed": true,
+      "duplicate_task_ids": []
+    },
+    {
+      "code": "assigned_unassigned_disjoint",
+      "passed": true,
+      "task_ids": []
+    },
+    {
+      "code": "all_tasks_accounted_for",
+      "passed": true,
+      "missing_task_ids": []
+    }
+  ],
+  "summary": {
+    "assigned_count": 8,
+    "unassigned_count": 0,
+    "trip_count": 4,
+    "travel_s": 1135,
+    "waiting_s": 0,
+    "lateness_s": 0,
+    "lateness_cost": 0,
+    "transport_cost": 12.26,
+    "lateness_penalty": 0.0,
+    "total_cost": 12.26
+  },
+  "plan_input": {
+    "trips": [
+      {
+        "trip_id": "AGV-01-trip-1",
+        "vehicle_id": "AGV-01",
+        "task_ids": [
+          "T08",
+          "T02"
+        ],
+        "load_start_s": 0
+      },
+      {
+        "trip_id": "AGV-02-trip-1",
+        "vehicle_id": "AGV-02",
+        "task_ids": [
+          "T06",
+          "T04"
+        ],
+        "load_start_s": 0
+      },
+      {
+        "trip_id": "UAV-01-trip-1",
+        "vehicle_id": "UAV-01",
+        "task_ids": [
+          "T03",
+          "T01"
+        ],
+        "load_start_s": 0
+      },
+      {
+        "trip_id": "UAV-02-trip-1",
+        "vehicle_id": "UAV-02",
+        "task_ids": [
+          "T07",
+          "T05"
+        ],
+        "load_start_s": 0
+      }
+    ],
+    "unassigned": []
+  },
+  "execution_status": "candidate_only",
+  "scenario_label": "Illustrative data — seeded synthetic normal",
+  "method_profile": "two-stage-permutation-ga-2026-v1",
+  "algorithm": "urgency_insertion_v2",
+  "chromosome": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "T06",
+    "T07",
+    "T08"
+  ],
+  "objective": {
+    "unassigned_count": 0,
+    "total_cost": 12.26,
+    "transport_cost": 12.26,
+    "lateness_penalty": 0.0,
+    "cost_unit": "penalty_unit"
+  },
+  "objective_parameters": {
+    "uav_transport_per_s": 0.02,
+    "agv_transport_per_s": 0.01,
+    "lateness_multiplier": 1.0,
+    "transport_coefficient_unit": "penalty_unit/s",
+    "task_lateness_coefficient_unit": "penalty_unit/s",
+    "lateness_multiplier_unit": "dimensionless",
+    "cost_unit": "penalty_unit",
+    "transport_basis": "travel seconds on all legs, including depot return",
+    "objective_priority": [
+      "unassigned_count",
+      "transport_cost + lateness_penalty"
+    ],
+    "illustrative_coefficients": true
+  },
+  "search_exhaustive": false
+}
